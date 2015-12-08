@@ -13,6 +13,31 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
+	"\/css\/vrt-toegankelijkheid.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/vrt-toegankelijkheid.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/css\/vrt-toegankelijkheid.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/vrt-toegankelijkheid.scss",
+		"outputAbbreviatedPath": "\/css\/vrt-toegankelijkheid.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/github-markdown.css": {
 		"fileType": 16,
 		"ignore": 0,
