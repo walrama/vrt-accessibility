@@ -1,4 +1,4 @@
-- [Iedere pagina heeft een unieke, relevante en betekenisvolle titel](paginatitels)
-- [De koppenstructuur is strikt hiërarchisch opgebouwd]
-- [Koppen, paragrafen, lijsten en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags]
-- [Het is duidelijk waar een link naartoe gaat, zelfs als je de omliggende tekst niet leest]
+- [Iedere pagina heeft een unieke, relevante en betekenisvolle titel](/inhoud/basisregels/paginatitels)
+- [De koppenstructuur is strikt hiërarchisch opgebouwd](/inhoud/basisregels/koppenstructuur)
+- [Koppen, paragrafen, lijsten en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags](/inhoud/basisregels/html-tags)
+- [Het is duidelijk waar een link naartoe gaat, zelfs als je de omliggende tekst niet leest](/inhoud/basisregels/linkteksten)
