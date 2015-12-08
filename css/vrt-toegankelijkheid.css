@@ -7,15 +7,17 @@ li a {
   li a:hover, li a:active {
     text-decoration: none !important; }
 
-#filters {
+nav#filters {
+  background: gray;
+  color: white;
   border: 2px dotted #aaa;
-  padding: .25em 2em 1.25em 2em;
+  padding: 1.5em 2em 1.25em 2em;
   margin: 0 0 2em 0;
   box-shadow: 0 0 25px #eee; }
-  #filters input[type=checkbox] {
+  nav#filters input[type=checkbox] {
     display: inline-block;
-    padding: 0 1em 0 0; }
-  #filters label {
+    margin: 1em 0.25em 0 0; }
+  nav#filters label {
     display: block; }
 
 #richtlijnen section {
