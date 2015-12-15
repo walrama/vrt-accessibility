@@ -1,5 +1,0 @@
-- [Belangrijke afbeeldingen hebben een alt-attribuut met een kernachtige beschrijving voor wie ze niet kan zien.](belangrijke-afbeeldingen)
-- [Diagrammen en grafieken zijn uitvoerig beschreven op de pagina zelf of op een bijbehorende pagina.](grafieken-diagrammen)
-- [Decoratieve afbeeldingen ziijn gedefinieerd in een stijlblad of zijn als decorafief gemarkeerd (in het CMS of in de broncode).](decoratieve-afbeeldingen)
-- [Als een afbeelding aanklikbaar is, zijn ook alle ijkpunten over linkteksten toegepast.](aanklikbare-afbeeldingen)
-- [Afbeeldignen van tekst komen nergens voor](afbeeldingen-van-tekst)

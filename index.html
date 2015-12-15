@@ -17,74 +17,452 @@
 		</style>
 	</head>
 	<body class="markdown-body">
-		<h1>VRT-Toegankelijkheidsrichtlijnen</h1>
-		<nav id="filters" role="navigation" class="hide">
-			<label>
-				<input type="checkbox" />
-				Eindverantwoordelijken van digitale producten
-			</label>
-			<label>
-				<input type="checkbox" />
-				Makers en leveranciers van inhoud (‘Content Creators’)
-			</label>
-			<label>
-				<input type="checkbox" />
-				Webdesigners en front-end ontwikkelaars
-			</label>
-			<label>
-				<input type="checkbox" />
-				Back-end ontwikkelaars
-			</label>
-			<label>
-				<input type="checkbox" />
-				Informatie-architecten en UX’ers
-			</label>
-			<label>
-				<input type="checkbox" />
-				Grafisch Vormgevers
-			</label>
-		</nav>
+		<h1>VRT-Toegankelijkheidsrichtlijnen voor websites</h1>
+
+<nav id="filters" role="navigation" class="hide">
+  <label>
+    <input type="checkbox" checked="checked" name="owner" />
+    Eindverantwoordelijken van digitale producten
+  </label>
+  <label>
+    <input type="checkbox" name="editor" />
+    Makers en leveranciers van inhoud (‘Content Creators’)
+  </label>
+  <label>
+    <input type="checkbox" name="frontend" />
+    Webdesigners en front-end ontwikkelaars
+  </label>
+  <label>
+    <input type="checkbox" name="backend" />
+    Back-end ontwikkelaars
+  </label>
+  <label>
+    <input type="checkbox" name="ux" />
+    Informatie-architecten en UX’ers
+  </label>
+  <label>
+    <input type="checkbox" name="design" />
+    Grafisch Vormgevers
+  </label>
+</nav>
 
 <div id="richtlijnen" role="main">
 
-  <section id="inhoud">
-    <h2>Inhoud</h2>
-    <h3>1.1. Basisregels</h3>
-    <ul>
-<li><a href="/inhoud/basisregels/paginatitels#1-1-1">Iedere pagina heeft een unieke, relevante en betekenisvolle titel</a></li>
-<li><a href="/inhoud/basisregels/koppenstructuur#1-1-2">De koppenstructuur is strikt hiërarchisch opgebouwd</a></li>
-<li><a href="/inhoud/basisregels/html-tags#1-1-3">Koppen, paragrafen, lijsten en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags</a></li>
-<li><a href="/inhoud/basisregels/linkteksten#1-1-3s">Het is duidelijk waar een link naartoe gaat, zelfs als je de omliggende tekst niet leest</a></li>
-</ul>
-    <h3>1.2. Afbeeldingen</h3>
-    <h3>1.3. Video en audio</h3>
-    <h3>1.4. Tabellen en infografieken</h3>
-  </section>
-
-  <section id="vormgeving">
-    <h2>Vormgeving</h2>
-    <h3>2.1. Tekst- en paginaopmaak</h3>
-    <h3>2.2. Kleuren en contrasten</h3>
-    <h3>2.3. Timing en beweging</h3>
-  </section>
-
-  <section id="navigatie-en-interactie">
-    <h2>Navigatie en interactie</h2>
-    <h3>3.1. Basisregels</h3>
-    <h3>3.2. Links en knoppen</h3>
-    <h3>3.3. Formulieren</h3>
-    <h3>3.4. Paginawijzigingen</h3>
-  </section>
-
-  <section id="onder-de-motorkap">
-    <h2>Onder de motorkap</h2>
-    <h3>4.1. Markup</h3>
-    <h3>4.2. Frames en iFrames</h3>
-    <h3>4.2. Plug-in's</h3>
-  </section>
+  <ol class="categorie">
+   <li>
+      <section id="inhoud">
+        <h2>Inhoud</h2>
+        <ol class="subcategorie">
+          <li class="no-cout">
+            <h3>Basisregels</h3>
+            <ol>
+  <li class='aan' id='c1-1-1'>
+    <a href='/inhoud/basisregels/paginatitels/'>
+      Iedere pagina heeft een unieke, relevante en betekenisvolle titel
+    </a>
+  </li>
+  <li class='aan' id='c1-1-2'>
+    <a href='/inhoud/basisregels/html-tags/'>
+      Koppen, paragrafen, lijsten en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags
+    </a>
+  </li>
+  <li class='aan' id='c1-1-3'>
+    <a href='/inhoud/basisregels/koppenstructuur/'>
+      De koppenstructuur is strikt hiërarchisch opgebouwd
+    </a>
+  </li>
+  <li class='aan' id='c1-1-4'>
+    <a href='/inhoud/basisregels/linkteksten/'>
+      Het is duidelijk waar een link naartoe gaat, zelfs als je de omliggende tekst niet leest
+    </a>
+  </li>
+</ol>
+          </li>
+          <li>
+            <h3>Afbeeldingen</h3>
+            <ol>
+  <li class='aan' id='c1-2-1'>
+    <a href='/inhoud/afbeeldingen/belangrijke-afbeeldingen/'>
+      Belangrijke afbeeldingen hebben een alt-attribuut met een kernachtige beschrijving voor wie ze niet kan zien.
+    </a>
+  </li>
+  <li class='aan' id='c1-2-2'>
+    <a href='/inhoud/afbeeldingen/diagrammen-en-infografieken/'>
+      Diagrammen en (info)grafieken zijn uitvoerig beschreven op de pagina zelf of op een bijbehorende pagina.
+    </a>
+  </li>
+  <li class='aan' id='c1-2-3'>
+    <a href='/inhoud/afbeeldingen/decoratieve-afbeeldingen/'>
+      Decoratieve afbeeldingen ziijn gedefinieerd in een stijlblad of zijn als decorafief gemarkeerd (in het CMS of in de broncode).
+    </a>
+  </li>
+  <li class='aan uitzondering' id='c1-2-4'>
+    <a href='/inhoud/afbeeldingen/aanklikbare-afbeeldingen/'>
+      Als een afbeelding aanklikbaar is, zijn ook alle ijkpunten over linkteksten toegepast.
+    </a>
+  </li>
+  <li class='aan uitzondering' id='c1-2-5'>
+    <a href='/inhoud/afbeeldingen/afbeeldingen-van-tekst/'>
+      Afbeeldingen van tekst komen nergens voor.
+    </a>
+  </li>
+</ol>
+          </li>
+          <li>
+            <h3>Video en audio</h3>
+            <ol>
+  <li class='aan owner' id='c1-1-1'>
+    <a href='/inhoud/basisregels/paginatitels/'>
+      Iedere pagina heeft een unieke, relevante en betekenisvolle titel
+    </a>
+  </li>
+  <li class='aan frontend editor' id='c1-1-1'>
+    <a href='/inhoud/basisregels/koppenstructuur/'>
+      De koppenstructuur is strikt hiërarchisch opgebouwd
+    </a>
+  </li>
+  <li class='aan container nogiets enzovoort' id='c1-1-1'>
+    <a href='/inhoud/basisregels/html-tags/'>
+      Koppen, paragrafen, lijsten en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags
+    </a>
+  </li>
+  <li class='aan container nogiets enzovoort' id='c1-1-1'>
+    <a href='/inhoud/basisregels/linkteksten/'>
+      Het is duidelijk waar een link naartoe gaat, zelfs als je de omliggende tekst niet leest
+    </a>
+  </li>
+</ol>
+          </li>
+          <li>
+            <h3>Tabellen en infografieken</h3>
+            <ol>
+  <li class='aan owner' id='c1-1-1'>
+    <a href='/inhoud/basisregels/paginatitels/'>
+      Iedere pagina heeft een unieke, relevante en betekenisvolle titel
+    </a>
+  </li>
+  <li class='aan frontend editor' id='c1-1-1'>
+    <a href='/inhoud/basisregels/koppenstructuur/'>
+      De koppenstructuur is strikt hiërarchisch opgebouwd
+    </a>
+  </li>
+  <li class='aan container nogiets enzovoort' id='c1-1-1'>
+    <a href='/inhoud/basisregels/html-tags/'>
+      Koppen, paragrafen, lijsten en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags
+    </a>
+  </li>
+  <li class='aan container nogiets enzovoort' id='c1-1-1'>
+    <a href='/inhoud/basisregels/linkteksten/'>
+      Het is duidelijk waar een link naartoe gaat, zelfs als je de omliggende tekst niet leest
+    </a>
+  </li>
+</ol>
+          </li>
+        </ol>
+      </section>
+     </li>
+     <li>
+      <section id="vormgeving">
+        <h2>Vormgeving</h2>
+        <ol>
+          <li>
+            <h3>Tekst- en paginaopmaak</h3>
+            <ol>
+  <li class='aan' id='c1-2-1'>
+    <a href='/inhoud/afbeeldingen/belangrijke-afbeeldingen/'>
+      Belangrijke afbeeldingen hebben een alt-attribuut met een kernachtige beschrijving voor wie ze niet kan zien.
+    </a>
+  </li>
+  <li class='aan' id='c1-2-2'>
+    <a href='/inhoud/afbeeldingen/diagrammen-infografieken/'>
+      Diagrammen en (info)grafieken zijn uitvoerig beschreven op de pagina zelf of op een bijbehorende pagina.
+    </a>
+  </li>
+  <li class='aan' id='c1-2-3'>
+    <a href='/inhoud/afbeeldingen/decoratieve-afbeeldingen/'>
+      Decoratieve afbeeldingen ziijn gedefinieerd in een stijlblad of zijn als decorafief gemarkeerd (in het CMS of in de broncode).
+    </a>
+  </li>
+  <li class='aan uitzondering' id='c1-2-4'>
+    <a href='/inhoud/afbeeldingen/aanklikbare-afbeeldingen/'>
+      Als een afbeelding aanklikbaar is, zijn ook alle ijkpunten over linkteksten toegepast.
+    </a>
+  </li>
+  <li class='aan uitzondering' id='c1-2-5'>
+    <a href='/inhoud/afbeeldingen/afbeeldingen-van-tekst/'>
+      Afbeeldingen van tekst komen nergens voor.
+    </a>
+  </li>
+</ol>
+          </li>
+          <li>
+            <h3>Kleuren en contrasten</h3>
+            <ol>
+  <li class='aan owner' id='c1-1-1'>
+    <a href='/inhoud/basisregels/paginatitels/'>
+      Iedere pagina heeft een unieke, relevante en betekenisvolle titel
+    </a>
+  </li>
+  <li class='aan frontend editor' id='c1-1-1'>
+    <a href='/inhoud/basisregels/koppenstructuur/'>
+      De koppenstructuur is strikt hiërarchisch opgebouwd
+    </a>
+  </li>
+  <li class='aan container nogiets enzovoort' id='c1-1-1'>
+    <a href='/inhoud/basisregels/html-tags/'>
+      Koppen, paragrafen, lijsten en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags
+    </a>
+  </li>
+  <li class='aan container nogiets enzovoort' id='c1-1-1'>
+    <a href='/inhoud/basisregels/linkteksten/'>
+      Het is duidelijk waar een link naartoe gaat, zelfs als je de omliggende tekst niet leest
+    </a>
+  </li>
+</ol>
+          </li>
+          <li>
+            <h3>Timing en beweging</h3>
+            <ol>
+  <li class='aan owner' id='c1-1-1'>
+    <a href='/inhoud/basisregels/paginatitels/'>
+      Iedere pagina heeft een unieke, relevante en betekenisvolle titel
+    </a>
+  </li>
+  <li class='aan frontend editor' id='c1-1-1'>
+    <a href='/inhoud/basisregels/koppenstructuur/'>
+      De koppenstructuur is strikt hiërarchisch opgebouwd
+    </a>
+  </li>
+  <li class='aan container nogiets enzovoort' id='c1-1-1'>
+    <a href='/inhoud/basisregels/html-tags/'>
+      Koppen, paragrafen, lijsten en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags
+    </a>
+  </li>
+  <li class='aan container nogiets enzovoort' id='c1-1-1'>
+    <a href='/inhoud/basisregels/linkteksten/'>
+      Het is duidelijk waar een link naartoe gaat, zelfs als je de omliggende tekst niet leest
+    </a>
+  </li>
+</ol>
+          </li>
+        </ol>
+      </section>
+   </li>
+   <li>
+      <section id="navigatie-en-interactie">
+        <h2>Navigatie en interactie</h2>
+        <ol>
+          <li>
+            <h3>Basisregels</h3>
+            <ol>
+  <li class='aan owner' id='c1-1-1'>
+    <a href='/inhoud/basisregels/paginatitels/'>
+      Iedere pagina heeft een unieke, relevante en betekenisvolle titel
+    </a>
+  </li>
+  <li class='aan frontend editor' id='c1-1-1'>
+    <a href='/inhoud/basisregels/koppenstructuur/'>
+      De koppenstructuur is strikt hiërarchisch opgebouwd
+    </a>
+  </li>
+  <li class='aan container nogiets enzovoort' id='c1-1-1'>
+    <a href='/inhoud/basisregels/html-tags/'>
+      Koppen, paragrafen, lijsten en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags
+    </a>
+  </li>
+  <li class='aan container nogiets enzovoort' id='c1-1-1'>
+    <a href='/inhoud/basisregels/linkteksten/'>
+      Het is duidelijk waar een link naartoe gaat, zelfs als je de omliggende tekst niet leest
+    </a>
+  </li>
+</ol>
+          </li>
+          <li>
+            <h3>Links en knoppen</h3>
+            <ol>
+  <li class='aan owner' id='c1-1-1'>
+    <a href='/inhoud/basisregels/paginatitels/'>
+      Iedere pagina heeft een unieke, relevante en betekenisvolle titel
+    </a>
+  </li>
+  <li class='aan frontend editor' id='c1-1-1'>
+    <a href='/inhoud/basisregels/koppenstructuur/'>
+      De koppenstructuur is strikt hiërarchisch opgebouwd
+    </a>
+  </li>
+  <li class='aan container nogiets enzovoort' id='c1-1-1'>
+    <a href='/inhoud/basisregels/html-tags/'>
+      Koppen, paragrafen, lijsten en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags
+    </a>
+  </li>
+  <li class='aan container nogiets enzovoort' id='c1-1-1'>
+    <a href='/inhoud/basisregels/linkteksten/'>
+      Het is duidelijk waar een link naartoe gaat, zelfs als je de omliggende tekst niet leest
+    </a>
+  </li>
+</ol>
+          </li>
+          <li>
+            <h3>Formulieren</h3>
+            <ol>
+  <li class='aan owner' id='c1-1-1'>
+    <a href='/inhoud/basisregels/paginatitels/'>
+      Iedere pagina heeft een unieke, relevante en betekenisvolle titel
+    </a>
+  </li>
+  <li class='aan frontend editor' id='c1-1-1'>
+    <a href='/inhoud/basisregels/koppenstructuur/'>
+      De koppenstructuur is strikt hiërarchisch opgebouwd
+    </a>
+  </li>
+  <li class='aan container nogiets enzovoort' id='c1-1-1'>
+    <a href='/inhoud/basisregels/html-tags/'>
+      Koppen, paragrafen, lijsten en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags
+    </a>
+  </li>
+  <li class='aan container nogiets enzovoort' id='c1-1-1'>
+    <a href='/inhoud/basisregels/linkteksten/'>
+      Het is duidelijk waar een link naartoe gaat, zelfs als je de omliggende tekst niet leest
+    </a>
+  </li>
+</ol>
+          </li>
+          <li>
+            <h3>Paginawijzigingen</h3>
+            <ol>
+  <li class='aan owner' id='c1-1-1'>
+    <a href='/inhoud/basisregels/paginatitels/'>
+      Iedere pagina heeft een unieke, relevante en betekenisvolle titel
+    </a>
+  </li>
+  <li class='aan frontend editor' id='c1-1-1'>
+    <a href='/inhoud/basisregels/koppenstructuur/'>
+      De koppenstructuur is strikt hiërarchisch opgebouwd
+    </a>
+  </li>
+  <li class='aan container nogiets enzovoort' id='c1-1-1'>
+    <a href='/inhoud/basisregels/html-tags/'>
+      Koppen, paragrafen, lijsten en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags
+    </a>
+  </li>
+  <li class='aan container nogiets enzovoort' id='c1-1-1'>
+    <a href='/inhoud/basisregels/linkteksten/'>
+      Het is duidelijk waar een link naartoe gaat, zelfs als je de omliggende tekst niet leest
+    </a>
+  </li>
+</ol>
+          </li>
+        </ol>
+      </section>
+   </li>
+   <li>
+    <section id="onder-de-motorkap">
+      <h2>Onder de motorkap</h2>
+      <ol>
+        <li>
+          <h3>Markup</h3>
+          <ol>
+  <li class='aan' id='c1-1-1'>
+    <a href='/inhoud/basisregels/paginatitels/'>
+      Iedere pagina heeft een unieke, relevante en betekenisvolle titel
+    </a>
+  </li>
+  <li class='aan' id='c1-1-2'>
+    <a href='/inhoud/basisregels/html-tags/'>
+      Koppen, paragrafen, lijsten en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags
+    </a>
+  </li>
+  <li class='aan' id='c1-1-3'>
+    <a href='/inhoud/basisregels/koppenstructuur/'>
+      De koppenstructuur is strikt hiërarchisch opgebouwd
+    </a>
+  </li>
+  <li class='aan' id='c1-1-4'>
+    <a href='/inhoud/basisregels/linkteksten/'>
+      Het is duidelijk waar een link naartoe gaat, zelfs als je de omliggende tekst niet leest
+    </a>
+  </li>
+</ol>
+        </li>
+        <li>
+          <h3>(i)Frames</h3>
+          <ol>
+  <li class='aan' id='c1-2-1'>
+    <a href='/inhoud/afbeeldingen/belangrijke-afbeeldingen/'>
+      Belangrijke afbeeldingen hebben een alt-attribuut met een kernachtige beschrijving voor wie ze niet kan zien.
+    </a>
+  </li>
+  <li class='aan' id='c1-2-2'>
+    <a href='/inhoud/afbeeldingen/diagrammen-en-infografieken/'>
+      Diagrammen en (info)grafieken zijn uitvoerig beschreven op de pagina zelf of op een bijbehorende pagina.
+    </a>
+  </li>
+  <li class='aan' id='c1-2-3'>
+    <a href='/inhoud/afbeeldingen/decoratieve-afbeeldingen/'>
+      Decoratieve afbeeldingen ziijn gedefinieerd in een stijlblad of zijn als decorafief gemarkeerd (in het CMS of in de broncode).
+    </a>
+  </li>
+  <li class='aan uitzondering' id='c1-2-4'>
+    <a href='/inhoud/afbeeldingen/aanklikbare-afbeeldingen/'>
+      Als een afbeelding aanklikbaar is, zijn ook alle ijkpunten over linkteksten toegepast.
+    </a>
+  </li>
+  <li class='aan uitzondering' id='c1-2-5'>
+    <a href='/inhoud/afbeeldingen/afbeeldingen-van-tekst/'>
+      Afbeeldingen van tekst komen nergens voor.
+    </a>
+  </li>
+</ol>
+        </li>
+        <li>
+          <h3>Plug-in's</h3>
+          <ol>
+  <li class='aan' id='c1-2-1'>
+    <a href='/inhoud/afbeeldingen/belangrijke-afbeeldingen/'>
+      Belangrijke afbeeldingen hebben een alt-attribuut met een kernachtige beschrijving voor wie ze niet kan zien.
+    </a>
+  </li>
+  <li class='aan' id='c1-2-2'>
+    <a href='/inhoud/afbeeldingen/diagrammen-en-infografieken/'>
+      Diagrammen en (info)grafieken zijn uitvoerig beschreven op de pagina zelf of op een bijbehorende pagina.
+    </a>
+  </li>
+  <li class='aan' id='c1-2-3'>
+    <a href='/inhoud/afbeeldingen/decoratieve-afbeeldingen/'>
+      Decoratieve afbeeldingen ziijn gedefinieerd in een stijlblad of zijn als decorafief gemarkeerd (in het CMS of in de broncode).
+    </a>
+  </li>
+  <li class='aan uitzondering' id='c1-2-4'>
+    <a href='/inhoud/afbeeldingen/aanklikbare-afbeeldingen/'>
+      Als een afbeelding aanklikbaar is, zijn ook alle ijkpunten over linkteksten toegepast.
+    </a>
+  </li>
+  <li class='aan uitzondering' id='c1-2-5'>
+    <a href='/inhoud/afbeeldingen/afbeeldingen-van-tekst/'>
+      Afbeeldingen van tekst komen nergens voor.
+    </a>
+  </li>
+</ol>
+        </li>
+      </ol>
+    </section>
+   </li>
+  </ol>
 
 </div>
 
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+  <script>
+    $(function() {
+      $('input:checked').change(function() {
+        if (this.checked)
+          $('#richtlijnen .'+this.name).removeClass('uit').addClass('aan');
+        else
+          $('#richtlijnen .'+this.name).removeClass('aan').addClass('uit');
+      })
+    });
+  </script>
 </body>
 </html>

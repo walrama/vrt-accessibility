@@ -17,33 +17,47 @@
 		</style>
 	</head>
 	<body class="markdown-body">
-		<h1>VRT-Toegankelijkheidsrichtlijnen</h1>
-		<nav id="filters" role="navigation" class="hide">
-			<label>
-				<input type="checkbox" />
-				Eindverantwoordelijken van digitale producten
-			</label>
-			<label>
-				<input type="checkbox" />
-				Makers en leveranciers van inhoud (‘Content Creators’)
-			</label>
-			<label>
-				<input type="checkbox" />
-				Webdesigners en front-end ontwikkelaars
-			</label>
-			<label>
-				<input type="checkbox" />
-				Back-end ontwikkelaars
-			</label>
-			<label>
-				<input type="checkbox" />
-				Informatie-architecten en UX’ers
-			</label>
-			<label>
-				<input type="checkbox" />
-				Grafisch Vormgevers
-			</label>
-		</nav>
-<p>Dit is de richtlijn over <strong>paginatitels</strong> hier.</p>
+		<h1>VRT-Toegankelijkheidsrichtlijnen voor websites</h1>
+
+
+<p class="waar">
+  Deze richtlijn hoort in <a href="/inhoud">Inhoud</a> › <a href="/inhoud/basisregels">Basisregels</a>
+</p>
+
+<h2 id="iederewebpaginaheefteenuniekerelevanteenbetekenisvolletitel">Iedere webpagina heeft een unieke, relevante en betekenisvolle titel</h2>
+
+<p>Een betekenisvolle paginatitel vat de inhoud of het doel van een pagina bondig samen en is verschillend op iedere pagina van de website. Je gebruikt hiervoor het <code>&lt;title&gt;</code>-element.</p>
+
+<h3 id="waarom">Waarom?</h3>
+
+<p>Paginatitels zijn voor iedere bezoeker een belangrijke oriëntatiehulp. Een titel&#8230;</p>
+
+<ul>
+<li>is zichtbaar in de titel- of menubalk en in tabbladen van een webbrowser;</li>
+<li>wordt gebruikt in de resultaatlijsten van zoekmachines;</li>
+<li>is de standaardbenaming wanneer je een favoriet maakt van een pagina;</li>
+<li>is het eerste wat een screenreader voorleest bij het openen van een webpagina.</li>
+</ul>
+
+<h3 id="aanbevelingen">Aanbevelingen</h3>
+
+<p>De naam van de site plaatst je best achteraan in de paginatitel. De breedte van tabbladen, geminimaliseerde vensters in de taakbalk van Windows en favorietenlijsten is vaak beperkt waardoor de titel wordt ingekort. Het bespaart blinde bezoekers ook tijd als ze eerst de titel van een pagina en verveolgens pas de naam van de website te horen krijgen.</p>
+
+<p>
+  <a href="#">Volgende richtlijn</a>
+</p>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+  <script>
+    $(function() {
+      $('input:checked').change(function() {
+        if (this.checked)
+          $('#richtlijnen .'+this.name).removeClass('uit').addClass('aan');
+        else
+          $('#richtlijnen .'+this.name).removeClass('aan').addClass('uit');
+      })
+    });
+  </script>
 </body>
 </html>

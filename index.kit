@@ -1,37 +1,120 @@
 <!-- @import /_onderdelen/_bovenaan.kit -->
 
+<nav id="filters" role="navigation" class="hide">
+  <label>
+    <input type="checkbox" checked="checked" name="owner" />
+    Eindverantwoordelijken van digitale producten
+  </label>
+  <label>
+    <input type="checkbox" name="editor" />
+    Makers en leveranciers van inhoud (‘Content Creators’)
+  </label>
+  <label>
+    <input type="checkbox" name="frontend" />
+    Webdesigners en front-end ontwikkelaars
+  </label>
+  <label>
+    <input type="checkbox" name="backend" />
+    Back-end ontwikkelaars
+  </label>
+  <label>
+    <input type="checkbox" name="ux" />
+    Informatie-architecten en UX’ers
+  </label>
+  <label>
+    <input type="checkbox" name="design" />
+    Grafisch Vormgevers
+  </label>
+</nav>
+
 <div id="richtlijnen" role="main">
 
-  <section id="inhoud">
-    <h2>Inhoud</h2>
-    <h3>1.1. Basisregels</h3>
-    <!-- @import /inhoud/basisregels/toc.kit -->
-    <h3>1.2. Afbeeldingen</h3>
-    <h3>1.3. Video en audio</h3>
-    <h3>1.4. Tabellen en infografieken</h3>
-  </section>
-
-  <section id="vormgeving">
-    <h2>Vormgeving</h2>
-    <h3>2.1. Tekst- en paginaopmaak</h3>
-    <h3>2.2. Kleuren en contrasten</h3>
-    <h3>2.3. Timing en beweging</h3>
-  </section>
-
-  <section id="navigatie-en-interactie">
-    <h2>Navigatie en interactie</h2>
-    <h3>3.1. Basisregels</h3>
-    <h3>3.2. Links en knoppen</h3>
-    <h3>3.3. Formulieren</h3>
-    <h3>3.4. Paginawijzigingen</h3>
-  </section>
-
-  <section id="onder-de-motorkap">
-    <h2>Onder de motorkap</h2>
-    <h3>4.1. Markup</h3>
-    <h3>4.2. Frames en iFrames</h3>
-    <h3>4.2. Plug-in's</h3>
-  </section>
+  <ol class="categorie">
+   <li>
+      <section id="inhoud">
+        <h2>Inhoud</h2>
+        <ol class="subcategorie">
+          <li class="no-cout">
+            <h3>Basisregels</h3>
+            <!-- @import /inhoud/basisregels/toc.kit -->
+          </li>
+          <li>
+            <h3>Afbeeldingen</h3>
+            <!-- @import /inhoud/afbeeldingen/toc.kit -->
+          </li>
+          <li>
+            <h3>Video en audio</h3>
+            <!-- @import /inhoud/video-en-audio/toc.kit -->
+          </li>
+          <li>
+            <h3>Tabellen en infografieken</h3>
+            <!-- @import /inhoud/tabellen-en-infografieken/toc.kit -->
+          </li>
+        </ol>
+      </section>
+     </li>
+     <li>
+      <section id="vormgeving">
+        <h2>Vormgeving</h2>
+        <ol>
+          <li>
+            <h3>Tekst- en paginaopmaak</h3>
+            <!-- @import /vormgeving/tekst-en-paginaopmaak/toc.kit -->
+          </li>
+          <li>
+            <h3>Kleuren en contrasten</h3>
+            <!-- @import /vormgeving/kleuren-en-contrasten/toc.kit -->
+          </li>
+          <li>
+            <h3>Timing en beweging</h3>
+            <!-- @import /vormgeving/timing-en-beweging/toc.kit -->
+          </li>
+        </ol>
+      </section>
+   </li>
+   <li>
+      <section id="navigatie-en-interactie">
+        <h2>Navigatie en interactie</h2>
+        <ol>
+          <li>
+            <h3>Basisregels</h3>
+            <!-- @import /navigatie-en-interactie/basisregels/toc.kit -->
+          </li>
+          <li>
+            <h3>Links en knoppen</h3>
+            <!-- @import /navigatie-en-interactie/links-en-knoppen/toc.kit -->
+          </li>
+          <li>
+            <h3>Formulieren</h3>
+            <!-- @import /navigatie-en-interactie/formulieren/toc.kit -->
+          </li>
+          <li>
+            <h3>Paginawijzigingen</h3>
+            <!-- @import /navigatie-en-interactie/paginawijzigingen/toc.kit -->
+          </li>
+        </ol>
+      </section>
+   </li>
+   <li>
+    <section id="onder-de-motorkap">
+      <h2>Onder de motorkap</h2>
+      <ol>
+        <li>
+          <h3>Markup</h3>
+          <!-- @import /inhoud/basisregels/toc.kit -->
+        </li>
+        <li>
+          <h3>(i)Frames</h3>
+          <!-- @import /inhoud/afbeeldingen/toc.kit -->
+        </li>
+        <li>
+          <h3>Plug-in's</h3>
+          <!-- @import /inhoud/afbeeldingen/toc.kit -->
+        </li>
+      </ol>
+    </section>
+   </li>
+  </ol>
 
 </div>
 

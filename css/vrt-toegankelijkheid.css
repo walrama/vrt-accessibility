@@ -1,3 +1,6 @@
+body {
+  background: #fff; }
+
 nav#filters {
   border: 1px solid gray;
   padding: 1em; }
@@ -20,20 +23,63 @@ nav#filters {
   nav#filters label {
     display: block; }
 
+/*  Richtlijn detail */
+p.waar {
+  border: 1px solid #aaa;
+  padding: .5em 1em;
+  background: #eee; }
+
+/*  Verschillende statuusen */
+#richtlijnen ol {
+  counter-reset: item;
+  padding-left: 10px; }
+#richtlijnen li {
+  display: block; }
+#richtlijnen li:before {
+  content: counters(item,".") " ";
+  counter-increment: item; }
+#richtlijnen ol.categorie, #richtlijnen ol.subcategorie > li:before {
+  content: ""; }
+
+ol.categorie {
+  background: red; }
+
+.no-count {
+  display: none; }
+
+#categorie ol {
+  counter-reset: item;
+  padding-left: 10px; }
+#categorie li {
+  display: block; }
+#categorie.inhoud li:before {
+  content: "1." counters(item,".") " ";
+  counter-increment: item; }
+#categorie.vormgeving li:before {
+  content: "2." counters(item,".") " ";
+  counter-increment: item; }
+#categorie.navigatie-en-interactie li:before {
+  content: "3." counters(item,".") " ";
+  counter-increment: item; }
+#categorie.onder-de-motorkap li:before {
+  content: "4." counters(item,".") " ";
+  counter-increment: item; }
+
+#richtlijnen li h3 {
+  display: inline-block; }
+
+#richtlijnen li.aan {
+  font-weight: bold;
+  background: #eee;
+  color: gray; }
+#richtlijnen li.uit {
+  opacity: 0.5; }
+#richtlijnen li.uitzondering {
+  background: red; }
+
 #richtlijnen section {
   border: 1px dotted #aaa;
   padding: .25em 2em 1.25em 2em;
   margin: 0 0 2em 0;
   box-shadow: 0 0 25px #eee;
   background: white; }
-  #richtlijnen section ul {
-    counter-reset: item;
-    list-style-type: decimal;
-    text-indent: 0;
-    margin-left: 0;
-    padding-left: 1em; }
-  #richtlijnen section ul li {
-    list-style: none; }
-  #richtlijnen section ul li:before {
-    content: "1.1." counter(item,decimal) ". ";
-    counter-increment: item; }
