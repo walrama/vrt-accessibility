@@ -815,7 +815,7 @@
 		},
 	"\/onder-de-motorkap\/frames\/toc.kit": {
 		"fileType": 2048,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/onder-de-motorkap\/frames\/toc.kit",
 		"outputAbbreviatedPath": "\/onder-de-motorkap\/frames\/toc.html",
@@ -833,7 +833,7 @@
 		},
 	"\/onder-de-motorkap\/markup\/toc.kit": {
 		"fileType": 2048,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/onder-de-motorkap\/markup\/toc.kit",
 		"outputAbbreviatedPath": "\/onder-de-motorkap\/markup\/toc.html",
@@ -851,7 +851,7 @@
 		},
 	"\/onder-de-motorkap\/plug-ins\/toc.kit": {
 		"fileType": 2048,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/onder-de-motorkap\/plug-ins\/toc.kit",
 		"outputAbbreviatedPath": "\/onder-de-motorkap\/plug-ins\/toc.html",
