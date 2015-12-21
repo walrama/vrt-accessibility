@@ -18,7 +18,65 @@
 	</head>
 	<body class="markdown-body">
 		<h1>VRT-Toegankelijkheidsrichtlijnen voor websites</h1>
-<p>Dit is de inhoud van 1&#8211;1&#8211;1</p>
+<h2 id="koppenparagrafenlijstenencitatenzijngemarkeerdmetdedaarvoorbedoeldehtml-tags">Koppen, paragrafen, lijsten en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags</h2>
+
+<p>Gebruik de juiste <strong>HTML-tags</strong> voor het markeren van de verschillende elementen op een pagina of in een artikel:</p>
+
+<ul>
+<li>Koppen en tussentitels: <code>&lt;h1&gt;</code> t.e.m. <code>&lt;h6&gt;</code></li>
+<li>Paragrafen: <code>&lt;p&gt;</code></li>
+<li>Opsommingen: <code>&lt;ul&gt;</code> voor de lijst en <code>&lt;li&gt;</code> voor de lijstonderdelen</li>
+<li>Citaten: <code>&lt;blockquote&gt;</code></li>
+</ul>
+
+<h3 id="hoedoejedat">Hoe doe je dat?</h3>
+
+<ul>
+<li>Als je een <strong>CMS gebruikt</strong>, hoef je gelukkig zelf geen HTML te schrijven. In een zgn. <abbr title="What You See is What You Get" lang="en">WYSIWYG</abbr>-tekstgebied zitten meestal handige knopjes om koppen en lijsten toe te voegen. Zorg er wel voor dat je tussenkoppen niet gewoon vet maakt, maar dat je het juiste <strong>kopniveau</strong> kiest. De stijl van de koppen is meestal is in principe vastgelegd in een stijlblad.</li>
+<li>Als je een <strong>CMS bouwt</strong> of laat bouwen, moet je er natuurlijk wel op letten dat nette HTML-code geproduceerd wordt.</li>
+</ul>
+
+<h3 id="waaromishetbelangrijk">Waarom is het belangrijk?</h3>
+
+<ul>
+<li>Als een pagina netjes gestructureerd is, kan een schermlezer automatisch <strong>inhoudstafels</strong> maken en lijsten met verschillende niveaus <strong>beter doorzoekbaar</strong> maken. Dat bespaart blinde bezoekers erg veel tijd tijdens het surfen.</li>
+<li>Ook Google en andere zoekmachines zullen je website nauwkeuriger kunnen <strong>indexeren</strong> als de HTML-structuur van je pagina&#8217;s goed zit.</li>
+<li>Gestructureerde pagina&#8217;s passen zich bovendien beter aan aan <strong>persoonlijke stijlbladen</strong>. Met behulp daarvan passen slechtzienden de kleur, het lettertype, de tekengrootte en de positie van tekst- en paginadelen aan om artikels beter te kunnen lezen.</li>
+<li>Als de algemene <strong>vormgeving</strong> van een website gewijzigd wordt (door de stijlbladen te bewerken), dan past de eerder gepubliceerde inhoud zich hieraan moeiteloos aan.</li>
+<li>In oude browsers en op oude GSM-toestellen (de zgn. &#8216;feature phones&#8217; is er <strong>basisopmaak</strong> gegarandeerd.</li>
+</ul>
+
+<h3 id="voorbeelden">Voorbeelden</h3>
+
+<h4 id="goedvoorbeeld">Goed voorbeeld</h4>
+
+<pre><code>&lt;h1&gt;Wie gaat vanavond naar huis met een MIA?&lt;/h1&gt;
+&lt;h2&gt;Genomineerden in de categorie 'Dance'&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;…&quot;&gt;Lost Frequencies&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;…&quot;&gt;Netsky&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;…&quot;&gt;Raving George&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Genomineerden in de categorie 'Pop'&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;…&quot;&gt;Emma Bale&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;…&quot;&gt;Oscar And The Wolf&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;…&quot;&gt;Sela Sue&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<h4 id="slechtvoorbeeld">Slecht voorbeeld</h4>
+
+<pre><code>&lt;div class=&quot;headingBig&quot;&gt;Wie gaat vanavond naar huis met een MIA?&lt;/div&gt;
+&lt;div class=&quot;headingMedium&quot;&gt;Genomineerden in de categorie 'Dance'&lt;/div&gt;
+• &lt;a href=&quot;…&quot;&gt;Lost Frequencies&lt;/a&gt;&lt;br /&gt;
+• &lt;a href=&quot;…&quot;&gt;Netsky&lt;/a&gt;&lt;br /&gt;
+• &lt;a href=&quot;…&quot;&gt;Raving George&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;div class=&quot;headingMedium&quot;&gt;Genomineerden in de categorie 'Pop'&lt;/div&gt;
+• &lt;a href=&quot;…&quot;&gt;Emma Bale&lt;/a&gt;&lt;br /&gt;
+• &lt;a href=&quot;…&quot;&gt;Oscar And The Wolf&lt;/a&gt;&lt;br /&gt;
+• &lt;a href=&quot;…&quot;&gt;Sela Sue&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+</code></pre>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
   <script>
