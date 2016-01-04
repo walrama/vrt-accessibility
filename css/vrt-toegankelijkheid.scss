@@ -74,6 +74,12 @@ p.waar {
   }
 }
 
+h2 + p {
+	border: 1px dashed black !important;
+	background: #eee;
+	padding: 1em;
+}
+
 #richtlijnen li {
   h1, h2, h3 {
     display: inline-block !important;
