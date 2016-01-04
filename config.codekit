@@ -857,7 +857,7 @@
 		},
 	"\/markdown\/html\/1-2-1.html": {
 		"fileType": 8192,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/markdown\/html\/1-2-1.html",
 		"outputAbbreviatedPath": "No Output Path",
@@ -884,7 +884,7 @@
 		},
 	"\/markdown\/html\/1-2-4.html": {
 		"fileType": 8192,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/markdown\/html\/1-2-4.html",
 		"outputAbbreviatedPath": "No Output Path",
