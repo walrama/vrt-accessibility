@@ -1,5 +1,8 @@
 body {
   background: #fff;
+  a {
+	text-decoration: underline !important;
+	}
 }
 
 nav#filters {
@@ -45,8 +48,8 @@ p.waar {
 #richtlijnen {
   ol { counter-reset: item; padding-left: 10px; }
   li { display: block }
-  li:before { content: counters(item, ".") " "; counter-increment: item; }
-  ol.categorie, ol.subcategorie > li:before { content: "" }
+  li:before { content: counters(item, ".") ". "; counter-increment: item; }
+  ol.categorie > li:before, ol.subcategorie > li:before { content: "" }
 }
 
 // ol.categorie {
@@ -57,22 +60,24 @@ p.waar {
 //   display: none;
 // }
 
-#categorie {
-  ol { counter-reset: item; padding-left: 10px; }
-  li { display: block }
-  &.inhoud {
-    li:before { content: "1." counters(item, ".") " "; counter-increment: item }
-  }
-  &.vormgeving {
-    li:before { content: "2." counters(item, ".") " "; counter-increment: item }
-  }
-  &.navigatie-en-interactie {
-    li:before { content: "3." counters(item, ".") " "; counter-increment: item }
-  }
-  &.onder-de-motorkap {
-    li:before { content: "4." counters(item, ".") " "; counter-increment: item }
-  }
-}
+//
+// #categorie {
+//   ol { counter-reset: item; padding-left: 10px; }
+//   li { display: block }
+//   &.inhoud {
+//     li li:before { content: "1." counters(item, ".") ". "; counter-increment: item }
+//   }
+//   &.vormgeving {
+//     li li:before { content: "2." counters(item, ".") ". "; counter-increment: item }
+//   }
+//   &.navigatie-en-interactie {
+//     li li:before { content: "3." counters(item, ".") ". "; counter-increment: item }
+//   }
+//   &.onder-de-motorkap {
+//     li li:before { content: "4." counters(item, ".") ". "; counter-increment: item }
+//   }
+// }
+
 
 h2 + p {
 	border: 1px dashed black !important;
@@ -84,6 +89,17 @@ h2 + p {
   h1, h2, h3 {
     display: inline-block !important;
   }
+}
+
+h1 {
+	border-bottom: 5px solid black !important;
+}
+
+#richtlijnen h2 {
+	background: gray;
+	color: white;
+	padding: .25em .75em;
+	margin: 2em 0 0 0;
 }
 
 #richtlijnen li {

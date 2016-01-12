@@ -17,13 +17,13 @@
 		</style>
 	</head>
 	<body class="markdown-body">
-		<h1>VRT-Toegankelijkheidsrichtlijnen voor websites</h1>
+		<h1>VRT-kwaliteitsvereisten voor toegankelijke websites, webapplicaties en elektronische nieuwsbrieven</h1>
 <p class="waar hide">
   Deze richtlijn hoort in <a href="/inhoud">Inhoud</a> › <a href="/inhoud/basisregels">Basisregels</a>
 </p>
 <h2 id="hetisaltijdduidelijkwaareenlinknaartoegaatooklosvandeomliggendetekst">Het is altijd duidelijk waar een link naartoe gaat, ook los van de omliggende tekst</h2>
 
-<p>Als je een link maakt van een stukje tekst, gebruik dan een <strong>betekenisvol stukje</strong>. Beeld je even in dat je de omliggende tekst niet kan lezen. Is het dan nog duidelijk waar je zal belanden als je op de link klikt?</p>
+<p>Als je een link aanbrengt in een zin, kies dan een <strong>betekenisvol woord of fragment</strong>. Beeld je even in dat je de omliggende tekst niet kan lezen. Is het dan nog duidelijk waar je zal belanden als je op de link klikt?</p>
 
 <h3 id="voorbeelden">Voorbeelden</h3>
 
@@ -45,7 +45,7 @@
 
 <h3 id="blokjesmetleesmeereronder">Blokjes met &#8216;Lees meer&#8217; eronder</h3>
 
-<p>Op homepages en overzichtspagina&#8217;s vind je vaak blokjes met <strong>Lees meer</strong> eronder. Dat is toegestaan, maar zorg er dan wel voor dat de titel van het artikel (met dezelfde bestemming) <strong>ook een link</strong> is. Als het even kan, vermijd het gebruik van nietszeggende links dan helemaal.</p>
+<p>Op homepages en overzichtspagina&#8217;s vind je vaak blokjes met een link <strong>Lees meer</strong> eronder. Dat is toegestaan, maar zorg er dan wel voor dat de titel van het artikel (met dezelfde bestemming) <strong>ook een link</strong> is. Als het even kan, vermijd het gebruik van nietszeggende links dan helemaal.</p>
 
 <h3 id="afbeeldingenalslinkgebruiken">Afbeeldingen als link gebruiken</h3>
 
@@ -60,7 +60,7 @@
 
 <h3 id="stukjesvanlinksverbergen">Stukjes van links verbergen</h3>
 
-<p>Met CSS is het mogelijk om stukjes tekst te <strong>verbergen</strong>. Afhankelijk van hoe deze techniek toegepast is, worden deze stukjes tekst toch voorgelezen door screenreaders. Zo kan je extra informatie toevoegen aan links om het gebruiksgemak voor blinde bezoekers te verbeteren.</p>
+<p>Met CSS is het mogelijk om stukjes tekst te <strong>verbergen</strong>. Afhankelijk van hoe deze techniek toegepast is, worden deze stukjes tekst toch voorgelezen door schermlezers. Zo kan je <strong>extra informatie</strong> toevoegen aan links om iets te verduidelijken voor blinde bezoekers.</p>
 
 <h4 id="voorbeeld:">Voorbeeld:</h4>
 
@@ -85,15 +85,17 @@
 
 <h3 id="tooltips">Tooltips</h3>
 
-<p>In HTML kan je eenvoudig <strong>tooltips</strong> toevoegen aan hyperlinks met behulp van het <code>title</code>-attribuut. Dat mag, maar gebruik ze niet voor belangrijke informatie of om een onduidelijke link beter te maken. Op smartphones en tablets verschijnen de tooltips immers niet en ook blinde bezoekers krijgen de informatie vaak niet voorgelezen (afhankelijk van de schermlezer die ze gebruiken).</p>
+<p>In HTML kan je <strong>tooltips</strong> toevoegen aan hyperlinks met behulp van het <code>title</code>-attribuut. In de meeste browsers verschijnt er een (geel) tekstbalkje als je met je muis over een link met een tooltip beweegt.</p>
+
+<p>Tooltips zijn toegestaan, maar gebruik ze niet voor <strong>belangrijke informatie</strong> of om een onduidelijke link beter te maken. Op <strong>smartphones en tablets</strong> verschijnen de tooltips immers <strong>niet</strong> en ook blinde bezoekers krijgen de informatie vaak niet voorgelezen (afhankelijk van de schermlezer die ze gebruiken).</p>
 
 <h2 id="andereaandachtspunten">Andere aandachtspunten</h2>
 
 <ul>
-<li>Als je PDF&#8217;s of andere documenten aanbiedt, is het een goed idee om het <strong>bestandstype</strong> en de <strong>grootte</strong> toe te voegen aan de linktekst. Zo kan een bezoeker gemakkelijker beslissen of het wel de moeite loont om een document te downloaden.</li>
-<li>Links die op het scherm niet zichtbaar zijn, zijn soms wel waarneembaar door blinde bezoekers. Vaak gaat het om verwijderde links waarvan een <strong>restje</strong> (<code>&lt;a href=&quot;…&quot;&gt;&lt;a/&gt;</code>) is achtergebleven in de broncode. Een screenreader zal zulke links aankondigen als &#8216;onbenoemd&#8217;, en dat is verwarrend. Verwijder zulke restjes.</li>
-<li>Geef links met <strong>hetzelfde doel</strong> <strong>dezelfde linktekst</strong>. Alle links naar de contactpagina markeer je dus best als <code>&lt;a href=&quot;/nl/contact&quot;&gt;Contact&lt;/a&gt;</code>. Zo voorkom je dat een schermlezer dezelfde link meerdere keren voorleest.</li>
-<li>Kijk de website regelmatig na op <strong>dode links</strong>. Je zou er versteld van staan hoe vaak ze voorkomen. Gebruik bijvoorbeeld de <a href="http://validator.w3.org/checklink">gratis Link Checker van het W3C</a>.</li>
+<li>Als je PDF&#8217;s of andere documenten aanbiedt, is het een goed idee om het <strong>bestandstype</strong> en de <strong>grootte</strong> toe te voegen aan de linktekst. Zo kan een bezoeker gemakkelijker beslissen of het wel de moeite loont om zo&#8217;n document te downloaden.</li>
+<li>Links die op het scherm niet zichtbaar zijn, zijn soms wel waarneembaar door blinde bezoekers. Vaak gaat het om verwijderde links waarvan een <strong>restje</strong> (<code>&lt;a href=&quot;…&quot;&gt;&lt;a/&gt;</code>) is achtergebleven in de broncode. Een schermlezer zal zulke links aankondigen als &#8216;onbenoemd&#8217; of &#8216;unnamed&#8217;, en dat is verwarrend. Verwijder zulke restjes.</li>
+<li>Geef links met <strong>hetzelfde doel</strong> <strong>dezelfde linktekst</strong>. Alle links naar de contactpagina markeer je dus best als <code>&lt;a href=&quot;/nl/contact&quot;&gt;Contact&lt;/a&gt;</code>. Zo voorkom je dat een schermlezer dezelfde link meermaals voorleest.</li>
+<li>Kijk de website regelmatig na op <strong>dode links</strong>. Ze komen vaker voor dan je zou denken. Gebruik hiervoor bijvoorbeeld de <a href="http://validator.w3.org/checklink">gratis Link Checker van het W3C</a>.</li>
 </ul>
 
 <h2 id="voorwieishetnuttig">Voor wie is het nuttig?</h2>
@@ -104,7 +106,7 @@
 
 <h3 id="zoekmachineoptimalisatie">Zoekmachineoptimalisatie</h3>
 
-<p>Google en andere zoekmachines geven een hogere waardering aan websites met veel goede interne en externe links. Niet enkel de hyperlink zelf (http://&#8230;), maar ook de kwaliteit van de linktekst wordt door zoekmachines beoordeeld. Websites met informatieve en unieke linkteksten scoren daarom vaak beter.</p>
+<p>Google en andere zoekmachines geven een hogere waardering aan websites met veel goede interne en externe links. Zoekmachines beoordelen niet enkel de kwaliteit van de website waar je naar verwijst, maar ze hebben ook aandacht voor de linktekst zelf. Websites met <strong>informatieve en unieke linkteksten</strong> scoren daarom vaak beter.</p>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
   <script>

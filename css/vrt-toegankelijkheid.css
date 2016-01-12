@@ -1,5 +1,7 @@
 body {
   background: #fff; }
+  body a {
+    text-decoration: underline !important; }
 
 nav#filters {
   border: 1px solid gray;
@@ -37,28 +39,10 @@ p.waar {
 #richtlijnen li {
   display: block; }
 #richtlijnen li:before {
-  content: counters(item,".") " ";
+  content: counters(item,".") ". ";
   counter-increment: item; }
-#richtlijnen ol.categorie, #richtlijnen ol.subcategorie > li:before {
+#richtlijnen ol.categorie > li:before, #richtlijnen ol.subcategorie > li:before {
   content: ""; }
-
-#categorie ol {
-  counter-reset: item;
-  padding-left: 10px; }
-#categorie li {
-  display: block; }
-#categorie.inhoud li:before {
-  content: "1." counters(item,".") " ";
-  counter-increment: item; }
-#categorie.vormgeving li:before {
-  content: "2." counters(item,".") " ";
-  counter-increment: item; }
-#categorie.navigatie-en-interactie li:before {
-  content: "3." counters(item,".") " ";
-  counter-increment: item; }
-#categorie.onder-de-motorkap li:before {
-  content: "4." counters(item,".") " ";
-  counter-increment: item; }
 
 h2 + p {
   border: 1px dashed black !important;
@@ -67,6 +51,15 @@ h2 + p {
 
 #richtlijnen li h1, #richtlijnen li h2, #richtlijnen li h3 {
   display: inline-block !important; }
+
+h1 {
+  border-bottom: 5px solid black !important; }
+
+#richtlijnen h2 {
+  background: gray;
+  color: white;
+  padding: .25em .75em;
+  margin: 2em 0 0 0; }
 
 #richtlijnen li.aan {
   font-weight: bold; }
