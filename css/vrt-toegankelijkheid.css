@@ -1,7 +1,25 @@
 body {
-  background: #fff; }
+  background: #fff;
+  font-family: "proxima-nova-soft" !important; }
   body a {
     text-decoration: underline !important; }
+
+.clearfix:before,
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  zoom: 1;
+  /* IE < 8 */ }
+
+th {
+  text-align: left !important; }
 
 nav#filters {
   border: 1px solid gray;
@@ -11,6 +29,44 @@ li a {
   text-decoration: underline !important; }
   li a:hover, li a:active {
     text-decoration: none !important; }
+
+#vorige-volgende ul {
+  display: block;
+  height: 8em;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #444;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; }
+  #vorige-volgende ul li {
+    height: 8em;
+    display: block;
+    padding: 1.5em; }
+    #vorige-volgende ul li a {
+      color: white;
+      display: block;
+      text-decoration: none !important; }
+      #vorige-volgende ul li a span:nth-child(1) {
+        font-size: 130%;
+        display: block;
+        text-decoration: underline; }
+      #vorige-volgende ul li a span:nth-child(2) {
+        display: block;
+        font-size: 90%; }
+    #vorige-volgende ul li.vorige {
+      width: 45%;
+      text-align: left;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    #vorige-volgende ul li.volgende {
+      width: 35%;
+      text-align: right;
+      position: absolute;
+      top: 0;
+      right: 0; }
 
 nav#filters {
   display: none;
@@ -44,16 +100,21 @@ p.waar {
 #richtlijnen ol.categorie > li:before, #richtlijnen ol.subcategorie > li:before {
   content: ""; }
 
-h2 + p {
-  border: 1px dashed black !important;
-  background: #eee;
-  padding: 1em; }
-
+/*
+h2:first-of-type + p {
+	border: 1px dashed black !important;
+	background: #eee;
+	padding: 1em;
+}
+*/
 #richtlijnen li h1, #richtlijnen li h2, #richtlijnen li h3 {
   display: inline-block !important; }
 
 h1 {
-  border-bottom: 5px solid black !important; }
+  background: gray;
+  color: white;
+  padding: 1em;
+  width: auto; }
 
 #richtlijnen h2 {
   background: gray;
@@ -65,3 +126,40 @@ h1 {
   font-weight: bold; }
 #richtlijnen li.uit {
   opacity: 0.5; }
+
+form input[type=text], form textarea {
+  padding: .25em; }
+form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 1.35em 0; }
+  form fieldset legend {
+    padding: 0;
+    font-weight: bold;
+    font-size: 1.15em;
+    margin: 0 0 .35em 0; }
+form .block {
+  display: block;
+  margin: 0 0 .5em 0; }
+  form .block.small {
+    font-size: 90%;
+    margin: 0; }
+form .inline {
+  display: inline-block;
+  margin: 0 1em 0 0; }
+form .verzenden {
+  display: inline;
+  margin: 0 0 0 1em;
+  font-size: 80%; }
+form#feedback {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 2em 0 0 0;
+  background: #eee;
+  padding: 1.5em; }
+  form#feedback h3 {
+    margin: 0 0 .5em 0;
+    padding: 0; }
+  form#feedback input[type=submit] {
+    font-size: 10em !important;
+    padding: 1em; }

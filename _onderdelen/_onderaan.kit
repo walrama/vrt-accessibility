@@ -1,14 +1,100 @@
+	<!-- @import _feedback.kit -->
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+	<script src="/js/vendor/jquery.cookie.js"></script>
   <script>
+
     $(function() {
+
+			var rol = $.cookie('rol');
+			var anderefunctie = $.cookie('anderefunctie');
+			var naam = $.cookie('naam');
+			var email = $.cookie('email');
+
+			$('#feedback select[name="rol"]').val(rol);
+			$('#feedback input[name="anderefunctie"]').val(anderefunctie);
+			$('#feedback input[name="naam"]').val(naam);
+			$('#feedback input[name="email"]').val(email);
+
+			$('#feedback #opmerkingen, #feedback #rol, #feedback #wie, p.opmerkingen').hide();
+			if (rol != 'anderefunctie') $('#feedback #anderefunctie').hide();
+			$('#feedback #submit').attr('disabled','disabled');
+
+			$('#feedback input[name="duidelijk"]').change(function() {
+				duidelijk = $(this).val();
+				$('p.opmerkingen').hide();
+				$('p.opmerkingen.'+duidelijk).show();
+				$('#feedback #submit').removeAttr('disabled');
+				if (!$('#feedback #opmerkingen').hasClass('open')) {
+					$('#feedback #opmerkingen, #feedback #rol, #feedback #wie').fadeIn();
+					$("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
+					$('#feedback #opmerkingen textarea').focus();
+				}
+				else {
+					$('#feedback #opmerkingen').addClass('open');
+				}
+			});
+
+			$('#feedback select[name="rol"]').change(function() {
+				if ($(this).val() == 'anderefunctie') {
+					$('#anderefunctie').show().focus();
+				}
+				else {
+					$('#anderefunctie').hide();
+				}
+			});
+
+			$("#feedback").submit(function(e) {
+				$.ajax({
+				    url: "http://formspree.io/pmzyeykx",
+						data:  $(this).serializeArray(),
+				    method: "POST",
+				    dataType: "json",
+						beforeSend: function() {
+							$.cookie('rol', $('#feedback select[name="rol"]').val(), { expires: 7, path: '/' });
+							$.cookie('anderefunctie', $('#feedback input[name="anderefunctie"]').val(), { expires: 7, path: '/' });
+							$.cookie('naam', $('#feedback input[name="naam"]').val(), { expires: 7, path: '/' });
+							$.cookie('email', $('#feedback input[name="email"]').val(), { expires: 7, path: '/' });
+							$('#feedback #submit')
+								.attr('disabled','disabled')
+								.attr('value','Bezig met verzenden...');
+		        },
+						success: function(data, textStatus, jqXHR) {
+							$('#feedback #submit')
+								.attr('value','Verzonden');
+							$('#feedback *')
+								.fadeOut();
+							$('#feedback')
+								.load('/feedback/bedankt.html')
+								.fadeIn()
+								.focus();
+		        },
+						error: function(data, textStatus, jqXHR) {
+							$('#feedback #submit')
+								.attr('value','Er is iets misgelopen');
+							$('#feedback *')
+								.fadeOut();
+							$('#feedback')
+								.load('/feedback/fout.html')
+								.fadeIn()
+								.focus();
+		        }
+				});
+		    e.preventDefault();
+		    e.unbind();
+			});
+
+
       $('input:checked').change(function() {
         if (this.checked)
           $('#richtlijnen .'+this.name).removeClass('uit').addClass('aan');
         else
           $('#richtlijnen .'+this.name).removeClass('aan').addClass('uit');
       })
+
     });
+
   </script>
 </body>
 </html>

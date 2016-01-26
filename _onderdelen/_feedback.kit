@@ -1,0 +1,92 @@
+<form id="feedback" action="http://formspree.io/bmgraqrx" method="post">
+	<h3><i class="fa fa-comment-o"></i> Geef feedback op deze richtlijn</h3>
+	<p>Dankzij jouw feedback kunnen we deze richtlijn verbeteren. Ook vragen en suggesties zijn welkom.</p>
+	<fieldset id="duidelijk">
+		<legend>Vond je deze richtlijn duidelijk en volledig?</legend>
+		<label class="inline">
+			<input type="radio" name="duidelijk" value="ja" /> Ja
+		</label>
+		<label class="inline">
+			<input type="radio" name="duidelijk" value="min-of-meer" /> Min of meer
+		</label>
+		<label class="inline">
+			<input type="radio" name="duidelijk" value="nee" /> Nee
+		</label>
+	</fieldset>
+	<fieldset id="opmerkingen">
+		<legend>Optioneel: wat wil je kwijt?</legend>
+		<label>
+			<p class="opmerkingen ja">
+				Wat vind je goed aan deze richtlijn? Denk je dat de richtlijn ook voor anderen duidelijk is?
+			</p>
+			<p class="opmerkingen min-of-meer">
+				Vind je de omschrijving of voorbeelden niet helemaal duidelijk? Wat kan beter?
+			</p>
+			<p class="opmerkingen nee">
+				Heb je een fout geveonden, ontbreekt er iets of ben je het oneens met de inhoud? Wat kan beter?
+			</p>
+			<textarea name="opmerkingen" style="width: 100%" rows="10"></textarea>
+		</label>
+	</fieldset>
+	<fieldset id="rol">
+		<legend>Welke omschrijving past best bij je?</legend>
+		<label class="block">
+			Ik herken mezelf best in dit profiel:
+			<select name="rol" class="block">
+				<option value="vormgever">Grafisch vormgever</option>
+				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
+				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
+				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
+				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
+				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
+				<option value="ux">Digitaal architect of UX-expert</option>
+				<option value="pm">Project manager of Product owner</option>
+				<option value="baas">(Eind)verantwoordelijke voor een website of app</option>
+				<option value="anderefunctie">Iets helemaal anders</option>
+			</select>
+		</label>
+		<label id="anderefunctie" class="block">
+			<span class="block small">Omschrijf je functie of waarom je te maken krijgt met deze richtlijnen.</span>
+			<input type="text" name="anderefunctie" style="width: 100%" class="block" />
+		</label>
+	</fieldset>
+	<fieldset id="wie">
+		<legend>Optioneel: jouw gegevens</legend>
+		<p>
+			Misschien hebben we bijkomende vragen. Als je je naam en e-mailadres invult, kunnen we contact met je opnemen.
+		</p>
+		<label class="block">
+			<span class="block small">Volledige naam</span>
+			<input type="text" name="naam" style="width: 100%" class="block" />
+		</label>
+		<label class="block">
+			<span class="block small">E-mailadres</span>
+			<input type="text" name="email" style="width: 100%" class="block" />
+		</label>
+	</fieldset>
+	<label style="display: none"">
+		Als je dit veld ziet, laat het dan gewoon leeg. Het staat er enkel om spam te voorkomen.
+		<input type="text" name="_gotcha" disabled="disabled" />
+	</label>
+	<input type="hidden" name="_next" value="/feedback/bedankt.html" />
+	<input type="hidden" name="_subject" value="Feedback op VRT-Toegankelijkheidsrichtlijnen" />
+	<!-- <input type="hidden" name="_cc" value="marc.walraven@vrt.be" /> -->
+	<input type="submit" id="submit" value="Verstuur feedback" />
+</form>
+
+<nav id="vorige-volgende">
+	<ul class="clearfix">
+		<li class="vorige">
+			<a href="#">
+				<span><i class="fa fa-arrow-circle-left"></i> Vorige richtlijn</span>
+				<span>(Koppen, paragrafen, lijsten en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags)</span>
+			</a>
+		</li>
+		<li class="volgende">
+			<a href="#">
+				<span>Volgende richtlijn <i class="fa fa-arrow-circle-right"></i></span>
+				<span>(De koppenstructuur is strikt hiërarchisch)</span>
+			</a>
+		</li>
+	</ul>
+</nav>
