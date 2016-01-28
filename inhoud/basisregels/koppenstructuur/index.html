@@ -52,8 +52,7 @@
 <p>Als je toch het HTML5 outline-algoritme wil toepassen, voeg dan consequent <code>role=&quot;heading&quot;</code> en <code>aria-level=&quot;…&quot;</code> toe aan iedere kop. Zo begrijpen sommige schermlezers het beter.</p>
 
 <p><abbr title="Mozille Developer Network">MDN</abbr> heeft er een verhelderend duidelijk artikel over: <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">Sections and Outlines of an HTML5 Document</a></p>
-	<form id="feedback" data-forge-name="YOURFORMNAME">
-	<input data-forge-name="YOURFIELDNAME">
+	<form id="feedback" data-forge-name="VRT-FEEDBACK">
 	<h3><i class="fa fa-comment-o"></i> Geef feedback op deze richtlijn</h3>
 	<p>Dankzij jouw feedback kunnen we deze richtlijn verbeteren. Ook vragen en suggesties zijn welkom.</p>
 	<fieldset id="duidelijk">
@@ -106,7 +105,7 @@
 		</label>
 	</fieldset>
 	<fieldset id="wie">
-		<legend>Optioneel: je gegevens</legend>
+		<legend>Optioneel: jouw gegevens</legend>
 		<p>
 			Misschien hebben we bijkomende vragen. Als je je naam en e-mailadres invult, kunnen we contact met je opnemen.
 		</p>
@@ -154,7 +153,7 @@
     $(function() {
 
 			/* Fix skip links for screenreader users on all browsers */
-			$('[id]').attr('tabindex','-1').css('outline','none');
+			$(':header[id]').attr('tabindex','-1');
 			$("a[href^='#']").click(function() {
 				$("#"+$(this).attr("href").slice(1)+"").focus()
 			});

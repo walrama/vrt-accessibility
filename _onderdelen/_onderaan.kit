@@ -8,7 +8,7 @@
     $(function() {
 
 			/* Fix skip links for screenreader users on all browsers */
-			$('[id]').attr('tabindex','-1').css('outline','none');
+			$(':header[id]').attr('tabindex','-1');
 			$("a[href^='#']").click(function() {
 				$("#"+$(this).attr("href").slice(1)+"").focus()
 			});

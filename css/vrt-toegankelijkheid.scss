@@ -6,6 +6,11 @@ body {
 	}
 }
 
+/* Fix voor voorbeeldjes over focus */
+nav:focus {
+  outline: none;
+}
+
 .clearfix:before,
 .clearfix:after {
   content: ".";
