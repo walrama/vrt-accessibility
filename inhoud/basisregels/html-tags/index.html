@@ -230,9 +230,9 @@
 				}
 			});
 
-			$("#disabled-feedback").submit(function(e) {
+			$("#feedback").submit(function(e) {
 				$.ajax({
-				    url: "http://formspree.io/pmzyeykx",
+				    url: "https://getforge.com/api/form-data",
 						data:  $(this).serializeArray(),
 				    method: "POST",
 				    dataType: "json",
