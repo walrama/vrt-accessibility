@@ -20,7 +20,7 @@
 		</style>
 	</head>
 	<body class="markdown-body">
-		<h1>VRT-kwaliteitsvereisten voor toegankelijke websites, webapplicaties en elektronische nieuwsbrieven</h1>
+		<h1><a href="/">VRT-kwaliteitsvereisten voor toegankelijke websites, webapplicaties en elektronische nieuwsbrieven</a></h1>
 <p class="waar hide">
   Deze richtlijn hoort in <a href="/inhoud">Inhoud</a> › <a href="/inhoud/basisregels">Basisregels</a>
 </p>
@@ -85,7 +85,8 @@
   &lt;li&gt;&lt;a href=&quot;…&quot;&gt;Sela Sue&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
-	<form id="feedback" action="http://formspree.io/bmgraqrx" method="post">
+	<form id="feedback" data-forge-name="YOURFORMNAME">
+	<input data-forge-name="YOURFIELDNAME">
 	<h3><i class="fa fa-comment-o"></i> Geef feedback op deze richtlijn</h3>
 	<p>Dankzij jouw feedback kunnen we deze richtlijn verbeteren. Ook vragen en suggesties zijn welkom.</p>
 	<fieldset id="duidelijk">
@@ -148,7 +149,7 @@
 		</label>
 		<label class="block">
 			<span class="block small">E-mailadres</span>
-			<input type="text" name="email" style="width: 100%" class="block" />
+			<input type="text" data-forge-name="email" style="width: 100%" class="block" />
 		</label>
 	</fieldset>
 	<label style="display: none"">
@@ -184,6 +185,12 @@
   <script>
 
     $(function() {
+
+			/* Fix skip links for screenreader users on all browsers */
+			$('[id]').attr('tabindex','-1').css('outline','none');
+			$("a[href^='#']").click(function() {
+				$("#"+$(this).attr("href").slice(1)+"").focus()
+			});
 
 			var rol = $.cookie('rol');
 			var anderefunctie = $.cookie('anderefunctie');
@@ -223,7 +230,7 @@
 				}
 			});
 
-			$("#feedback").submit(function(e) {
+			$("#disabled-feedback").submit(function(e) {
 				$.ajax({
 				    url: "http://formspree.io/pmzyeykx",
 						data:  $(this).serializeArray(),
@@ -274,5 +281,13 @@
     });
 
   </script>
+	<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='https://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-73007524-1','auto');ga('send','pageview');
+    </script>
 </body>
 </html>

@@ -111,10 +111,8 @@ h2:first-of-type + p {
   display: inline-block !important; }
 
 h1 {
-  background: gray;
-  color: white;
-  padding: 1em;
-  width: auto; }
+  display: block;
+  border-bottom: 5px solid black !important; }
 
 #richtlijnen h2 {
   background: gray;
