@@ -1,0 +1,59 @@
+<h2 id="belangrijkeafbeeldingenhebbeneenalt-attribuutmeteenbondigebeschrijvingvanwatertezienis">Belangrijke afbeeldingen hebben een alt-attribuut met een bondige beschrijving van wat er te zien is</h2>
+
+<p>Beeld je in dat je de afbeeldingen op een webpagina of in een nieuwsbrief niet kan zien. Net als een blinde bezoeker dus. Mis je dan belangrijke informatie? Als iemand de afbeelding voor je zou moeten beschrijven, wat wil je dan zeker weten? Dat vermeld je in het <code>alt</code>-attribuut van de <code>&lt;img&gt;</code>-tag.</p>
+
+<h3 id="enkelevuistregels">Enkele vuistregels</h3>
+
+<ul>
+<li>Hou de beschrijving <strong>beknopt</strong> en gebruik <strong>eenvoudige taal</strong>. De kleur van iemands haar of ogen hoef je bv. niet te beschrijven, tenzij dat écht relevant is in de context van het artikel.</li>
+<li>Volzinnen zijn meestal niet nodig. Vaak volstaan <strong>enkele woorden</strong>. Beperk de beschrijving tot ongeveer 80 karakters.</li>
+<li>Start de beschrijving niet met &#8216;Afbeelding van…&#8217;, &#8216;Hier ziet u…&#8217; of &#8216;Foto: …&#8217;. Schermlezers die blinden gebruiken, kondigen zelf aan wanneer ze de beschrijving van een afbeelding gaan voorlezen.</li>
+<li>Het <code>alt</code>-attribuut is niet de meest geschikte plaats voor de naam van de fotograaf of copyright-informatie. Die vermeld je best onder de foto, voor iedereen zichtbaar.</li>
+</ul>
+
+<h3 id="goedevoorbeelden">Goede voorbeelden</h3>
+
+<ul>
+<li><code>&lt;img src=&quot;cover.png?id=665145&quot; alt=&quot;Platenhoes van het album 'Alive' van Pearl Jam&quot;&gt;</code></li>
+<li><code>&lt;img src=&quot;eurosong_001.jpg&quot; alt=&quot;Amaryllis huilt tranen van geluk op de finale van Eurosong&quot;&gt;</code></li>
+<li><code>&lt;img src=&quot;meme_thuis.gif&quot; alt=&quot;Animated GIF: Kort fragment uit Thuis waarin Marianne en Rosa elkaar in de haren vliegen&quot;&gt;</code></li>
+<li><code>&lt;img sc=&quot;DSC4554556878.jpg&quot; alt=&quot;Groepsfoto met de presentatoren van Radio 1 bovenop de VRT-toren&quot;&gt;</code></li>
+</ul>
+
+<h3 id="opgelet">Opgelet</h3>
+
+<ul>
+<li>Dit ijkpunt geldt ook voor Animated GIF&#8217;s en de afbeeldingen die je in nieuwsbrieven gebruikt.</li>
+<li>Als je kan klikken op een afbeelding, lees dan zeker ook het ijkpunt over <a href="/inhoud/afbeeldingen/aanklikbare-afbeeldingen/">aanklikbare afbeeldingen</a>.</li>
+<li>Niet alle afbeeldingen zijn informatief. Soms zijn ze decoratief of wordt de inhoud al beschreven in het artikel waar ze bij horen. Deze afbeeldingen hoef je niet uitgebreid te beschrijven. Meer hierover lees je in het ijkpunt over <a href="/inhoud/afbeeldingen/decoratieve-afbeeldingen/">decoratieve afbeeldingen</a>.</li>
+</ul>
+
+<h3 id="hoedoejedat">Hoe doe je dat?</h3>
+
+<ul>
+<li>Als je een CMS gebruikt, vind je daarin meestal een veld om een afbeelding te beschrijven.</li>
+<li>In bijna alle gevallen koppel je een alt-attribuut aan de <code>&lt;img&gt;</code>-tag in HTML, maar ook deze HTML-elementen hebben een alt-attribuut nodig:
+
+<ul>
+<li>Afbeeldingen die als verzendknop gebruikt worden: <code>&lt;input type=&quot;img&quot; alt=&quot;…&quot;&gt;</code></li>
+<li>Onderdelen van client-sided image maps: <code>&lt;area alt=&quot;…&gt;</code></li>
+</ul></li>
+</ul>
+
+<h3 id="extraaanbevelingen">Extra aanbevelingen</h3>
+
+<h4 id="watmetfotoverslagen">Wat met fotoverslagen?</h4>
+
+<p>Een fotoverslag of fotogalerij bevat vaak veel gelijkaardige foto&#8217;s van een persoon of een evenement dat voorbij is. Er is niets op tegen om iedere foto afzonderlijk te beschrijven, maar dat is niet per se nodig.</p>
+
+<p>Boven zo&#8217;n fotoreeks mag je gerust een algemene beschrijving plaatsen, zoals &#8216;Enkele sfeerfoto&#8217;s van de MIA Awards&#8217; of &#8217;Fotoshoot Joy Anna Thielemans op het strand. De foto&#8217;s zelf mag je een lege alt-tekst (<code>alt=&quot;&quot;</code>) geven. Als de foto&#8217;s een link bevatten naar een vergrote versie, geef ze dan een unieke alt-tekst, zoals <code>alt=&quot;Foto 1 (groot)&quot;</code>, <code>alt=&quot;Foto 2 (groot)&quot;</code> etc.</p>
+
+<h4 id="watmetcaptchas">Wat met captcha&#8217;s?</h4>
+
+<p>Soms moet een bezoeker een aantal <strong>karakters uit een afbeelding overtikken</strong> om bv. een account aan te maken of een reactie te kunnen plaatsen. <strong>Blinden, slechtzienden en dyslectici worden uitgesloten</strong> van alle functies waarvoor het overtikken van een visuele captcha vereist is. Omdat de over te typen karakters vaak <strong>met opzet moeilijk leesbaar</strong> gemaakt worden, hebben veel andere bezoekers er ook moeite mee.</p>
+
+<p>Daarom raden we het gebruik van visuele captcha&#8217;s ten stelligste af. In de meeste gevallen is er even veilige manier te bedenken om spam of oneigenlijk gebruik van een dienst te voorkomen.</p>
+
+<h5 id="alternatieven">Alternatieven</h5>
+
+<p>Als het om beveiligingsredenen echt niet anders kan, bied dan een alternatieve captcha (herken een geluidsfragment, beantwoord een vreeag waarop computers het antwoord niet waeten, etc.). Kies in ieder geval voor een techniek of een combinatie van technieken waarmee je geen enkele bezoeker uitsluit. In het artikel <a href="http://www.anysurfer.be/nl/in-de-praktijk/websites/spam-vermijden-zonder-captcha">Spam vermijden zonder captcha op de website van AnySurfer</a> vind je wat inspiratie.</p>

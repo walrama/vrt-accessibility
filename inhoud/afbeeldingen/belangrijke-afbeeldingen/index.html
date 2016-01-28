@@ -1,0 +1,290 @@
+<!doctype html>
+<html class="markup-body">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+		<title></title>
+		<link rel="stylesheet" href="/github-markdown.css">
+		<link rel="stylesheet" href="/css/vrt-toegankelijkheid.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<script src="https://use.typekit.net/tvi1crm.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+		<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+		</style>
+	</head>
+	<body class="markdown-body">
+		<h1><a href="/">VRT-kwaliteitsvereisten voor toegankelijke websites, webapplicaties en elektronische nieuwsbrieven</a></h1>
+<p class="waar hide">
+  Deze richtlijn hoort in <a href="/inhoud">Inhoud</a> › <a href="/inhoud/afbeeldingen">Afbeedlingen</a>
+</p>
+<h2 id="belangrijkeafbeeldingenhebbeneenalt-attribuutmeteenbondigebeschrijvingvanwatertezienis">Belangrijke afbeeldingen hebben een alt-attribuut met een bondige beschrijving van wat er te zien is</h2>
+
+<p>Beeld je in dat je de afbeeldingen op een webpagina of in een nieuwsbrief niet kan zien. Net als een blinde bezoeker dus. Mis je dan belangrijke informatie? Als iemand de afbeelding voor je zou moeten beschrijven, wat wil je dan zeker weten? Dat vermeld je in het <code>alt</code>-attribuut van de <code>&lt;img&gt;</code>-tag.</p>
+
+<h3 id="enkelevuistregels">Enkele vuistregels</h3>
+
+<ul>
+<li>Hou de beschrijving <strong>beknopt</strong> en gebruik <strong>eenvoudige taal</strong>. De kleur van iemands haar of ogen hoef je bv. niet te beschrijven, tenzij dat écht relevant is in de context van het artikel.</li>
+<li>Volzinnen zijn meestal niet nodig. Vaak volstaan <strong>enkele woorden</strong>. Beperk de beschrijving tot ongeveer 80 karakters.</li>
+<li>Start de beschrijving niet met &#8216;Afbeelding van…&#8217;, &#8216;Hier ziet u…&#8217; of &#8216;Foto: …&#8217;. Schermlezers die blinden gebruiken, kondigen zelf aan wanneer ze de beschrijving van een afbeelding gaan voorlezen.</li>
+<li>Het <code>alt</code>-attribuut is niet de meest geschikte plaats voor de naam van de fotograaf of copyright-informatie. Die vermeld je best onder de foto, voor iedereen zichtbaar.</li>
+</ul>
+
+<h3 id="goedevoorbeelden">Goede voorbeelden</h3>
+
+<ul>
+<li><code>&lt;img src=&quot;cover.png?id=665145&quot; alt=&quot;Platenhoes van het album 'Alive' van Pearl Jam&quot;&gt;</code></li>
+<li><code>&lt;img src=&quot;eurosong_001.jpg&quot; alt=&quot;Amaryllis huilt tranen van geluk op de finale van Eurosong&quot;&gt;</code></li>
+<li><code>&lt;img src=&quot;meme_thuis.gif&quot; alt=&quot;Animated GIF: Kort fragment uit Thuis waarin Marianne en Rosa elkaar in de haren vliegen&quot;&gt;</code></li>
+<li><code>&lt;img sc=&quot;DSC4554556878.jpg&quot; alt=&quot;Groepsfoto met de presentatoren van Radio 1 bovenop de VRT-toren&quot;&gt;</code></li>
+</ul>
+
+<h3 id="opgelet">Opgelet</h3>
+
+<ul>
+<li>Dit ijkpunt geldt ook voor Animated GIF&#8217;s en de afbeeldingen die je in nieuwsbrieven gebruikt.</li>
+<li>Als je kan klikken op een afbeelding, lees dan zeker ook het ijkpunt over <a href="/inhoud/afbeeldingen/aanklikbare-afbeeldingen/">aanklikbare afbeeldingen</a>.</li>
+<li>Niet alle afbeeldingen zijn informatief. Soms zijn ze decoratief of wordt de inhoud al beschreven in het artikel waar ze bij horen. Deze afbeeldingen hoef je niet uitgebreid te beschrijven. Meer hierover lees je in het ijkpunt over <a href="/inhoud/afbeeldingen/decoratieve-afbeeldingen/">decoratieve afbeeldingen</a>.</li>
+</ul>
+
+<h3 id="hoedoejedat">Hoe doe je dat?</h3>
+
+<ul>
+<li>Als je een CMS gebruikt, vind je daarin meestal een veld om een afbeelding te beschrijven.</li>
+<li>In bijna alle gevallen koppel je een alt-attribuut aan de <code>&lt;img&gt;</code>-tag in HTML, maar ook deze HTML-elementen hebben een alt-attribuut nodig:
+
+<ul>
+<li>Afbeeldingen die als verzendknop gebruikt worden: <code>&lt;input type=&quot;img&quot; alt=&quot;…&quot;&gt;</code></li>
+<li>Onderdelen van client-sided image maps: <code>&lt;area alt=&quot;…&gt;</code></li>
+</ul></li>
+</ul>
+
+<h3 id="extraaanbevelingen">Extra aanbevelingen</h3>
+
+<h4 id="watmetfotoverslagen">Wat met fotoverslagen?</h4>
+
+<p>Een fotoverslag of fotogalerij bevat vaak veel gelijkaardige foto&#8217;s van een persoon of een evenement dat voorbij is. Er is niets op tegen om iedere foto afzonderlijk te beschrijven, maar dat is niet per se nodig.</p>
+
+<p>Boven zo&#8217;n fotoreeks mag je gerust een algemene beschrijving plaatsen, zoals &#8216;Enkele sfeerfoto&#8217;s van de MIA Awards&#8217; of &#8217;Fotoshoot Joy Anna Thielemans op het strand. De foto&#8217;s zelf mag je een lege alt-tekst (<code>alt=&quot;&quot;</code>) geven. Als de foto&#8217;s een link bevatten naar een vergrote versie, geef ze dan een unieke alt-tekst, zoals <code>alt=&quot;Foto 1 (groot)&quot;</code>, <code>alt=&quot;Foto 2 (groot)&quot;</code> etc.</p>
+
+<h4 id="watmetcaptchas">Wat met captcha&#8217;s?</h4>
+
+<p>Soms moet een bezoeker een aantal <strong>karakters uit een afbeelding overtikken</strong> om bv. een account aan te maken of een reactie te kunnen plaatsen. <strong>Blinden, slechtzienden en dyslectici worden uitgesloten</strong> van alle functies waarvoor het overtikken van een visuele captcha vereist is. Omdat de over te typen karakters vaak <strong>met opzet moeilijk leesbaar</strong> gemaakt worden, hebben veel andere bezoekers er ook moeite mee.</p>
+
+<p>Daarom raden we het gebruik van visuele captcha&#8217;s ten stelligste af. In de meeste gevallen is er even veilige manier te bedenken om spam of oneigenlijk gebruik van een dienst te voorkomen.</p>
+
+<h5 id="alternatieven">Alternatieven</h5>
+
+<p>Als het om beveiligingsredenen echt niet anders kan, bied dan een alternatieve captcha (herken een geluidsfragment, beantwoord een vreeag waarop computers het antwoord niet waeten, etc.). Kies in ieder geval voor een techniek of een combinatie van technieken waarmee je geen enkele bezoeker uitsluit. In het artikel <a href="http://www.anysurfer.be/nl/in-de-praktijk/websites/spam-vermijden-zonder-captcha">Spam vermijden zonder captcha op de website van AnySurfer</a> vind je wat inspiratie.</p>
+	<form id="feedback" data-forge-name="VRT-FEEDBACK">
+	<h3><i class="fa fa-comment-o"></i> Geef feedback op deze richtlijn</h3>
+	<p>Dankzij jouw feedback kunnen we deze richtlijn verbeteren. Ook vragen en suggesties zijn welkom.</p>
+	<fieldset id="duidelijk">
+		<legend>Vond je deze richtlijn duidelijk en volledig?</legend>
+		<label class="inline">
+			<input type="radio" name="duidelijk" value="ja" /> Ja
+		</label>
+		<label class="inline">
+			<input type="radio" name="duidelijk" value="min-of-meer" /> Min of meer
+		</label>
+		<label class="inline">
+			<input type="radio" name="duidelijk" value="nee" /> Nee
+		</label>
+	</fieldset>
+	<fieldset id="opmerkingen">
+		<legend>Optioneel: wat wil je kwijt?</legend>
+		<label>
+			<p class="opmerkingen ja">
+				Wat vind je goed aan deze richtlijn? Denk je dat de richtlijn ook voor anderen duidelijk is?
+			</p>
+			<p class="opmerkingen min-of-meer">
+				Vind je de omschrijving of voorbeelden niet helemaal duidelijk? Wat kan beter?
+			</p>
+			<p class="opmerkingen nee">
+				Heb je een fout geveonden, ontbreekt er iets of ben je het oneens met de inhoud? Wat kan beter?
+			</p>
+			<textarea name="opmerkingen" style="width: 100%" rows="10"></textarea>
+		</label>
+	</fieldset>
+	<fieldset id="rol">
+		<legend>Welke omschrijving past best bij je?</legend>
+		<label class="block">
+			Ik herken mezelf best in dit profiel:
+			<select name="rol" class="block">
+				<option value="vormgever">Grafisch vormgever</option>
+				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
+				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
+				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
+				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
+				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
+				<option value="ux">Digitaal architect of UX-expert</option>
+				<option value="pm">Project manager of Product owner</option>
+				<option value="baas">(Eind)verantwoordelijke voor een website of app</option>
+				<option value="anderefunctie">Iets helemaal anders</option>
+			</select>
+		</label>
+		<label id="anderefunctie" class="block">
+			<span class="block small">Omschrijf je functie of waarom je te maken krijgt met deze richtlijnen.</span>
+			<input type="text" name="anderefunctie" style="width: 100%" class="block" />
+		</label>
+	</fieldset>
+	<fieldset id="wie">
+		<legend>Optioneel: jouw gegevens</legend>
+		<p>
+			Misschien hebben we bijkomende vragen. Als je je naam en e-mailadres invult, kunnen we contact met je opnemen.
+		</p>
+		<label class="block">
+			<span class="block small">Volledige naam</span>
+			<input type="text" name="naam" style="width: 100%" class="block" />
+		</label>
+		<label class="block">
+			<span class="block small">E-mailadres</span>
+			<input type="text" data-forge-name="email" style="width: 100%" class="block" />
+		</label>
+	</fieldset>
+	<label style="display: none"">
+		Als je dit veld ziet, laat het dan gewoon leeg. Het staat er enkel om spam te voorkomen.
+		<input type="text" name="_gotcha" disabled="disabled" />
+	</label>
+	<input type="hidden" name="_next" value="/feedback/bedankt.html" />
+	<input type="hidden" name="_subject" value="Feedback op VRT-Toegankelijkheidsrichtlijnen" />
+	<!-- <input type="hidden" name="_cc" value="marc.walraven@vrt.be" /> -->
+	<input type="submit" id="submit" value="Verstuur feedback" />
+</form>
+
+<nav id="vorige-volgende">
+	<ul class="clearfix">
+		<li class="vorige">
+			<a href="#">
+				<span><i class="fa fa-arrow-circle-left"></i> Vorige richtlijn</span>
+				<span>(Koppen, paragrafen, lijsten en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags)</span>
+			</a>
+		</li>
+		<li class="volgende">
+			<a href="#">
+				<span>Volgende richtlijn <i class="fa fa-arrow-circle-right"></i></span>
+				<span>(De koppenstructuur is strikt hiërarchisch)</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+	<script src="/js/vendor/jquery.cookie.js"></script>
+  <script>
+
+    $(function() {
+
+			/* Fix skip links for screenreader users on all browsers */
+			$(':header[id]').attr('tabindex','-1');
+			$("a[href^='#']").click(function() {
+				$("#"+$(this).attr("href").slice(1)+"").focus()
+			});
+
+			var rol = $.cookie('rol');
+			var anderefunctie = $.cookie('anderefunctie');
+			var naam = $.cookie('naam');
+			var email = $.cookie('email');
+
+			$('#feedback select[name="rol"]').val(rol);
+			$('#feedback input[name="anderefunctie"]').val(anderefunctie);
+			$('#feedback input[name="naam"]').val(naam);
+			$('#feedback input[name="email"]').val(email);
+
+			$('#feedback #opmerkingen, #feedback #rol, #feedback #wie, p.opmerkingen').hide();
+			if (rol != 'anderefunctie') $('#feedback #anderefunctie').hide();
+			$('#feedback #submit').attr('disabled','disabled');
+
+			$('#feedback input[name="duidelijk"]').change(function() {
+				duidelijk = $(this).val();
+				$('p.opmerkingen').hide();
+				$('p.opmerkingen.'+duidelijk).show();
+				$('#feedback #submit').removeAttr('disabled');
+				if (!$('#feedback #opmerkingen').hasClass('open')) {
+					$('#feedback #opmerkingen, #feedback #rol, #feedback #wie').fadeIn();
+					$("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
+					$('#feedback #opmerkingen textarea').focus();
+				}
+				else {
+					$('#feedback #opmerkingen').addClass('open');
+				}
+			});
+
+			$('#feedback select[name="rol"]').change(function() {
+				if ($(this).val() == 'anderefunctie') {
+					$('#anderefunctie').show().focus();
+				}
+				else {
+					$('#anderefunctie').hide();
+				}
+			});
+
+			$("#feedback").submit(function(e) {
+				$.ajax({
+				    url: "https://getforge.com/api/form-data",
+						data:  $(this).serializeArray(),
+				    method: "POST",
+				    dataType: "json",
+						beforeSend: function() {
+							$.cookie('rol', $('#feedback select[name="rol"]').val(), { expires: 7, path: '/' });
+							$.cookie('anderefunctie', $('#feedback input[name="anderefunctie"]').val(), { expires: 7, path: '/' });
+							$.cookie('naam', $('#feedback input[name="naam"]').val(), { expires: 7, path: '/' });
+							$.cookie('email', $('#feedback input[name="email"]').val(), { expires: 7, path: '/' });
+							$('#feedback #submit')
+								.attr('disabled','disabled')
+								.attr('value','Bezig met verzenden...');
+		        },
+						success: function(data, textStatus, jqXHR) {
+							$('#feedback #submit')
+								.attr('value','Verzonden');
+							$('#feedback *')
+								.fadeOut();
+							$('#feedback')
+								.load('/feedback/bedankt.html')
+								.fadeIn()
+								.focus();
+		        },
+						error: function(data, textStatus, jqXHR) {
+							$('#feedback #submit')
+								.attr('value','Er is iets misgelopen');
+							$('#feedback *')
+								.fadeOut();
+							$('#feedback')
+								.load('/feedback/fout.html')
+								.fadeIn()
+								.focus();
+		        }
+				});
+		    e.preventDefault();
+		    e.unbind();
+			});
+
+
+      $('input:checked').change(function() {
+        if (this.checked)
+          $('#richtlijnen .'+this.name).removeClass('uit').addClass('aan');
+        else
+          $('#richtlijnen .'+this.name).removeClass('aan').addClass('uit');
+      })
+
+    });
+
+  </script>
+	<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='https://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-73007524-1','auto');ga('send','pageview');
+    </script>
+</body>
+</html>

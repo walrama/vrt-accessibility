@@ -1,0 +1,55 @@
+<h2 id="detab-volgordeislogischenvoorspelbaar">De tab-volgorde is logisch en voorspelbaar</h2>
+
+<p>Bezoekers die het toetsenbord gebruiken in plaats van de muis, hechten veel belang aan een <strong>logische en voorspelbare</strong> tab-volgorde.</p>
+
+<h3 id="watisdetabvolgorde">Wat is de tabvolgorde?</h3>
+
+<p>De tab-volgorde is de volgorde waarin de elementen op een pagina gefocust worden als je herhaaldelijk op de tab-toets drukt.</p>
+
+<h3 id="waarhetkanmislopen">Waar het kan mislopen</h3>
+
+<p>Meestal hoef je niets speciaals te doen om aan deze richtlijn te voldoen. Toch loop het geregeld mis. Boosdoeners zijn vaak het foutief gebruik van de CSS-eigenschap <code>float</code> en de aanwezigheid van <code>tabindex</code>-attributen op sommige HTML-elementen.</p>
+
+<h4 id="voorbeeld1:foutiefgebruikvandecss-eigenschapfloat">Voorbeeld 1: Foutief gebruik van de CSS-eigenschap &#8216;float&#8217;</h4>
+
+<h5 id="nietgoed">Niet goed</h5>
+
+<pre><code>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;…&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;…&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;…&quot;&gt;Over ons&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;…&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+nav li {
+  float: right;
+  list-style: none;
+}
+</code></pre>
+
+<h5 id="welgoed">Wel goed</h5>
+
+<pre><code>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;…&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;…&quot;&gt;Over ons&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;…&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;…&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+nav {
+  float: right;
+}
+
+nav ul li {
+  float: left;
+  list-style: none;
+}
+</code></pre>
+
+<h3 id="voorwiebelangrijk">Voor wie belangrijk?</h3>
+
+<p>Deze richtlijn is in het bijzonder nuttig voor blinden, omdat ze het scherm niet kunnen zien en dus geen overzicht hebben.</p>

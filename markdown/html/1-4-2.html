@@ -1,0 +1,181 @@
+<h2 id="tabellenzijnlineariseerbaarendusbegrijpelijkalsdecellenéénperéénvoorgelezenworden">Tabellen zijn lineariseerbaar en dus begrijpelijk als de cellen één per één voorgelezen worden</h2>
+
+<p>Zet elk gegeven in een aparte cel.</p>
+
+<h3 id="watbetekenthetomeentabeltelineariseren">Wat betekent het om een tabel te lineariseren?</h3>
+
+<p>Een schermlezer leest een tabel <strong>rij per rij</strong> voor en binnenin <strong>cel per cel</strong>:</p>
+
+<ul>
+<li>Eerst rij 1 van links naar rechts</li>
+<li>Vervolgens rij 2 van links naar rechts</li>
+<li>Etc.</li>
+</ul>
+
+<p>Dat is ook de volgorde waarin de gegevens in de HTML-code staan. Als u elk gegeven in een eigen cel zet, is er doorgaans geen probleem met de linearisatie.</p>
+
+<h3 id="waaromishetbelangrijk">Waarom is het belangrijk?</h3>
+
+<h4 id="voorwieeenschermlezergebruikt">Voor wie een schermlezer gebruikt</h4>
+
+<h3 id="voorbeelden">Voorbeelden</h3>
+
+<p>Onderstaand voorbeeld bevat de HTML-code voor een tabel met de FM-frequenties van enkele radiozenders, opgesplitst per provincie. De inhoud is illustratief en niet per se juist of volledig.</p>
+
+<h4 id="slechtvoorbeeld">Slecht voorbeeld</h4>
+
+<p>In dit voorbeeld zijn <strong>lijnsprongen</strong> (<code>&lt;br /&gt; tags</code>) gebruikt om de gegevens op te maken:</p>
+
+<pre><code>&lt;table&gt;
+  &lt;caption&gt;FM-radiofrequenties VRT-radiozenders&lt;/caption&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Zender&lt;/th&gt;
+      &lt;th&gt;Antwerpen&lt;/th&gt;
+      &lt;th&gt;Limburg&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;th&gt;
+      Studio Brussel &lt;br /&gt;
+      MNM &lt;br /&gt;
+      Radio 1
+    &lt;/th&gt;
+    &lt;td&gt;
+      100.9 MHz &lt;br /&gt;
+      101.4 MHz &lt;br /&gt;
+      94.2 MHz
+    &lt;/td&gt;
+    &lt;td&gt;
+      89.0 MHz &lt;br /&gt;
+      102.0 MHz &lt;br /&gt;
+      199.9 MHz
+    &lt;/td&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+
+<p>Op het scherm ziet het er goed uit:</p>
+
+<table>
+  <caption>FM-radiofrequenties VRT-radiozenders</caption>
+  <tbody>
+    <tr>
+      <th>Zender</th>
+      <th>Antwerpen</th>
+      <th>Limburg</th>
+    </tr>
+    <th>
+      Studio Brussel <br />
+      MNM <br />
+      Radio 1
+    </th>
+    <td>
+      100.9 MHz <br />
+      101.4 MHz <br />
+      94.2 MHz
+    </td>
+    <td>
+      89.0 MHz <br />
+      102.0 MHz <br />
+      199.9 MHz
+    </td>
+  </tbody>
+</table>
+
+<p>Een <strong>schermlezer</strong> kan de gegevens in deze tabel echter <strong>niet goed lineariseren</strong>. Als de tabel voorgelezen wordt voor een blinde bezoeker, zal hij de gegevens in deze volgorde te horen krijgen:</p>
+
+<ul>
+<li>Zender</li>
+<li>Antwerpen</li>
+<li>Limburg</li>
+<li>Studio Brussel</li>
+<li>MNM</li>
+<li>Radio 1</li>
+<li>100.9 MHz</li>
+<li>101.4 MHz</li>
+<li>94.2 MHz</li>
+<li>89.0 MHz</li>
+<li>102.0 MHz</li>
+<li>199.9 MHz</li>
+</ul>
+
+<p>Dat is helemaal niet logisch. Het <strong>interpreteren van lange tabellen</strong> is op deze manier haast onmogelijk voor blinden.</p>
+
+<h4 id="goedvoorbeeld">Goed voorbeeld</h4>
+
+<p>Deze tabel ziet er ongeveer hetzelfde uit, maar is wel voor iedereen leesbaar:</p>
+
+<table>
+  <caption>FM-frequenties VRT-radiozenders</caption>
+  <tbody>
+    <tr>
+      <th>Zender</th>
+      <th>Antwerpen</th>
+      <th>Limburg</th>
+    </tr>
+    <tr>
+      <th>Studio Brussel</th>
+      <td>100.9 MHz</td>
+      <td>101.4 MHz</td>
+    </tr>
+    <tr>
+      <th>MNM</th>
+      <td>89.0 MHz</td>
+      <td>102.0 MHz</td>
+    </tr>
+    <tr>
+      <th>Radio 1</th>
+      <td>94.2 MHz</td>
+      <td>199.9 MHz</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Dit is de bijbehorende HTML:</p>
+
+<pre><code>&lt;table&gt;
+  &lt;caption&gt;FM-frequenties VRT-radiozenders&lt;/caption&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Zender&lt;/th&gt;
+      &lt;th&gt;Antwerpen&lt;/th&gt;
+      &lt;th&gt;Limburg&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Studio Brussel&lt;/th&gt;
+      &lt;td&gt;100.9 MHz&lt;/td&gt;
+      &lt;td&gt;101.4 MHz&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;MNM&lt;/th&gt;
+      &lt;td&gt;89.0 MHz&lt;/td&gt;
+      &lt;td&gt;102.0 MHz&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Radio 1&lt;/th&gt;
+      &lt;td&gt;94.2 MHz&lt;/td&gt;
+      &lt;td&gt;199.9 MHz&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+
+<p>En dit is de <strong>volgorde</strong> waarin een schermlezer de inhoud van deze tabel voorleest:</p>
+
+<ul>
+<li>Antwerpen</li>
+<li>Studio Brussel</li>
+<li>100.9 Mhz</li>
+<li>MNM</li>
+<li>89.0 Mhz</li>
+<li>Radio 1</li>
+<li>94.2 Mhz</li>
+<li>Limburg</li>
+<li>Studio Brussel</li>
+<li>101.4</li>
+<li>MNM</li>
+<li>89.0 Mhz</li>
+<li>Radio 1</li>
+<li>199.9 MHz</li>
+</ul>
+
+<p>Dat is een stuk begrijpelijker dan in het <a href="#slechtvoorbeeld">slechte voorbeeld</a>.</p>

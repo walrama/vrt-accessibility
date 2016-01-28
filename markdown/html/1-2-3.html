@@ -1,0 +1,61 @@
+<h2 id="decoratieveafbeeldingenzittenineenstijlblad">Decoratieve afbeeldingen zitten in een stijlblad</h2>
+
+<p>Decoratieve afbeeldingen stop je in een stijlblad. Ze hoeven niet beschreven te worden. Als ze toch voorkomen in de HTML-broncode, geef je ze een leeg <code>alt</code>-attribuut.</p>
+
+<h3 id="watzijndecoratieveafbeeldingen">Wat zijn decoratieve afbeeldingen?</h3>
+
+<p>Dit zijn enkele voorbeelden van decoratieve afbeeldingen:</p>
+
+<ul>
+<li>Lijnen, randen, afgeronde hoekjes etc.</li>
+<li>Iconen die gebruikt worden in combinatie met een tekstlink</li>
+<li>Sfeer- en achtergrondfoto&#8217;s die vervaagd werden of transparant zijn gemaakt.</li>
+<li>Sneeuwvlokjes, paaseitjes en andere fantasietjes.</li>
+</ul>
+
+<h3 id="stopzeineenstijlblad">Stop ze in een stijlblad</h3>
+
+<p>Je hoeft hiervoor niet speciaals te doen: de CSS-eigenschap <code>background-image</code> gebruiken is voldoende. Iedere schermlezer negeert CSS-achtergrondafbeeldingen, zoals het hoort:</p>
+
+<pre><code>#masthead { background-image: url(bg_blur.jpg) }
+</code></pre>
+
+<h4 id="opgelet:stopgeenbelangrijkeafbeeldingenineenstijlblad">Opgelet: stop geen belangrijke afbeeldingen in een stijlblad</h4>
+
+<p>Je stopt ook liefst geen belangrijke of <strong>betekenisvolle</strong> afbeeldingen in een stijlblad. Het is immers onmogelijk om een alt-attribuut te koppelen aan een achtergrondafbeelding. Als je dat toch doet, zorg er dan voor dat de boodschap of functie ook duidelijk is als CSS uitstaat.</p>
+
+<h5 id="voorbeeld">Voorbeeld</h5>
+
+<pre><code>&lt;style&gt;
+  .verplicht {
+    background: url(icoon_verplicht.png) center left no-repeat;
+  }
+&lt;/style&gt;
+
+&lt;label&gt;
+  Naam: &lt;input type=&quot;text&quot; class=&quot;verplicht&quot; /&gt;
+&lt;/label&gt;
+</code></pre>
+
+<p>Op het scherm zal een duidelijk icoon naast het tekstveld te zien zijn, maar die informatie gaat verloren voor wie het formulier laat voorlezen door een schermlezer. Dit kan je eenvoudig verhelpen door ook <strong>binnen het label</strong> te vermelden dat het veld verplicht is:</p>
+
+<pre><code>&lt;label&gt;
+  Naam (verplicht): &lt;input type=&quot;text&quot; class=&quot;verplicht&quot; /&gt;
+&lt;/label&gt;
+</code></pre>
+
+<h3 id="achtergrondafbeeldingenindehtml-broncode">Achtergrondafbeeldingen in de HTML-broncode</h3>
+
+<p>Af en toe komen afbeeldingen ook voor in de HTML-broncode van een pagina of nieuwsbrief. In dat geval is het <strong>verplicht</strong> om de afbeelding een <strong>leeg</strong> <code>alt</code>-attribuut te geven. Dat ziet er zo uit:</p>
+
+<pre><code>&lt;img src=&quot;/images/balkje_rood_breed.png&quot; alt=&quot;…&quot; /&gt;
+</code></pre>
+
+<p>Als je een CMS gebruikt, moet je mogelijk een vinkje zetten bij &#8216;Decoratief&#8217;.</p>
+
+<h4 id="opgelet:leegisleeg">Opgelet: leeg is leeg</h4>
+
+<ul>
+<li>Zorg ervoor dat het <code>alt</code>-attribuut nooit ontbreekt; het moet <strong>leeg</strong> (&#8216;null&#8217;) zijn. Als het attribuut zelf ontbreekt (zoals in <code>&lt;img src=&quot;/images/balkje_rood_breed.png&quot; /&gt;</code>), zal een schermlezer immers de bestandsnaam (én vaak zelfs het volledige bestandspad) voorlezen en dat is heel vervelend. Zeker als hetzelfde balkje tien keer voorkomt op dezelfde pagina of in dezelfde nieuwsbrief (&#8216;images/balkje_rood_breed.png&#8217; in bovenstaand voorbeeld).</li>
+<li>Gebruik ook nooit het woordje &#8216;decoratie&#8217;. Er mag zelfs <strong>geen spatie</strong> tussen de aanhalingstekens staan. Enkel zo zal een schermlezer de afbeelding echt negeren, zoals bedoelt.</li>
+</ul>

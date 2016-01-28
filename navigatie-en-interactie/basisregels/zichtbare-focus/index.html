@@ -1,0 +1,438 @@
+<!doctype html>
+<html class="markup-body">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+		<title></title>
+		<link rel="stylesheet" href="/github-markdown.css">
+		<link rel="stylesheet" href="/css/vrt-toegankelijkheid.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<script src="https://use.typekit.net/tvi1crm.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+		<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+		</style>
+	</head>
+	<body class="markdown-body">
+		<h1><a href="/">VRT-kwaliteitsvereisten voor toegankelijke websites, webapplicaties en elektronische nieuwsbrieven</a></h1>
+<p class="waar hide">
+  Deze richtlijn hoort in <a href="/navigatie-en-interactie">Navigatie en interactie</a> › <a href="/navigatie-en-interactie/basisrgels">Basisregels</a>
+</p>
+<h3 id="alseenpagina-onderdeeltijdenshettabbenfocuskrijgt–endusactiveerbaarwordt–isdatduidelijkzicthbaar">Als een pagina-onderdeel tijdens het tabben focus krijgt – en dus activeerbaar wordt – is dat duidelijk zicthbaar</h3>
+
+<p>Als je navigeert met de tab-toets is het belangrijk om goed te kunnen <strong>zien</strong> waar je je precies bevindt op de pagina. Als je niet kan zien welke link &#8216;focus&#8217; krijgt, weet je ook niet wanneer je op Enter moet drukken om de link te volgen.</p>
+
+<p>Als je een muis gebruikt, kan je gewoon <strong>aanwijzen</strong> waarop je wil klikken en is een visuele markering niet noodzakelijk. In desktop-browsers verandert het muispijltje bovendien in een handje als je over een link beweegt.</p>
+
+<h4 id="nooitverbergen">Nooit verbergen</h4>
+
+<p>Browsers passen een paar standaard-opmaakregels toe op iedere webpagina. Een van die stijlen is het fijne stippellijntje waarmee elementen &#8216;in focus&#8217; gemarkeerd worden.</p>
+
+<p>Die opmaakregel (<code>outline: none</code>) kan je als webdesigner (te) gemakkelijk overschrijven, maar dat doe je liever niet. In het uitgewerkte voorbeeld verderop laten we zien waarom.</p>
+
+<h4 id="zetlinkslieverextraindeverf">Zet links liever extra in de verf</h4>
+
+<p>Het is niet verplicht, maar het is wel een goede gewoonte om de focus net <strong>extra duidelijk</strong> te maken, bv. met een vette rand of een achtergrondkleurtje. Als je dat doet, let er dan wel op dat de kleuren voldoende contrasteren (zie richtlijn xyz).</p>
+
+<h5 id="voorbeeld:navigatiebalk">Voorbeeld: navigatiebalk</h5>
+
+<p>Neem deze eenvoudige navigatiebalk als voorbeeld:</p>
+
+<nav id="radiozenders-1" tabindex="-1">
+  <ul>
+    <li><a href="http://www.stubru.be/">Studio Brussel</a></li>
+    <li><a href="http://www.mnm.be/">MNM</a></li>
+    <li><a href="http://www.radio1.be/">Radio 1</a></li>
+    <li><a href="http://www.radio2.be/">Radio 2</a></li>
+    <li><a href="http://www.Klara.be/">Klara</a></li>
+  </ul>
+</nav>
+
+<style>
+  #radiozenders-1 ul {
+    margin: 0 0 1me; padding: 0;
+  }
+  #radiozenders-1 ul li {
+    margin: 0; padding; 0;
+    display: inline-block;
+  }
+  #radiozenders-1 ul li a {
+    display: block;
+    padding: 5px 15px;
+    text-decoration: none !important;
+    background: Beige;
+  }
+</style>
+
+<p>Bijbehorende HTML:</p>
+
+<pre><code>&lt;nav id=&quot;radiozenders&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;http://www.stubru.be/&quot;&gt;Studio Brussel&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://www.mnm.be/&quot;&gt;MNM&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://www.radio1.be/&quot;&gt;Radio 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://www.radio2.be/&quot;&gt;Radio 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://www.Klara.be/&quot;&gt;Klara&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+
+<p>Bijbehorende CSS:</p>
+
+<pre><code>&lt;style&gt;
+  #radiozenders ul li {
+    display: inline-block;
+  }
+  #radiozenders ul li a {
+    display: block;
+    padding: 5px 15px;
+    text-decoration: none;
+    background: Beige;
+  }
+&lt;/style&gt;
+</code></pre>
+
+<p>Omdat de standaard <code>:hover</code>-stijl een beetje saai is, voegen we volgende CSS toe:</p>
+
+<pre><code>#radiozenders ul li a:hover {
+  color: white;
+  background: darkOrange;
+}
+</code></pre>
+
+<p>Beweeg met je muis over onderstaande balk om het effect te zien. Probeer ook eens te navigeren met de Tab-toets. Je kan nu op Tab drukken, maar dan start je helemaal bovenaan de pagina. Met deze link kan je <a href="#stubru-2">meteen naar het eerste item in het tweede voorbeeld springen</a> zodat je van daaruit kan starten met tabben.</p>
+
+<nav id="radiozenders-2" tabindex="-1">
+  <ul>
+    <li><a id="stubru-2" href="http://www.stubru.be/">Studio Brussel</a></li>
+    <li><a href="http://www.mnm.be/">MNM</a></li>
+    <li><a href="http://www.radio1.be/">Radio 1</a></li>
+    <li><a href="http://www.radio2.be/">Radio 2</a></li>
+    <li><a href="http://www.Klara.be/">Klara</a></li>
+  </ul>
+</nav>
+
+<style>
+  #radiozenders-2 ul {
+    margin: 0 0 1me; padding: 0;
+  }
+  #radiozenders-2 ul li {
+    margin: 0; padding; 0;
+    display: inline-block;
+  }
+  #radiozenders-2 ul li a {
+    display: block;
+    padding: 5px 15px;
+    text-decoration: none !important;
+    background: Beige;
+  }
+  #radiozenders-2 ul li a:hover {
+    color: white;
+    background: darkOrange;
+  }
+</style>
+
+<p>Je merkt dat de focusmarkering eerder subtiel is (afhankelijk van welke je browser je gebruikt). Als je nu bovendien de standaardmarkering weg zou halen met <code>outline: none</code> – wat in de praktijk vaak gebeurt – dan zie je helemaal niet meer welk element focus krijgt:</p>
+
+<pre><code>#radiozenders ul li a:focus {
+  outline: none; /* Dit is de boosdoener */
+}
+</code></pre>
+
+<p>Let op: misschien schrijf je deze CSS-regel niet zelf, maar maakt hij deel uit van een stijlblad dat bij een framework hoort. Kijk dat dus zeker na.</p>
+
+<p>Probeer maar eens in onderstaande balk te navigeren met de tab-toets. <a href="#stubru-3">Spring meteen naar het eerste item in het derde voorbeeld</a>.</p>
+
+<nav id="radiozenders-3" tabindex="-1">
+  <ul>
+    <li><a id="stubru-3" href="http://www.stubru.be/">Studio Brussel</a></li>
+    <li><a href="http://www.mnm.be/">MNM</a></li>
+    <li><a href="http://www.radio1.be/">Radio 1</a></li>
+    <li><a href="http://www.radio2.be/">Radio 2</a></li>
+    <li><a href="http://www.Klara.be/">Klara</a></li>
+  </ul>
+</nav>
+
+<style>
+  #radiozenders-3 ul {
+    margin: 0 0 1me; padding: 0;
+  }
+  #radiozenders-3 ul li {
+    margin: 0; padding; 0;
+    display: inline-block;
+  }
+  #radiozenders-3 ul li a {
+    display: block;
+    padding: 5px 15px;
+    text-decoration: none !important;
+    background: Beige;
+  }
+  #radiozenders-3 ul li a:hover {
+    color: white;
+    background: darkOrange;
+  }
+  #radiozenders-3 ul li a:focus {
+    outline: none; 
+  }
+</style>
+
+<p>Er lijkt niks te gebeuren? Toch wel, maar je bent nu &#8216;blind&#8217; aan het navigeren. Druk twee keer op tab en je bevindt je op de link naar de website van Radio 1 (Bevestig met Enter). Druk drie keer en je bevindt je op de link naar de website van Radio 2. Verwarrend, niet?</p>
+
+<p>Gelukkig kunnen we dit probleem gemakkelijk verhelpen. Eigenlijk is het heel simpel: als je een <code>:hover</code>-stijl definieert, hergebruik die dan voor de <code>:focus</code>-stijl. En in dat geval mag je zelfs best de standaard-stijl overschrijven met <code>outline: none</code>:</p>
+
+<pre><code>#radiozenders ul li a:hover,
+#radiozenders ul li a:focus {
+  color: white;
+  background: darkOrange;
+  outline: none; /* Niet verplicht hier, maar het staat netter */
+}
+</code></pre>
+
+<p>Dit is het eindresultaat: een navigatiebalk die je <strong>zowel met de muis als met het toetsenbord</strong> prima kan bedienen en duidelijk laat zien waar je je bevindt. Probeer het zelf in dit <a href="#stubru-4">laatste (goed uitgewerkte) voorbeeld</a>:</p>
+
+<nav id="radiozenders-4" tabindex="-1">
+  <ul>
+    <li><a id="stubru-4" href="http://www.stubru.be/">Studio Brussel</a></li>
+    <li><a href="http://www.mnm.be/">MNM</a></li>
+    <li><a href="http://www.radio1.be/">Radio 1</a></li>
+    <li><a href="http://www.radio2.be/">Radio 2</a></li>
+    <li><a href="http://www.Klara.be/">Klara</a></li>
+  </ul>
+</nav>
+
+<style>
+  #radiozenders-4 ul {
+    margin: 0 0 1me; padding: 0;
+  }
+  #radiozenders-4 ul li {
+    margin: 0; padding; 0;
+    display: inline-block;
+  }
+  #radiozenders-4 ul li a {
+    display: block;
+    padding: 5px 15px;
+    text-decoration: none !important;
+    background: Beige;
+  }
+  #radiozenders-4 ul li a:hover,
+  #radiozenders-4 ul li a:focus {
+    color: white;
+    background: darkOrange;
+    outline: none;
+  }
+  #radiozenders-4 ul li a:active {
+    color: white;
+    background: Orange;
+  }
+</style>
+	<form id="feedback" data-forge-name="VRT-FEEDBACK">
+	<h3><i class="fa fa-comment-o"></i> Geef feedback op deze richtlijn</h3>
+	<p>Dankzij jouw feedback kunnen we deze richtlijn verbeteren. Ook vragen en suggesties zijn welkom.</p>
+	<fieldset id="duidelijk">
+		<legend>Vond je deze richtlijn duidelijk en volledig?</legend>
+		<label class="inline">
+			<input type="radio" name="duidelijk" value="ja" /> Ja
+		</label>
+		<label class="inline">
+			<input type="radio" name="duidelijk" value="min-of-meer" /> Min of meer
+		</label>
+		<label class="inline">
+			<input type="radio" name="duidelijk" value="nee" /> Nee
+		</label>
+	</fieldset>
+	<fieldset id="opmerkingen">
+		<legend>Optioneel: wat wil je kwijt?</legend>
+		<label>
+			<p class="opmerkingen ja">
+				Wat vind je goed aan deze richtlijn? Denk je dat de richtlijn ook voor anderen duidelijk is?
+			</p>
+			<p class="opmerkingen min-of-meer">
+				Vind je de omschrijving of voorbeelden niet helemaal duidelijk? Wat kan beter?
+			</p>
+			<p class="opmerkingen nee">
+				Heb je een fout geveonden, ontbreekt er iets of ben je het oneens met de inhoud? Wat kan beter?
+			</p>
+			<textarea name="opmerkingen" style="width: 100%" rows="10"></textarea>
+		</label>
+	</fieldset>
+	<fieldset id="rol">
+		<legend>Welke omschrijving past best bij je?</legend>
+		<label class="block">
+			Ik herken mezelf best in dit profiel:
+			<select name="rol" class="block">
+				<option value="vormgever">Grafisch vormgever</option>
+				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
+				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
+				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
+				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
+				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
+				<option value="ux">Digitaal architect of UX-expert</option>
+				<option value="pm">Project manager of Product owner</option>
+				<option value="baas">(Eind)verantwoordelijke voor een website of app</option>
+				<option value="anderefunctie">Iets helemaal anders</option>
+			</select>
+		</label>
+		<label id="anderefunctie" class="block">
+			<span class="block small">Omschrijf je functie of waarom je te maken krijgt met deze richtlijnen.</span>
+			<input type="text" name="anderefunctie" style="width: 100%" class="block" />
+		</label>
+	</fieldset>
+	<fieldset id="wie">
+		<legend>Optioneel: jouw gegevens</legend>
+		<p>
+			Misschien hebben we bijkomende vragen. Als je je naam en e-mailadres invult, kunnen we contact met je opnemen.
+		</p>
+		<label class="block">
+			<span class="block small">Volledige naam</span>
+			<input type="text" name="naam" style="width: 100%" class="block" />
+		</label>
+		<label class="block">
+			<span class="block small">E-mailadres</span>
+			<input type="text" data-forge-name="email" style="width: 100%" class="block" />
+		</label>
+	</fieldset>
+	<label style="display: none"">
+		Als je dit veld ziet, laat het dan gewoon leeg. Het staat er enkel om spam te voorkomen.
+		<input type="text" name="_gotcha" disabled="disabled" />
+	</label>
+	<input type="hidden" name="_next" value="/feedback/bedankt.html" />
+	<input type="hidden" name="_subject" value="Feedback op VRT-Toegankelijkheidsrichtlijnen" />
+	<!-- <input type="hidden" name="_cc" value="marc.walraven@vrt.be" /> -->
+	<input type="submit" id="submit" value="Verstuur feedback" />
+</form>
+
+<nav id="vorige-volgende">
+	<ul class="clearfix">
+		<li class="vorige">
+			<a href="#">
+				<span><i class="fa fa-arrow-circle-left"></i> Vorige richtlijn</span>
+				<span>(Koppen, paragrafen, lijsten en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags)</span>
+			</a>
+		</li>
+		<li class="volgende">
+			<a href="#">
+				<span>Volgende richtlijn <i class="fa fa-arrow-circle-right"></i></span>
+				<span>(De koppenstructuur is strikt hiërarchisch)</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+	<script src="/js/vendor/jquery.cookie.js"></script>
+  <script>
+
+    $(function() {
+
+			/* Fix skip links for screenreader users on all browsers */
+			$(':header[id]').attr('tabindex','-1');
+			$("a[href^='#']").click(function() {
+				$("#"+$(this).attr("href").slice(1)+"").focus()
+			});
+
+			var rol = $.cookie('rol');
+			var anderefunctie = $.cookie('anderefunctie');
+			var naam = $.cookie('naam');
+			var email = $.cookie('email');
+
+			$('#feedback select[name="rol"]').val(rol);
+			$('#feedback input[name="anderefunctie"]').val(anderefunctie);
+			$('#feedback input[name="naam"]').val(naam);
+			$('#feedback input[name="email"]').val(email);
+
+			$('#feedback #opmerkingen, #feedback #rol, #feedback #wie, p.opmerkingen').hide();
+			if (rol != 'anderefunctie') $('#feedback #anderefunctie').hide();
+			$('#feedback #submit').attr('disabled','disabled');
+
+			$('#feedback input[name="duidelijk"]').change(function() {
+				duidelijk = $(this).val();
+				$('p.opmerkingen').hide();
+				$('p.opmerkingen.'+duidelijk).show();
+				$('#feedback #submit').removeAttr('disabled');
+				if (!$('#feedback #opmerkingen').hasClass('open')) {
+					$('#feedback #opmerkingen, #feedback #rol, #feedback #wie').fadeIn();
+					$("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
+					$('#feedback #opmerkingen textarea').focus();
+				}
+				else {
+					$('#feedback #opmerkingen').addClass('open');
+				}
+			});
+
+			$('#feedback select[name="rol"]').change(function() {
+				if ($(this).val() == 'anderefunctie') {
+					$('#anderefunctie').show().focus();
+				}
+				else {
+					$('#anderefunctie').hide();
+				}
+			});
+
+			$("#feedback").submit(function(e) {
+				$.ajax({
+				    url: "https://getforge.com/api/form-data",
+						data:  $(this).serializeArray(),
+				    method: "POST",
+				    dataType: "json",
+						beforeSend: function() {
+							$.cookie('rol', $('#feedback select[name="rol"]').val(), { expires: 7, path: '/' });
+							$.cookie('anderefunctie', $('#feedback input[name="anderefunctie"]').val(), { expires: 7, path: '/' });
+							$.cookie('naam', $('#feedback input[name="naam"]').val(), { expires: 7, path: '/' });
+							$.cookie('email', $('#feedback input[name="email"]').val(), { expires: 7, path: '/' });
+							$('#feedback #submit')
+								.attr('disabled','disabled')
+								.attr('value','Bezig met verzenden...');
+		        },
+						success: function(data, textStatus, jqXHR) {
+							$('#feedback #submit')
+								.attr('value','Verzonden');
+							$('#feedback *')
+								.fadeOut();
+							$('#feedback')
+								.load('/feedback/bedankt.html')
+								.fadeIn()
+								.focus();
+		        },
+						error: function(data, textStatus, jqXHR) {
+							$('#feedback #submit')
+								.attr('value','Er is iets misgelopen');
+							$('#feedback *')
+								.fadeOut();
+							$('#feedback')
+								.load('/feedback/fout.html')
+								.fadeIn()
+								.focus();
+		        }
+				});
+		    e.preventDefault();
+		    e.unbind();
+			});
+
+
+      $('input:checked').change(function() {
+        if (this.checked)
+          $('#richtlijnen .'+this.name).removeClass('uit').addClass('aan');
+        else
+          $('#richtlijnen .'+this.name).removeClass('aan').addClass('uit');
+      })
+
+    });
+
+  </script>
+	<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='https://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-73007524-1','auto');ga('send','pageview');
+    </script>
+</body>
+</html>
