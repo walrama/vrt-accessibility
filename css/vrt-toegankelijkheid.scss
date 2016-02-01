@@ -6,6 +6,18 @@ body {
 	}
 }
 
+ul.horizontaal {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  li {
+    margin: 0; padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    height: 3.5em;
+  }
+}
+
 /* Fix voor voorbeeldjes over focus */
 nav:focus {
   outline: none;

@@ -65,6 +65,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/afbeeldingen\/afbeelding-van-tekst.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3519,
+		"inputAbbreviatedPath": "\/afbeeldingen\/afbeelding-van-tekst.png",
+		"outputAbbreviatedPath": "\/afbeeldingen\/afbeelding-van-tekst.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/bower.json": {
 		"fileType": 524288,
 		"ignore": 1,
@@ -1238,6 +1249,85 @@
 		"useDoubleQuotes": 0,
 		"useUnixNewlines": 0
 		},
+	"\/markdown\/3-2 (old).haml": {
+		"escapeHTMLCharacters": 0,
+		"fileType": 256,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/markdown\/3-2 (old).haml",
+		"noEscapeInAttributes": 0,
+		"outputAbbreviatedPath": "\/markdown\/3-2 (old).html",
+		"outputFormat": 2,
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"useCDATA": 0,
+		"useDoubleQuotes": 0,
+		"useUnixNewlines": 0
+		},
+	"\/markdown\/3-2-1.md": {
+		"criticStyle": 0,
+		"enableFootnotes": 1,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/markdown\/3-2-1.md",
+		"maskEmailAddresses": 1,
+		"outputAbbreviatedPath": "\/markdown\/html\/3-2-1.html",
+		"outputFormat": 0,
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 1,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
+	"\/markdown\/3-2-2.md": {
+		"criticStyle": 0,
+		"enableFootnotes": 1,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/markdown\/3-2-2.md",
+		"maskEmailAddresses": 1,
+		"outputAbbreviatedPath": "\/markdown\/html\/3-2-2.html",
+		"outputFormat": 0,
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 1,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
+	"\/markdown\/3-2-3.md": {
+		"criticStyle": 0,
+		"enableFootnotes": 1,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/markdown\/3-2-3.md",
+		"maskEmailAddresses": 1,
+		"outputAbbreviatedPath": "\/markdown\/html\/3-2-3.html",
+		"outputFormat": 0,
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 1,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
 	"\/markdown\/3-2.haml": {
 		"escapeHTMLCharacters": 0,
 		"fileType": 256,
@@ -1652,6 +1742,33 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/markdown\/html\/3-2-1.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/markdown\/html\/3-2-1.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/markdown\/html\/3-2-2.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/markdown\/html\/3-2-2.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/markdown\/html\/3-2-3.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/markdown\/html\/3-2-3.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/markdown\/html\/3-2.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -1775,6 +1892,60 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/navigatie-en-interactie\/formulieren\/toc.kit",
 		"outputAbbreviatedPath": "\/navigatie-en-interactie\/formulieren\/toc.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/navigatie-en-interactie\/links-en-knoppen\/helder-en-informatief\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/navigatie-en-interactie\/links-en-knoppen\/helder-en-informatief\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/navigatie-en-interactie\/links-en-knoppen\/helder-en-informatief\/index.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/navigatie-en-interactie\/links-en-knoppen\/helder-en-informatief\/index.kit",
+		"outputAbbreviatedPath": "\/navigatie-en-interactie\/links-en-knoppen\/helder-en-informatief\/index.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/navigatie-en-interactie\/links-en-knoppen\/herkenbaar\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/navigatie-en-interactie\/links-en-knoppen\/herkenbaar\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/navigatie-en-interactie\/links-en-knoppen\/herkenbaar\/index.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/navigatie-en-interactie\/links-en-knoppen\/herkenbaar\/index.kit",
+		"outputAbbreviatedPath": "\/navigatie-en-interactie\/links-en-knoppen\/herkenbaar\/index.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/navigatie-en-interactie\/links-en-knoppen\/klik-en-aanraakgebied\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/navigatie-en-interactie\/links-en-knoppen\/klik-en-aanraakgebied\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/navigatie-en-interactie\/links-en-knoppen\/klik-en-aanraakgebied\/index.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/navigatie-en-interactie\/links-en-knoppen\/klik-en-aanraakgebied\/index.kit",
+		"outputAbbreviatedPath": "\/navigatie-en-interactie\/links-en-knoppen\/klik-en-aanraakgebied\/index.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},

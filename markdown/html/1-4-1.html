@@ -2,7 +2,7 @@
 
 <p>Markeer cellen die een hoofding bevatten met een <code>&lt;th&gt;</code>-tag en gebruik <code>&lt;td&gt;</code>-tags voor cellen met andere gegevens. De titel of het bijschrift van de tabel markeer je met de <code>&lt;caption&gt;</code>-tag.</p>
 
-<p><strong>Opgelet</strong>: deze richtlijn is enkel bedoeld voor <strong>gegevenstabellen</strong>. HTML-tabellen mag je niet gebruiken om kolommen, formulieren of pagina’s op te maken. Die moet je vormgeven in een stijlblad.</p>
+<p><strong>Opgelet</strong>: deze richtlijn is enkel bedoeld voor tabellen met <strong>gestructureerde gegevens</strong>. HTML-tabellen mag je niet gebruiken om kolommen, formulieren, volledige webpagina’s of nieuwsbrieven op te maken. Die moet je opmaken met CSS.</p>
 
 <h3 id="hoemarkeerjeeentabelmetdejuistetags">Hoe markeer je een tabel met de juiste tags?</h3>
 
@@ -17,6 +17,27 @@
 <p>Onderstaand voorbeeld bevat de HTML-code voor een tabel met de FM-frequenties van enkele radiozenders, opgesplitst per provincie. De inhoud is illustratief en niet per se juist of volledig.</p>
 
 <h4 id="goedvoorbeeld">Goed voorbeeld</h4>
+
+<table>
+  <caption>FM-frequenties VRT-radiozenders</caption>
+  <tbody>
+    <tr>
+      <th>Zender</th>
+      <th>Antwerpen</th>
+      <th>Limburg</th>
+    </tr>
+    <tr>
+      <th>Studio Brussel</th>
+      <td>100.9 MHz</td>
+      <td>101.4 MHz</td>
+    </tr>
+    <tr>
+      <th>MNM</th>
+      <td>89.0 MHz</td>
+      <td>102.0 MHz</td>
+    </tr>
+  </tbody>
+</table>
 
 <pre><code>&lt;table&gt;
   &lt;caption&gt;FM-frequenties VRT-radiozenders&lt;/caption&gt;
@@ -41,6 +62,28 @@
 </code></pre>
 
 <h4 id="slechtvoorbeeld">Slecht voorbeeld</h4>
+
+<p>FM-frequenties VRT-radiozenders</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td class="zender"><strong>Zender</strong></td>
+      <td class="provincie"><strong>Antwerpen</strong></td>
+      <td class="provincie"><strong>Limburg</strong></td>
+    </tr>
+    <tr>
+      <td class="zender">Studio Brussel</td>
+      <td>100.9 MHz</td>
+      <td>101.4 MHz</td>
+    </tr>
+    <tr>
+      <td class="zender">MNM</td>
+      <td>89.0 MHz</td>
+      <td>102.0 MHz</td>
+    </tr>
+  </tbody>
+</table>
 
 <pre><code>&lt;p&gt;FM-frequenties VRT-radiozenders&lt;/p&gt;
 &lt;table&gt;
