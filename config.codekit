@@ -1138,6 +1138,48 @@
 		"useDoubleQuotes": 0,
 		"useUnixNewlines": 0
 		},
+	"\/markdown\/2-2-1.md": {
+		"criticStyle": 0,
+		"enableFootnotes": 1,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/markdown\/2-2-1.md",
+		"maskEmailAddresses": 1,
+		"outputAbbreviatedPath": "\/markdown\/html\/2-2-1.html",
+		"outputFormat": 0,
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 1,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
+	"\/markdown\/2-2-2.md": {
+		"criticStyle": 0,
+		"enableFootnotes": 1,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/markdown\/2-2-2.md",
+		"maskEmailAddresses": 1,
+		"outputAbbreviatedPath": "\/markdown\/html\/2-2-2.html",
+		"outputFormat": 0,
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 1,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
 	"\/markdown\/2-2.haml": {
 		"escapeHTMLCharacters": 0,
 		"fileType": 256,
@@ -1688,6 +1730,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/markdown\/html\/2-2-1.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/markdown\/html\/2-2-1.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/markdown\/html\/2-2-2.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/markdown\/html\/2-2-2.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/markdown\/html\/2-2.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -2041,12 +2101,48 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/vormgeving\/kleuren-en-contrasten\/toc.kit": {
-		"fileType": 2048,
+	"\/vormgeving\/kleuren\/contrastverhoudingen\/index.html": {
+		"fileType": 8192,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vormgeving\/kleuren-en-contrasten\/toc.kit",
-		"outputAbbreviatedPath": "\/vormgeving\/kleuren-en-contrasten\/toc.html",
+		"inputAbbreviatedPath": "\/vormgeving\/kleuren\/contrastverhoudingen\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vormgeving\/kleuren\/contrastverhoudingen\/index.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vormgeving\/kleuren\/contrastverhoudingen\/index.kit",
+		"outputAbbreviatedPath": "\/vormgeving\/kleuren\/contrastverhoudingen\/index.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vormgeving\/kleuren\/kleuren-met-een-functie\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vormgeving\/kleuren\/kleuren-met-een-functie\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vormgeving\/kleuren\/kleuren-met-een-functie\/index.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vormgeving\/kleuren\/kleuren-met-een-functie\/index.kit",
+		"outputAbbreviatedPath": "\/vormgeving\/kleuren\/kleuren-met-een-functie\/index.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vormgeving\/kleuren\/toc.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vormgeving\/kleuren\/toc.kit",
+		"outputAbbreviatedPath": "\/vormgeving\/kleuren\/toc.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
