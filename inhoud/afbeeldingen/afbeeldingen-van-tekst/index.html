@@ -24,54 +24,67 @@
 <p class="waar hide">
   Deze richtlijn hoort in <a href="/inhoud">Inhoud</a> › <a href="/inhoud/afbeeldingen">Afbeedlingen</a>
 </p>
-<h2 id="tekstzitnietgevangenineenafbeelding">Tekst zit niet gevangen in een afbeelding</h2>
+<h1 id="afbeeldingenvantekstzijnspaarzaamgebrukt">Afbeeldingen van tekst zijn spaarzaam gebrukt</h1>
 
 <p>Vermijd afbeeldingen van tekst. Geef altijd de voorkeur aan HTML-tekst. Ook voor koppen, slogans, knopopschriften en bijschriften bij foto&#8217;s.</p>
 
 <p><strong>Opgelet</strong>: op deze richtlijn zijn enkele <a href="#toegestaneuitzonderingen">uitzonderingen</a> toegestaan.</p>
 
-<h3 id="watiseenafbeeldingvantekst">Wat is een afbeelding van tekst?</h3>
+<h2 id="watiseenafbeeldingvantekst">Wat is een afbeelding van tekst?</h2>
 
-<p>Een afbeelding van tekst is meestal gemaakt met een <strong>beeldbewerkingsprogramma</strong> als <a href="http://www.adobe.com/be_nl/products/photoshop.html">Photoshop</a> of <a href="https://www.sketchapp.com">Sketch</a> en heeft een bestandsnaam die eindigt op .png, .svg of .jpg. Ze worden ingevoegd met een <code>&lt;img&gt;</code> tag of met behulp van een techniek waarbij de originele tekst vervangen wordt door een achtergrondafbeelding die gedefinieerd is in een stijlblad (&#8216;image replacement&#8217;). Geen van deze technieken is toegestaan.</p>
+<p>Een afbeelding van tekst is meestal gemaakt met een <strong>beeldbewerkingsprogramma</strong> als <a href="http://www.adobe.com/be_nl/products/photoshop.html">Photoshop</a> of <a href="https://www.sketchapp.com">Sketch</a> en heeft een bestandsnaam die eindigt op .png, .svg of .jpg. Ze worden ingevoegd met een <code>&lt;img&gt;</code> tag of met behulp van een techniek waarbij de originele tekst vervangen wordt door een achtergrondafbeelding die gedefinieerd is in een stijlblad. Deze techniek noemt men ook <em>image replacement</em>. Geen van deze technieken is toegestaan.</p>
 
-<p>Soms zie je het verschil met echte tekst niet zo goed in je browser. Als je de tekst kan <strong>selecteren</strong> (en kopiëren), ben je zeker dat het om HTML-tekst (&#8216;echte&#8217; tekst) gaat en niet om een <strong>afbeelding</strong> van tekst.</p>
+<p>Soms zie je het verschil met echte tekst niet zo goed op het scherm. Als je de tekst kan <strong>selecteren</strong> (en kopiëren), ben je zeker dat het om HTML-tekst (&#8216;echte&#8217; tekst) gaat en niet om een <strong>afbeelding</strong> van tekst.</p>
 
-<ul class="horizontaal">
-  <li><span style="display: block; margin: 0; padding: 1em; font-weight: bold; background: DeepPink; color: white;">Dit is HTML-tekst</span></li>
-  <li><img style="zoom: 50%" src="/afbeeldingen/afbeelding-van-tekst.png" alt="Afbeelding van tekst" /></li>
-</ul>
+<h3 id="voorbeeld">Voorbeeld</h3>
 
-<h3 id="waaromgebruikjezebeterniet">Waarom gebruik je ze beter niet?</h3>
+<p>In onderstaand voorbeeld kan je de tekst in het linkse blok selecteren. De tekst in het rechtse blok kan je niet selecteren omdat het een afbeelding is.</p>
 
 <ul>
-<li>Bezoekers kunnen afbeeldingen van tekst <strong>niet vergroten</strong> zonder dat er kwaliteitsverlies optreedt. Dat maakt ze voor slechtzienden <strong>moeilijk leesbaar</strong>.</li>
-<li>Sommige bezoekers passen graag het <strong>lettertype</strong> of de <strong>kleuren</strong> van hun favoriete website aan en dat kan niet als de tekst &#8216;gevangen&#8217; zit in een afbeelding.</li>
-<li>Als een browser of apparaat geen afbeeldingen kan weergeven – of als de bezoeker <strong>blind</strong> is – kan belangrijke informatie verloren gaan. Zeker als de afbeelding geen alternatieve beschrijving heeft.</li>
-<li>Tekst in een afbeelding kan je <strong>niet selecteren of kopiëren</strong>. Je kan de inhoud ook niet vinden met de <strong>zoekfunctie</strong> van je browser. Dat vermindert de gebruikservaring van je website.</li>
-<li>Ook <strong>zoekmachines</strong> kunnen ze soms niet goed lezen (afhankelijk van de gebruikte techniek). Dat kan ten koste gaan van de <strong>indexering en ranking</strong> in de resultatenlijst van bv. Google.</li>
-<li>Afbeeldingen <strong>laden</strong> nooit zo snel als tekst en nemen meer ruimte in beslag op de server. Bovendien passen afbeeldingen zich niet goed aan aan de <strong>beeldverhouding</strong> van (mobiele) apparaten; ze zijn niet &#8216;responsive&#8217;.</li>
-<li>Wie de website <strong>onderhoudt</strong>, ondervindt dat websites die veel afbeeldingen van tekst bevatten <strong>niet zo handig</strong> zijn om te onderhouden. HTML-tekst aanpassen is <strong>sneller en eenvoudiger</strong>.</li>
+<li><p><span style="display: block; margin: 0; padding: 1em; font-weight: bold; background: DeepPink; color: white;">Dit is HTML-tekst</span></p></li>
+<li><figure>
+<img src="/afbeeldingen/afbeelding-van-tekst.png" alt="Afbeelding van tekst" />
+<figcaption>Afbeelding van tekst</figcaption>
+</figure></li>
 </ul>
 
-<h3 id="tochcreatiefmettekst">Toch creatief met tekst</h3>
+<h2 id="waaromgebruikjeafbeeldingenvantekstbeterniet">Waarom gebruik je afbeeldingen van tekst beter niet?</h2>
+
+<h3 id="hinderlijkvoorslechtziendenenblinden">Hinderlijk voor slechtzienden en blinden</h3>
 
 <ul>
-<li>Als je <strong>lettertypes</strong> wilt gebruiken die niet standaard meegeleverd worden op iedere computer, kan je web fonts gebruiken. Die kan je op je eigen server installeren, maar ook diensten als <a href="https://typekit.com">Adobe Typekit</a> en <a href="https://www.google.com/fonts">Google fonts</a> zijn prima toegankelijk. Technieken die Flash gebruiken (zoals <a href="https://en.wikipedia.org/wiki/Scalable_Inman_Flash_Replacement">sIFR</a>) zijn niet toegankelijk en mag je niet gebruiken.</li>
+<li>Om comfortabel te kunnen lezen, passen sommige slechtzienden het <strong>lettertype</strong>, de <strong>tekengrootte</strong> en/of de <strong>tekstkleur</strong> op webpagina&#8217;s aan in de instellingen van hun browser of apparaat. Deze instellingen hebben niet het gewenste effect op afbeeldingen van tekst.</li>
+<li>Als afbeeldingen vergroot weergegeven worden, treedt vaak zichtbaar <strong>kwaliteitsverlies</strong> op (dit geldt niet voor vectoriële afbeeldingen).</li>
+<li>Als een browser of apparaat geen afbeeldingen kan weergeven – of als de bezoeker <strong>blind</strong> is – kan belangrijke informatie <strong>verloren</strong> gaan. Dat geldt met name voor afbeeldingen die <strong>geen alternatieve</strong> beschrijving hebben.</li>
+</ul>
+
+<h3 id="hinderlijkvooranderebezoekers">Hinderlijk voor andere bezoekers</h3>
+
+<ul>
+<li>Tekst in een afbeelding kan je <strong>niet selecteren of kopiëren</strong>. Je kan de tekst ook niet vinden met de <strong>zoekfunctie</strong> van je browser.</li>
+<li>Ook <strong>zoekmachines</strong> kunnen ze vaak niet lezen (afhankelijk van de gebruikte techniek). Dat kan ten koste gaan van de <strong>indexering en ranking</strong> in de resultatenlijst van bv. Google.</li>
+<li>Afbeeldingen hebben <strong>vaste beeldverhoudingen</strong> en passen zich daarom niet goed aan de breedte van browsers en (mobiele) apparaten; ze zijn dus niet <strong>responsive</strong>.</li>
+<li>Het duurt <strong>langer</strong> om afbeeldingen over een netwerk te versturen omdat ze veel <strong>meer data</strong> bevatten dan tekst. Daar ondervinden bezoekers met een <strong>trage internetverbinding</strong> en/of een <strong>data-limiet</strong> hinder van.</li>
+<li>De meeste e-mailprogramma&#8217;s en diensten als Gmail en Windows Live Mail <strong>verbergen</strong> afbeeldingen als ze de afzender niet vertrouwen. Daarom is het geen goed idee om afbeeldingen van tekst te gebruiken in <strong>HTML-nieuwsbrieven</strong>.</li>
+<li>Wie een website <strong>onderhoudt</strong>, ondervindt dat websites die veel afbeeldingen van tekst bevatten <strong>niet zo handig</strong> zijn om te bewerken of te vertalen. HTML-tekst bewerken is meestal <strong>sneller en gemakkelijker</strong>.</li>
+</ul>
+
+<h2 id="tochcreatiefmettekst">Toch creatief met tekst</h2>
+
+<ul>
+<li>Als je <strong>lettertypes</strong> wilt gebruiken die niet voorgeïnstalleerd zijn op computers en smartphones, kan je web fonts gebruiken. Die kan je op je eigen server installeren, maar ook diensten als <a href="https://typekit.com">Adobe Typekit</a> en <a href="https://www.google.com/fonts">Google fonts</a> zijn prima toegankelijk. Technieken die Flash gebruiken (zoals <a href="https://en.wikipedia.org/wiki/Scalable_Inman_Flash_Replacement">sIFR</a>) zijn niet toegankelijk en mag je zeker niet gebruiken.</li>
 <li>Als je <strong>teksteffecten</strong> wil toepassen (schaduwen, verlooptinten, uitsnedes etc.) dan kan dat tegenwoordig ook prima met CSS. Daarvoor hoef je dus geen beeldbewerkingsprogramma te gebruiken.</li>
 </ul>
 
-<h3 id="toegestaneuitzonderingen">Toegestane uitzonderingen</h3>
+<h2 id="toegestaneuitzonderingen">Toegestane uitzonderingen</h2>
 
 <ul>
-<li><strong>Logo&#8217;s en beeldmerken</strong> waarin tekst voorkomt (zoals de naam van een tv-station) mag je natuurlijk wel gewoon gebruiken. Als er ook een slogan of slagzin bij hoort, maak je daar bij voorkeur wel HTML-tekst van.</li>
-<li>Complexe <strong>infografieken</strong> met veel tekst en afbeeldingen worden gewoonlijk opgemaakt in een beeldbewerkingsprogramma. Deze afbeeldingen kan je wel gerust zo online plaatsen, maar pas dan wel de <a href="/inhoud/afbeeldingen/diagrammen-infografieken/">richtlijn over het beschrijven van diagrammen en infografieken</a> toe.</li>
-<li>Soms kan je bijna niet anders dan een afbeelding van tekst gebruiken. In dat geval herhaal je in het <code>alt</code>-attribuut <strong>letterlijk</strong> de afgebeelde tekst of pas je de <a href="/inhoud/afbeeldingen/diagrammen-infografieken/">richtlijn over het beschrijven van diagrammen en infografieken</a> toe. Enkele voorbeelden:
-
-<ul>
-<li>Een foto van de set list van een artiest</li>
-<li>Een stukje uit een ingescand krantenartikel of een handgeschreven manuscript</li>
-<li>Een verkeersbord</li>
-</ul></li>
+<li><p><strong>Logo&#8217;s en beeldmerken</strong> waarin tekst voorkomt (zoals de naam van een tv-zender) mag je wel gewoon gebruiken. Als er ook een slogan of slagzin bij hoort, maak je daar bij voorkeur wel HTML-tekst van.</p></li>
+<li><p>Complexe <strong>infografieken</strong> met veel tekst en afbeeldingen worden gewoonlijk opgemaakt in een beeldbewerkingsprogramma. Deze afbeeldingen kan je wel gerust zo online plaatsen, maar pas dan wel de <a href="/inhoud/afbeeldingen/diagrammen-infografieken/">richtlijn over het beschrijven van diagrammen en infografieken</a> toe.</p></li>
+<li><p>Soms kan je bijna niet anders dan een afbeelding van tekst gebruiken. In dat geval herhaal je in het <code>alt</code>-attribuut <strong>letterlijk</strong> de afgebeelde tekst of pas je de <a href="/inhoud/afbeeldingen/diagrammen-infografieken/">richtlijn over het beschrijven van diagrammen en infografieken</a> toe. Enkele voorbeelden:</p></li>
+<li><p>Een foto van de set list van een artiest</p></li>
+<li><p>Een stukje uit een ingescand krantenartikel of een handgeschreven manuscript</p></li>
+<li><p>Een verkeersbord</p></li>
 </ul>
 	<form id="feedback" data-forge-name="VRT-FEEDBACK">
 	<h3><i class="fa fa-comment-o"></i> Geef feedback op deze richtlijn</h3>

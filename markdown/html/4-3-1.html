@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+<h1 id="alseenpagina-onderdeeltijdenshettabbenfocuskrijgt–endusactiveerbaarwordt–isdatduidelijkzicthbaar">Als een pagina-onderdeel tijdens het tabben focus krijgt – en dus activeerbaar wordt – is dat duidelijk zicthbaar</h1>
+
+<p>Als je navigeert met de tab-toets is het belangrijk om goed te kunnen <strong>zien</strong> waar je je precies bevindt op de pagina. Als je niet kan zien welke link &#8216;focus&#8217; krijgt, weet je ook niet wanneer je op Enter moet drukken om de link te volgen.</p>
+
+<p>Als je een muis gebruikt, kan je gewoon <strong>aanwijzen</strong> waarop je wil klikken en is een visuele markering niet noodzakelijk. In desktop-browsers verandert het muispijltje bovendien in een handje als je over een link beweegt.</p>
+
+<h2 id="nooitverbergen">Nooit verbergen</h2>
+
+<p>Browsers passen een paar standaard-opmaakregels toe op iedere webpagina. Een van die stijlen is het fijne stippellijntje waarmee elementen &#8216;in focus&#8217; gemarkeerd worden.</p>
+
+<p>Die opmaakregel (<code>outline: none</code>) kan je als webdesigner (te) gemakkelijk overschrijven, maar dat doe je liever niet. In het uitgewerkte voorbeeld verderop laten we zien waarom.</p>
+
+<h2 id="zetlinkslieverextraindeverf">Zet links liever extra in de verf</h2>
+
+<p>Het is niet verplicht, maar het is wel een goede gewoonte om de focus net <strong>extra duidelijk</strong> te maken, bv. met een vette rand of een achtergrondkleurtje. Als je dat doet, let er dan wel op dat de kleuren voldoende contrasteren (zie richtlijn xyz).</p>
+
+<h3 id="voorbeeld:navigatiebalk">Voorbeeld: navigatiebalk</h3>
+
+<p>Neem deze eenvoudige navigatiebalk als voorbeeld:</p>
+
+<nav id="radiozenders-1" tabindex="-1">
+  <ul>
+  <li><a href="http://www.stubru.be/">Studio Brussel</a></li>
+  <li><a href="http://www.mnm.be/">MNM</a></li>
+  <li><a href="http://www.radio1.be/">Radio 1</a></li>
+  <li><a href="http://www.radio2.be/">Radio 2</a></li>
+  <li><a href="http://www.Klara.be/">Klara</a></li>
+</ul>
+</nav>
+
+<style>
+  #radiozenders-1 ul {
+    margin: 0 0 1me; padding: 0;
+  }
+  #radiozenders-1 ul li {
+    margin: 0; padding; 0;
+    display: inline-block;
+  }
+  #radiozenders-1 ul li a {
+    display: block;
+    padding: 5px 15px;
+    text-decoration: none !important;
+    background: Beige;
+  }
+</style>
+
+<p>Bijbehorende HTML:</p>
+
+<nav id="radiozenders">
+  <ul>
+  <li><a href="http://www.stubru.be/">Studio Brussel</a></li>
+  <li><a href="http://www.mnm.be/">MNM</a></li>
+  <li><a href="http://www.radio1.be/">Radio 1</a></li>
+  <li><a href="http://www.radio2.be/">Radio 2</a></li>
+  <li><a href="http://www.Klara.be/">Klara</a></li>
+</ul>
+</nav>
+
+<p>Bijbehorende CSS:</p>
+
+<pre><code>&lt;style&gt;
+  #radiozenders ul li {
+    display: inline-block;
+  }
+  #radiozenders ul li a {
+    display: block;
+    padding: 5px 15px;
+    text-decoration: none;
+    background: Beige;
+  }
+&lt;/style&gt;
+</code></pre>
+
+<p>Omdat de standaard <code>:hover</code>-stijl een beetje saai is, voegen we volgende CSS toe:</p>
+
+<pre><code>#radiozenders ul li a:hover {
+  color: white;
+  background: darkOrange;
+}
+</code></pre>
+
+<p>Beweeg met je muis over onderstaande balk om het effect te zien. Probeer ook eens te navigeren met de Tab-toets. Je kan nu op Tab drukken, maar dan start je helemaal bovenaan de pagina. Met deze link kan je <a href="#stubru-2">meteen naar het eerste item in het tweede voorbeeld springen</a> zodat je van daaruit kan starten met tabben.</p>
+
+<nav id="radiozenders-2" tabindex="-1">
+  <ul>
+  <li><a id="stubru-2" href="http://www.stubru.be/">Studio Brussel</a></li>
+  <li><a href="http://www.mnm.be/">MNM</a></li>
+  <li><a href="http://www.radio1.be/">Radio 1</a></li>
+  <li><a href="http://www.radio2.be/">Radio 2</a></li>
+  <li><a href="http://www.Klara.be/">Klara</a></li>
+</ul>
+</nav>
+
+<style>
+  #radiozenders-2 ul {
+    margin: 0 0 1me; padding: 0;
+  }
+  #radiozenders-2 ul li {
+    margin: 0; padding; 0;
+    display: inline-block;
+  }
+  #radiozenders-2 ul li a {
+    display: block;
+    padding: 5px 15px;
+    text-decoration: none !important;
+    background: Beige;
+  }
+  #radiozenders-2 ul li a:hover {
+    color: white;
+    background: darkOrange;
+  }
+</style>
+
+<p>Je merkt dat de focusmarkering eerder subtiel is (afhankelijk van welke je browser je gebruikt). Als je nu bovendien de standaardmarkering weg zou halen met <code>outline: none</code> – wat in de praktijk vaak gebeurt – dan zie je helemaal niet meer welk element focus krijgt:</p>
+
+<pre><code>#radiozenders ul li a:focus {
+  outline: none; /* Dit is de boosdoener */
+}
+</code></pre>
+
+<p>Let op: misschien schrijf je deze CSS-regel niet zelf, maar maakt hij deel uit van een stijlblad dat bij een framework hoort. Kijk dat dus zeker na.</p>
+
+<p>Probeer maar eens in onderstaande balk te navigeren met de tab-toets. <a href="#stubru-3">Spring meteen naar het eerste item in het derde voorbeeld</a>.</p>
+
+<nav id="radiozenders-3" tabindex="-1">
+  <ul>
+  <li><a id="stubru-3" href="http://www.stubru.be/">Studio Brussel</a></li>
+  <li><a href="http://www.mnm.be/">MNM</a></li>
+  <li><a href="http://www.radio1.be/">Radio 1</a></li>
+  <li><a href="http://www.radio2.be/">Radio 2</a></li>
+  <li><a href="http://www.Klara.be/">Klara</a></li>
+</ul>
+</nav>
+
+<style>
+  #radiozenders-3 ul {
+    margin: 0 0 1me; padding: 0;
+  }
+  #radiozenders-3 ul li {
+    margin: 0; padding; 0;
+    display: inline-block;
+  }
+  #radiozenders-3 ul li a {
+    display: block;
+    padding: 5px 15px;
+    text-decoration: none !important;
+    background: Beige;
+  }
+  #radiozenders-3 ul li a:hover {
+    color: white;
+    background: darkOrange;
+  }
+  #radiozenders-3 ul li a:focus {
+    outline: none;
+  }
+</style>
+
+<p>Er lijkt niks te gebeuren? Toch wel, maar je bent nu &#8216;blind&#8217; aan het navigeren. Druk twee keer op tab en je bevindt je op de link naar de website van Radio 1 (Bevestig met Enter). Druk drie keer en je bevindt je op de link naar de website van Radio 2. Verwarrend, niet?</p>
+
+<p>Gelukkig kunnen we dit probleem gemakkelijk verhelpen. Eigenlijk is het heel simpel: als je een <code>:hover</code>-stijl definieert, hergebruik die dan voor de <code>:focus</code>-stijl. En in dat geval mag je zelfs best de standaard-stijl overschrijven met <code>outline: none</code>:</p>
+
+<pre><code>#radiozenders ul li a:hover,
+#radiozenders ul li a:focus {
+  color: white;
+  background: darkOrange;
+  outline: none; /* Niet verplicht hier, maar het staat netter */
+}
+</code></pre>
+
+<p>Dit is het eindresultaat: een navigatiebalk die je <strong>zowel met de muis als met het toetsenbord</strong> prima kan bedienen en duidelijk laat zien waar je je bevindt. Probeer het zelf in dit <a href="#stubru-4">laatste (goed uitgewerkte) voorbeeld</a>:</p>
+
+<nav id="radiozenders-4" tabindex="-1">
+  <ul>
+  <li><a id="stubru-4" href="http://www.stubru.be/">Studio Brussel</a></li>
+  <li><a href="http://www.mnm.be/">MNM</a></li>
+  <li><a href="http://www.radio1.be/">Radio 1</a></li>
+  <li><a href="http://www.radio2.be/">Radio 2</a></li>
+  <li><a href="http://www.Klara.be/">Klara</a></li>
+</ul>
+</nav>
+
+<style>
+  #radiozenders-4 ul {
+    margin: 0 0 1me; padding: 0;
+  }
+  #radiozenders-4 ul li {
+    margin: 0; padding; 0;
+    display: inline-block;
+  }
+  #radiozenders-4 ul li a {
+    display: block;
+    padding: 5px 15px;
+    text-decoration: none !important;
+    background: Beige;
+  }
+  #radiozenders-4 ul li a:hover,
+  #radiozenders-4 ul li a:focus {
+    color: white;
+    background: darkOrange;
+    outline: none;
+  }
+  #radiozenders-4 ul li a:active {
+    color: white;
+    background: Orange;
+  }
+</style>
+
+</body>
+</html>

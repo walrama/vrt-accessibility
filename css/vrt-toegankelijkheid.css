@@ -4,6 +4,9 @@ body {
   body a {
     text-decoration: underline !important; }
 
+@media print {
+  h1, .waar, #feedback, #vorige-volgende {
+    display: none !important; } }
 ul.horizontaal {
   margin: 0;
   padding: 0;
@@ -14,6 +17,30 @@ ul.horizontaal {
     display: inline-block;
     vertical-align: middle;
     height: 3.5em; }
+
+.infografiek-alternatief {
+  width: 600px;
+  background: #eee;
+  padding: 1em; }
+  .infografiek-alternatief caption {
+    font-weight: normal; }
+  .infografiek-alternatief details {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: .5em 1em;
+    margin: 0 0 1em 0; }
+    .infografiek-alternatief details summary {
+      text-decoration: underline;
+      color: blue; }
+    .infografiek-alternatief details ul {
+      margin-top: .75em;
+      font-weight: normal;
+      font-size: 80%; }
+  .infografiek-alternatief caption {
+    text-align: left;
+    width: 600px; }
+  .infografiek-alternatief thead {
+    width: 100%; }
 
 /* Fix voor voorbeeldjes over focus */
 nav:focus {
@@ -115,13 +142,11 @@ p.waar {
 #richtlijnen ol.categorie > li:before, #richtlijnen ol.subcategorie > li:before {
   content: ""; }
 
-/*
 h2:first-of-type + p {
-	border: 1px dashed black !important;
-	background: #eee;
-	padding: 1em;
-}
-*/
+  border: 1px dashed black !important;
+  background: #eee;
+  padding: 1em; }
+
 #richtlijnen li h1, #richtlijnen li h2, #richtlijnen li h3 {
   display: inline-block !important; }
 
