@@ -20,15 +20,33 @@
 		</style>
 	</head>
 	<body class="markdown-body">
-		<h1><a href="/">VRT-kwaliteitsvereisten voor toegankelijke websites, webapplicaties en elektronische nieuwsbrieven</a></h1>
+    <a href="#main">Ga naar inhoud</a>
+    <header id="header">
+      <nav role="navigation" aria-label="site links">
+        <ul>
+          <li><a href="/">Home - Kwaliteitsvereisten voor toegankelijke websites</a></li>
+          <li><a href="#">Over deze kwaliteitsvereisten</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <p>Versie 0.9 -- Laatst aangepast door Roel Van Gils op 12 december 2016.</p>
+    </header>
+    <!-- <form id="search" role="search" action="index.html" method="post">
+      <label>
+        Doorzoek alle richtlijnen
+        <input type="text" name="" value="">
+      </label>
+      <input type="submit" name="" value="Zoek">
+    </form> -->
+    <main role="main" id="main">
 <p class="waar hide">
   Deze richtlijn hoort in <a href="/inhoud">Inhoud</a> › <a href="/inhoud/afbeeldingen">Afbeedlingen</a>
 </p>
-<h2 id="belangrijkeafbeeldingenhebbeneenalt-attribuutmeteenbondigebeschrijvingvanwatertezienis">Belangrijke afbeeldingen hebben een alt-attribuut met een bondige beschrijving van wat er te zien is</h2>
+<h1 id="betekenisvolleafbeeldingenhebbeneenalt-attribuutmeteenbondigebeschrijvingvanwatertezienis">Betekenisvolle afbeeldingen hebben een alt-attribuut met een bondige beschrijving van wat er te zien is</h1>
 
 <p>Beeld je in dat je de afbeeldingen op een webpagina of in een nieuwsbrief niet kan zien. Net als een blinde bezoeker dus. Mis je dan belangrijke informatie? Als iemand de afbeelding voor je zou moeten beschrijven, wat wil je dan zeker weten? Dat vermeld je in het <code>alt</code>-attribuut van de <code>&lt;img&gt;</code>-tag.</p>
 
-<h3 id="enkelevuistregels">Enkele vuistregels</h3>
+<h2 id="enkelevuistregels">Enkele vuistregels</h2>
 
 <ul>
 <li>Hou de beschrijving <strong>beknopt</strong> en gebruik <strong>eenvoudige taal</strong>. De kleur van iemands haar of ogen hoef je bv. niet te beschrijven, tenzij dat écht relevant is in de context van het artikel.</li>
@@ -37,7 +55,7 @@
 <li>Het <code>alt</code>-attribuut is niet de meest geschikte plaats voor de naam van de fotograaf of copyright-informatie. Die vermeld je best onder de foto, voor iedereen zichtbaar.</li>
 </ul>
 
-<h3 id="goedevoorbeelden">Goede voorbeelden</h3>
+<h2 id="goedevoorbeelden">Goede voorbeelden</h2>
 
 <ul>
 <li><code>&lt;img src=&quot;cover.png?id=665145&quot; alt=&quot;Platenhoes van het album 'Alive' van Pearl Jam&quot;&gt;</code></li>
@@ -46,7 +64,7 @@
 <li><code>&lt;img sc=&quot;DSC4554556878.jpg&quot; alt=&quot;Groepsfoto met de presentatoren van Radio 1 bovenop de VRT-toren&quot;&gt;</code></li>
 </ul>
 
-<h3 id="opgelet">Opgelet</h3>
+<h2 id="letookhierop">Let ook hierop</h2>
 
 <ul>
 <li>Dit ijkpunt geldt ook voor Animated GIF&#8217;s en de afbeeldingen die je in nieuwsbrieven gebruikt.</li>
@@ -54,7 +72,7 @@
 <li>Niet alle afbeeldingen zijn informatief. Soms zijn ze decoratief of wordt de inhoud al beschreven in het artikel waar ze bij horen. Deze afbeeldingen hoef je niet uitgebreid te beschrijven. Meer hierover lees je in het ijkpunt over <a href="/inhoud/afbeeldingen/decoratieve-afbeeldingen/">decoratieve afbeeldingen</a>.</li>
 </ul>
 
-<h3 id="hoedoejedat">Hoe doe je dat?</h3>
+<h2 id="hoedoejedat">Hoe doe je dat?</h2>
 
 <ul>
 <li>Als je een CMS gebruikt, vind je daarin meestal een veld om een afbeelding te beschrijven.</li>
@@ -66,23 +84,24 @@
 </ul></li>
 </ul>
 
-<h3 id="extraaanbevelingen">Extra aanbevelingen</h3>
+<h2 id="extraaanbevelingen">Extra aanbevelingen</h2>
 
-<h4 id="watmetfotoverslagen">Wat met fotoverslagen?</h4>
+<h3 id="watmetfotoverslagenengalerijen">Wat met fotoverslagen en galerijen?</h3>
 
 <p>Een fotoverslag of fotogalerij bevat vaak veel gelijkaardige foto&#8217;s van een persoon of een evenement dat voorbij is. Er is niets op tegen om iedere foto afzonderlijk te beschrijven, maar dat is niet per se nodig.</p>
 
 <p>Boven zo&#8217;n fotoreeks mag je gerust een algemene beschrijving plaatsen, zoals &#8216;Enkele sfeerfoto&#8217;s van de MIA Awards&#8217; of &#8217;Fotoshoot Joy Anna Thielemans op het strand. De foto&#8217;s zelf mag je een lege alt-tekst (<code>alt=&quot;&quot;</code>) geven. Als de foto&#8217;s een link bevatten naar een vergrote versie, geef ze dan een unieke alt-tekst, zoals <code>alt=&quot;Foto 1 (groot)&quot;</code>, <code>alt=&quot;Foto 2 (groot)&quot;</code> etc.</p>
 
-<h4 id="watmetcaptchas">Wat met captcha&#8217;s?</h4>
+<h3 id="watmetcaptchas">Wat met captcha&#8217;s?</h3>
 
 <p>Soms moet een bezoeker een aantal <strong>karakters uit een afbeelding overtikken</strong> om bv. een account aan te maken of een reactie te kunnen plaatsen. <strong>Blinden, slechtzienden en dyslectici worden uitgesloten</strong> van alle functies waarvoor het overtikken van een visuele captcha vereist is. Omdat de over te typen karakters vaak <strong>met opzet moeilijk leesbaar</strong> gemaakt worden, hebben veel andere bezoekers er ook moeite mee.</p>
 
 <p>Daarom raden we het gebruik van visuele captcha&#8217;s ten stelligste af. In de meeste gevallen is er even veilige manier te bedenken om spam of oneigenlijk gebruik van een dienst te voorkomen.</p>
 
-<h5 id="alternatieven">Alternatieven</h5>
+<h4 id="captchaszijnvaaknietnodig">Captcha&#8217;s zijn vaak niet nodig</h4>
 
 <p>Als het om beveiligingsredenen echt niet anders kan, bied dan een alternatieve captcha (herken een geluidsfragment, beantwoord een vreeag waarop computers het antwoord niet waeten, etc.). Kies in ieder geval voor een techniek of een combinatie van technieken waarmee je geen enkele bezoeker uitsluit. In het artikel <a href="http://www.anysurfer.be/nl/in-de-praktijk/websites/spam-vermijden-zonder-captcha">Spam vermijden zonder captcha op de website van AnySurfer</a> vind je wat inspiratie.</p>
+  </main>
 	<form id="feedback" data-forge-name="VRT-FEEDBACK">
 	<h3><i class="fa fa-comment-o"></i> Geef feedback op deze richtlijn</h3>
 	<p>Dankzij jouw feedback kunnen we deze richtlijn verbeteren. Ook vragen en suggesties zijn welkom.</p>
@@ -101,9 +120,6 @@
 	<fieldset id="opmerkingen">
 		<legend>Optioneel: wat wil je kwijt?</legend>
 		<label>
-			<p class="opmerkingen ja">
-				Wat vind je goed aan deze richtlijn? Denk je dat de richtlijn ook voor anderen duidelijk is?
-			</p>
 			<p class="opmerkingen min-of-meer">
 				Vind je de omschrijving of voorbeelden niet helemaal duidelijk? Wat kan beter?
 			</p>
@@ -118,16 +134,18 @@
 		<label class="block">
 			Ik herken mezelf best in dit profiel:
 			<select name="rol" class="block">
-				<option value="vormgever">Grafisch vormgever</option>
-				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
-				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
-				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
-				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
-				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
-				<option value="ux">Digitaal architect of UX-expert</option>
-				<option value="pm">Project manager of Product owner</option>
-				<option value="baas">(Eind)verantwoordelijke voor een website of app</option>
-				<option value="anderefunctie">Iets helemaal anders</option>
+        <optgroup label="Kies…">
+          <option value="vormgever">Grafisch vormgever</option>
+  				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
+  				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
+  				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
+  				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
+  				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
+  				<option value="ux">Digitaal architect of UX-expert</option>
+  				<option value="pm">Project manager of Product owner</option>
+  				<option value="manager">(Eind)verantwoordelijke voor een website of app</option>
+  				<option value="anderefunctie">Iets helemaal anders</option>
+        </optgroup>
 			</select>
 		</label>
 		<label id="anderefunctie" class="block">
@@ -179,11 +197,23 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
 	<script src="/js/vendor/jquery.cookie.js"></script>
+  <script src="/js/vendor/match-height.js"></script>
   <script>
 
     $(function() {
 
+      /* Equal heights */
+      $('.categorie .sub-container .sub').matchHeight(
+        {
+          property: 'min-height',
+          target: null,
+          remove: false
+        }
+      );
+
+
 			/* Fix skip links for screenreader users on all browsers */
+
 			$(':header[id]').attr('tabindex','-1');
 			$("a[href^='#']").click(function() {
 				$("#"+$(this).attr("href").slice(1)+"").focus()
@@ -205,17 +235,26 @@
 
 			$('#feedback input[name="duidelijk"]').change(function() {
 				duidelijk = $(this).val();
-				$('p.opmerkingen').hide();
-				$('p.opmerkingen.'+duidelijk).show();
-				$('#feedback #submit').removeAttr('disabled');
-				if (!$('#feedback #opmerkingen').hasClass('open')) {
-					$('#feedback #opmerkingen, #feedback #rol, #feedback #wie').fadeIn();
-					$("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
-					$('#feedback #opmerkingen textarea').focus();
-				}
-				else {
-					$('#feedback #opmerkingen').addClass('open');
-				}
+
+        if (duidelijk == 'ja') {
+          console.log('jajaja');
+          $('fieldset#opmerkingen fieldset#rol fieldset#wie').hide();
+        }
+        else {
+          $('p.opmerkingen').hide();
+  				$('p.opmerkingen.'+duidelijk).show();
+          if (!$('#feedback #opmerkingen').hasClass('open')) {
+  					$('#feedback #opmerkingen').fadeIn();
+  					$('#feedback #opmerkingen textarea').focus();
+  				}
+  				else {
+  					$('#feedback #opmerkingen').addClass('open');
+  				}
+          $("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
+          $('#feedback #rol, #feedback #wie').fadeIn();
+  				$('#feedback #submit').removeAttr('disabled');
+        }
+
 			});
 
 			$('#feedback select[name="rol"]').change(function() {

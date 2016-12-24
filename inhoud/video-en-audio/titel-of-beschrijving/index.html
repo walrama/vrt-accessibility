@@ -20,25 +20,42 @@
 		</style>
 	</head>
 	<body class="markdown-body">
-		<h1><a href="/">VRT-kwaliteitsvereisten voor toegankelijke websites, webapplicaties en elektronische nieuwsbrieven</a></h1>
+    <a href="#main">Ga naar inhoud</a>
+    <header id="header">
+      <nav role="navigation" aria-label="site links">
+        <ul>
+          <li><a href="/">Home - Kwaliteitsvereisten voor toegankelijke websites</a></li>
+          <li><a href="#">Over deze kwaliteitsvereisten</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <p>Versie 0.9 -- Laatst aangepast door Roel Van Gils op 12 december 2016.</p>
+    </header>
+    <!-- <form id="search" role="search" action="index.html" method="post">
+      <label>
+        Doorzoek alle richtlijnen
+        <input type="text" name="" value="">
+      </label>
+      <input type="submit" name="" value="Zoek">
+    </form> -->
+    <main role="main" id="main">
 <p class="waar hide">
   Deze richtlijn hoort in <a href="/inhoud">Inhoud</a> › <a href="/inhoud/video-en-audio">Video en Audio</a>
 </p>
-<h2 id="bijiedervideo-enaudiofragmenthoortminstenseentitelofeenbeknoptebeschrijving">Bij ieder video- en audiofragment hoort minstens een titel of een beknopte beschrijving</h2>
+<h1 id="bijiedervideo-enaudiofragmenthoortminstenseentitelofeenbeknoptebeschrijving">Bij ieder video- en audiofragment hoort minstens een titel of een beknopte beschrijving</h1>
 
-<p>De titel en/of de beknopte beschrijving plaats je boven of onder de video en is voor iedereen zichtbaar.</p>
+<p>Bezoekers weten graag vooraf wat ze kunnen verwachten. Op basis van de titel of de beschrijving kan een bezoeker beslissen of hij het fragment wil bekijken of beluisteren.</p>
 
-<h3 id="waarombelangrijk">Waarom belangrijk?</h3>
+<p>De titel en/of de beknopte beschrijving plaats je boven of onder de video en moet voor iedereen zichtbaar zijn.</p>
 
-<p>Bezoekers willen weten wat ze kunnen verwachten. Op basis van de titel of de beschrijving moet een bezoeker zelf kunnen beslissen of hij het fragment wil bekijken of beluisteren.</p>
-
-<h3 id="letookhierop">Let ook hierop</h3>
+<h2 id="letookhierop">Let ook hierop</h2>
 
 <ul>
-<li>Plaats de titel en beschrijving consequent op dezelfde plaats.</li>
-<li>Zelfs als de titel in beeld komt (in het eerste frame of in een zelfgekozen &#8216;poster frame&#8217; van het videobestand), blijft het noodzakelijk om een titel toe te voegen.</li>
-<li>Als een video schokkende beelden bevat of beelden die een epileptische aanval kunnen uitlokken (zoals hevige en langdurige flikkeringen), vermeld dat dan in de beschrijving.</li>
+<li>Als je website veel video&#8217;s en audiofragmenten bevat, plaats de titels en beschrijvingen dan <strong>steeds op dezelfde plaats</strong>.</li>
+<li>Zelfs als de titel of een onderschrift in het videobeeld verschijnt (in het eerste frame of in een zelfgekozen &#8216;poster frame&#8217; van het videobestand), blijft het noodzakelijk om een titel toe te voegen <strong>in de HTML-code</strong>.</li>
+<li>Als een video <strong>schokkende beelden</strong> bevat of beelden die een <strong>epileptische aanval</strong> kunnen uitlokken (zoals hevige en langdurige flikkeringen), vermeld dat dan in de beschrijving.</li>
 </ul>
+  </main>
 	<form id="feedback" data-forge-name="VRT-FEEDBACK">
 	<h3><i class="fa fa-comment-o"></i> Geef feedback op deze richtlijn</h3>
 	<p>Dankzij jouw feedback kunnen we deze richtlijn verbeteren. Ook vragen en suggesties zijn welkom.</p>
@@ -57,9 +74,6 @@
 	<fieldset id="opmerkingen">
 		<legend>Optioneel: wat wil je kwijt?</legend>
 		<label>
-			<p class="opmerkingen ja">
-				Wat vind je goed aan deze richtlijn? Denk je dat de richtlijn ook voor anderen duidelijk is?
-			</p>
 			<p class="opmerkingen min-of-meer">
 				Vind je de omschrijving of voorbeelden niet helemaal duidelijk? Wat kan beter?
 			</p>
@@ -74,16 +88,18 @@
 		<label class="block">
 			Ik herken mezelf best in dit profiel:
 			<select name="rol" class="block">
-				<option value="vormgever">Grafisch vormgever</option>
-				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
-				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
-				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
-				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
-				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
-				<option value="ux">Digitaal architect of UX-expert</option>
-				<option value="pm">Project manager of Product owner</option>
-				<option value="baas">(Eind)verantwoordelijke voor een website of app</option>
-				<option value="anderefunctie">Iets helemaal anders</option>
+        <optgroup label="Kies…">
+          <option value="vormgever">Grafisch vormgever</option>
+  				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
+  				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
+  				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
+  				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
+  				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
+  				<option value="ux">Digitaal architect of UX-expert</option>
+  				<option value="pm">Project manager of Product owner</option>
+  				<option value="manager">(Eind)verantwoordelijke voor een website of app</option>
+  				<option value="anderefunctie">Iets helemaal anders</option>
+        </optgroup>
 			</select>
 		</label>
 		<label id="anderefunctie" class="block">
@@ -135,11 +151,23 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
 	<script src="/js/vendor/jquery.cookie.js"></script>
+  <script src="/js/vendor/match-height.js"></script>
   <script>
 
     $(function() {
 
+      /* Equal heights */
+      $('.categorie .sub-container .sub').matchHeight(
+        {
+          property: 'min-height',
+          target: null,
+          remove: false
+        }
+      );
+
+
 			/* Fix skip links for screenreader users on all browsers */
+
 			$(':header[id]').attr('tabindex','-1');
 			$("a[href^='#']").click(function() {
 				$("#"+$(this).attr("href").slice(1)+"").focus()
@@ -161,17 +189,26 @@
 
 			$('#feedback input[name="duidelijk"]').change(function() {
 				duidelijk = $(this).val();
-				$('p.opmerkingen').hide();
-				$('p.opmerkingen.'+duidelijk).show();
-				$('#feedback #submit').removeAttr('disabled');
-				if (!$('#feedback #opmerkingen').hasClass('open')) {
-					$('#feedback #opmerkingen, #feedback #rol, #feedback #wie').fadeIn();
-					$("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
-					$('#feedback #opmerkingen textarea').focus();
-				}
-				else {
-					$('#feedback #opmerkingen').addClass('open');
-				}
+
+        if (duidelijk == 'ja') {
+          console.log('jajaja');
+          $('fieldset#opmerkingen fieldset#rol fieldset#wie').hide();
+        }
+        else {
+          $('p.opmerkingen').hide();
+  				$('p.opmerkingen.'+duidelijk).show();
+          if (!$('#feedback #opmerkingen').hasClass('open')) {
+  					$('#feedback #opmerkingen').fadeIn();
+  					$('#feedback #opmerkingen textarea').focus();
+  				}
+  				else {
+  					$('#feedback #opmerkingen').addClass('open');
+  				}
+          $("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
+          $('#feedback #rol, #feedback #wie').fadeIn();
+  				$('#feedback #submit').removeAttr('disabled');
+        }
+
 			});
 
 			$('#feedback select[name="rol"]').change(function() {

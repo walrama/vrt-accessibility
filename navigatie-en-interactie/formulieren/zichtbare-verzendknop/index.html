@@ -1,0 +1,327 @@
+<!doctype html>
+<html class="markup-body">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+		<title></title>
+		<link rel="stylesheet" href="/github-markdown.css">
+		<link rel="stylesheet" href="/css/vrt-toegankelijkheid.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<script src="https://use.typekit.net/tvi1crm.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+		<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+		</style>
+	</head>
+	<body class="markdown-body">
+    <a href="#main">Ga naar inhoud</a>
+    <header id="header">
+      <nav role="navigation" aria-label="site links">
+        <ul>
+          <li><a href="/">Home - Kwaliteitsvereisten voor toegankelijke websites</a></li>
+          <li><a href="#">Over deze kwaliteitsvereisten</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <p>Versie 0.9 -- Laatst aangepast door Roel Van Gils op 12 december 2016.</p>
+    </header>
+    <!-- <form id="search" role="search" action="index.html" method="post">
+      <label>
+        Doorzoek alle richtlijnen
+        <input type="text" name="" value="">
+      </label>
+      <input type="submit" name="" value="Zoek">
+    </form> -->
+    <main role="main" id="main">
+<p class="waar hide">
+  todo
+</p>
+<h1 id="elkformulierheefteenzichtbareverzendknopenopdieknopisderichtlijnoverlinksenknoppentoegepast">Elk formulier heeft een zichtbare verzendknop en op die knop is de richtlijn over links en knoppen toegepast</h1>
+
+<p>De verzendknop moet een [helder opschrift] bevatten en zowel met de muis als het toetsenbord te activeren zijn. De HTML voor een verzendknop onder een inschrijfformulier ziet er meestal zo uit:</p>
+
+<p><code>&lt;input type=&quot;submit&quot; value=&quot;Schrijf in&quot;&gt;</code></p>
+
+<p>Je kunt ook het net zo toegankelijke <code>&lt;button&gt;</code>-element gebruiken:</p>
+
+<p><code>&lt;button type=&quot;submit&quot;&gt;Schrijf in&lt;/button&gt;</code></p>
+
+<p>Ook de (verouderde) techniek waarbij een afbeelding als verzendknop gebruikt wordt, is toegestaan. Vergeet in dat geval niet om een duidelijk <code>alt</code>-attribuut toe te voegen:</p>
+
+<p><code>&lt;input type=&quot;image&quot; src=&quot;submitButton.png&quot; alt=&quot;Schrijf in&quot; /&gt;</code></p>
+
+<h2 id="watalsmijnknopeenanderhtml-elementiszoalseenimgofeenspan">Wat als mijn knop een ander HTML-element is, zoals een <code>&lt;img&gt;</code> of een <code>&lt;span&gt;</code>?</h2>
+
+<p>Als je om een of andere reden geen <code>&lt;input&gt;</code>- of <code>&lt;button&gt;</code>-element kan gebruiken, is er extra werk nodig om de knop toegankelijk te maken.</p>
+
+<h3 id="goedvoorbeeld">Goed voorbeeld</h3>
+
+<p><code>&lt;span class=&quot;myCustomButton&quot; onClick=&quot;myCustomHandler()&quot; role=“button” tabindex=“0“&gt;Schrijf in&lt;/span&gt;</code></p>
+
+<h3 id="ditmoetjesowiesodoenomeenknoptemakenvanjespan-element">Dit moet je sowieso doen om een knop te maken van je <code>&lt;span&gt;</code>-element</h3>
+
+<ul>
+<li>Aan je stylesheet moet je een selector toevoegen (<code>. myCustomButton {}</code> in dit geval) om <code>&lt;span class=&quot;myCustomButton”&gt;</code> er als een knop te laten uitzien. Je kan zelfs het opschrift <em>Schrijf in</em> verbergen en vervangen door een afbeelding, maar gebruik in dat geval zeker een [techniek om de tekst enkel voor schermlezers te verbergen].</li>
+<li>Ook zal je een <em>event listener</em> (of een <code>onClick</code>-attribuut) moeten toevoegen opdat er ook echt iets gebeurt wanneer een gebruiker op jouw knop klikt. De JavaScript-code die daarvoor zorgt, schrijf je zelf of wordt voorzien door het framework dat je gebruikt.</li>
+</ul>
+
+<h3 id="zomaakjedeknopookvoorblindenentoetsenbordgebruikerstoegankelijk">Zo maak je de knop ook voor blinden en toetsenbordgebruikers toegankelijk</h3>
+
+<ul>
+<li>Het is <strong>noodzakelijk</strong> om het attribuut <code>tabindex=&quot;0&quot;</code> toe te voegen omdat dat ervoor zorgt dat het <code>&lt;span&gt;</code>-element <strong>bereikbaar</strong> is met de <key>Tab</key>-toets en dus <em>keyboard focus</em> kan krijgen. Door het attribuut <code>tabindex=&quot;0&quot;</code> te gebruiken, blijkt de tab-volgorde onaangetast.</li>
+<li>Het <code>role</code>-attribuut (<code>role=“button”</code>) is ook noodzakelijk. Hierdoor weet een schermlezer dat hij <code>&lt;span class=&quot;myCustomButton&quot;&gt;</code> als een knop moet <strong>aankondigen</strong>. Een blinde gebruiker zal voor bovenstaand voorbeeld <em>Knop: Schrijf in</em> te horen krijgen als hij eop focust. Zonder die informatie weet je gebruiker niet dat het om een knop gaat die hij kan activeren (hij ziet de knop immers niet).</li>
+</ul>
+
+<p>Doordat de knop nu bereikbaar is én correct aangekondigd wordt, kan een blinde gebruiker de knop nu activeren met de Enter-toets. Tenminste, als een <code>onClick</code>-event aan de knop gekoppeld is. <code>onClick</code> is immers, in tegenstelling tot bijvoorbeeld <code>onMouseDown</code> en <code>onMouseOver</code>, een <strong>apparaatonnafhankelijke event handler</strong> die probleemloos geactiveerd kan worden met een muisklik, de <key>Enter</key>-toets of met een tikje op een aanraakscherm.</p>
+
+<h3 id="conclusie">Conclusie</h3>
+
+<p>Je ziet dat het <strong>veel lastiger</strong> is om toegankelijke knoppen te maken met HTML-elementen die hier niet op voorzien zijn. Dat komt doordat browsers en screenreaders uit zichzelf al weten hoe ze <em>native</em> knoppen moeten aankondigen en hoe gebruikers ermee kunnen interacteren.</p>
+
+<p>Overweeg daarom om – waar mogelijk – een <code>&lt;input type=&quot;submit&quot;&gt;</code> of <code>&lt;button type=&quot;submit&quot;&gt;</code> te gebruiken voor verzendknoppen. Een <code>&lt;button&gt;</code>-element kan je in moderne browsers bovendien net zo gemakkelijk vormgeven met CSS als pakweg een <code>&lt;span&gt;</code>-element.</p>
+
+<h2 id="toegestaneuitzonderingvoorformulierenmetéénveld">Toegestane uitzondering voor formulieren met één veld</h2>
+
+<p>Als een formulier slechts één veld heeft, is het <strong>niet verplicht</strong> om de verzendknop zichtbaar te maken. Dat komt het vaakst voor bij zoekvelden. Voor je gebruikers – ook voor blinde bezoekers – is het <strong>voldoende duidelijk</strong> dat ze de zoekopdracht kunnen starten met de <key>Enter</key>-toets.</p>
+
+<h3 id="voorbeeld">Voorbeeld</h3>
+
+<p>&#8216;&#8217; <form action=“/zoekresultaten”>
+&#8216;&#8217; <label>
+&#8216;&#8217; Zoek: &lt;input type=“search” placeholder=“Voorbeeld: terzake” /&gt;
+&#8216;&#8217; </label>
+&#8216;&#8217; </form></p>
+
+<p>Merk ten slotte nog op dat het een goed idee is om de verzendknop op smartphones en tablets <strong>altijd zichtbaar</strong> te maken. Dat verhoogt het gebruiksgemak aanzienlijk.</p>
+  </main>
+	<form id="feedback" data-forge-name="VRT-FEEDBACK">
+	<h3><i class="fa fa-comment-o"></i> Geef feedback op deze richtlijn</h3>
+	<p>Dankzij jouw feedback kunnen we deze richtlijn verbeteren. Ook vragen en suggesties zijn welkom.</p>
+	<fieldset id="duidelijk">
+		<legend>Vond je deze richtlijn duidelijk en volledig?</legend>
+		<label class="inline">
+			<input type="radio" name="duidelijk" value="ja" /> Ja
+		</label>
+		<label class="inline">
+			<input type="radio" name="duidelijk" value="min-of-meer" /> Min of meer
+		</label>
+		<label class="inline">
+			<input type="radio" name="duidelijk" value="nee" /> Nee
+		</label>
+	</fieldset>
+	<fieldset id="opmerkingen">
+		<legend>Optioneel: wat wil je kwijt?</legend>
+		<label>
+			<p class="opmerkingen min-of-meer">
+				Vind je de omschrijving of voorbeelden niet helemaal duidelijk? Wat kan beter?
+			</p>
+			<p class="opmerkingen nee">
+				Heb je een fout geveonden, ontbreekt er iets of ben je het oneens met de inhoud? Wat kan beter?
+			</p>
+			<textarea name="opmerkingen" style="width: 100%" rows="10"></textarea>
+		</label>
+	</fieldset>
+	<fieldset id="rol">
+		<legend>Welke omschrijving past best bij je?</legend>
+		<label class="block">
+			Ik herken mezelf best in dit profiel:
+			<select name="rol" class="block">
+        <optgroup label="Kies…">
+          <option value="vormgever">Grafisch vormgever</option>
+  				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
+  				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
+  				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
+  				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
+  				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
+  				<option value="ux">Digitaal architect of UX-expert</option>
+  				<option value="pm">Project manager of Product owner</option>
+  				<option value="manager">(Eind)verantwoordelijke voor een website of app</option>
+  				<option value="anderefunctie">Iets helemaal anders</option>
+        </optgroup>
+			</select>
+		</label>
+		<label id="anderefunctie" class="block">
+			<span class="block small">Omschrijf je functie of waarom je te maken krijgt met deze richtlijnen.</span>
+			<input type="text" name="anderefunctie" style="width: 100%" class="block" />
+		</label>
+	</fieldset>
+	<fieldset id="wie">
+		<legend>Optioneel: jouw gegevens</legend>
+		<p>
+			Misschien hebben we bijkomende vragen. Als je je naam en e-mailadres invult, kunnen we contact met je opnemen.
+		</p>
+		<label class="block">
+			<span class="block small">Volledige naam</span>
+			<input type="text" name="naam" style="width: 100%" class="block" />
+		</label>
+		<label class="block">
+			<span class="block small">E-mailadres</span>
+			<input type="text" data-forge-name="email" style="width: 100%" class="block" />
+		</label>
+	</fieldset>
+	<label style="display: none"">
+		Als je dit veld ziet, laat het dan gewoon leeg. Het staat er enkel om spam te voorkomen.
+		<input type="text" name="_gotcha" disabled="disabled" />
+	</label>
+	<input type="hidden" name="_next" value="/feedback/bedankt.html" />
+	<input type="hidden" name="_subject" value="Feedback op VRT-Toegankelijkheidsrichtlijnen" />
+	<!-- <input type="hidden" name="_cc" value="marc.walraven@vrt.be" /> -->
+	<input type="submit" id="submit" value="Verstuur feedback" />
+</form>
+
+<nav id="vorige-volgende">
+	<ul class="clearfix">
+		<li class="vorige">
+			<a href="#">
+				<span><i class="fa fa-arrow-circle-left"></i> Vorige richtlijn</span>
+				<span>(Koppen, paragrafen, lijsten en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags)</span>
+			</a>
+		</li>
+		<li class="volgende">
+			<a href="#">
+				<span>Volgende richtlijn <i class="fa fa-arrow-circle-right"></i></span>
+				<span>(De koppenstructuur is strikt hiërarchisch)</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+	<script src="/js/vendor/jquery.cookie.js"></script>
+  <script src="/js/vendor/match-height.js"></script>
+  <script>
+
+    $(function() {
+
+      /* Equal heights */
+      $('.categorie .sub-container .sub').matchHeight(
+        {
+          property: 'min-height',
+          target: null,
+          remove: false
+        }
+      );
+
+
+			/* Fix skip links for screenreader users on all browsers */
+
+			$(':header[id]').attr('tabindex','-1');
+			$("a[href^='#']").click(function() {
+				$("#"+$(this).attr("href").slice(1)+"").focus()
+			});
+
+			var rol = $.cookie('rol');
+			var anderefunctie = $.cookie('anderefunctie');
+			var naam = $.cookie('naam');
+			var email = $.cookie('email');
+
+			$('#feedback select[name="rol"]').val(rol);
+			$('#feedback input[name="anderefunctie"]').val(anderefunctie);
+			$('#feedback input[name="naam"]').val(naam);
+			$('#feedback input[name="email"]').val(email);
+
+			$('#feedback #opmerkingen, #feedback #rol, #feedback #wie, p.opmerkingen').hide();
+			if (rol != 'anderefunctie') $('#feedback #anderefunctie').hide();
+			$('#feedback #submit').attr('disabled','disabled');
+
+			$('#feedback input[name="duidelijk"]').change(function() {
+				duidelijk = $(this).val();
+
+        if (duidelijk == 'ja') {
+          console.log('jajaja');
+          $('fieldset#opmerkingen fieldset#rol fieldset#wie').hide();
+        }
+        else {
+          $('p.opmerkingen').hide();
+  				$('p.opmerkingen.'+duidelijk).show();
+          if (!$('#feedback #opmerkingen').hasClass('open')) {
+  					$('#feedback #opmerkingen').fadeIn();
+  					$('#feedback #opmerkingen textarea').focus();
+  				}
+  				else {
+  					$('#feedback #opmerkingen').addClass('open');
+  				}
+          $("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
+          $('#feedback #rol, #feedback #wie').fadeIn();
+  				$('#feedback #submit').removeAttr('disabled');
+        }
+
+			});
+
+			$('#feedback select[name="rol"]').change(function() {
+				if ($(this).val() == 'anderefunctie') {
+					$('#anderefunctie').show().focus();
+				}
+				else {
+					$('#anderefunctie').hide();
+				}
+			});
+
+			$("#feedback").submit(function(e) {
+				$.ajax({
+				    url: "https://getforge.com/api/form-data",
+						data:  $(this).serializeArray(),
+				    method: "POST",
+				    dataType: "json",
+						beforeSend: function() {
+							$.cookie('rol', $('#feedback select[name="rol"]').val(), { expires: 7, path: '/' });
+							$.cookie('anderefunctie', $('#feedback input[name="anderefunctie"]').val(), { expires: 7, path: '/' });
+							$.cookie('naam', $('#feedback input[name="naam"]').val(), { expires: 7, path: '/' });
+							$.cookie('email', $('#feedback input[name="email"]').val(), { expires: 7, path: '/' });
+							$('#feedback #submit')
+								.attr('disabled','disabled')
+								.attr('value','Bezig met verzenden...');
+		        },
+						success: function(data, textStatus, jqXHR) {
+							$('#feedback #submit')
+								.attr('value','Verzonden');
+							$('#feedback *')
+								.fadeOut();
+							$('#feedback')
+								.load('/feedback/bedankt.html')
+								.fadeIn()
+								.focus();
+		        },
+						error: function(data, textStatus, jqXHR) {
+							$('#feedback #submit')
+								.attr('value','Er is iets misgelopen');
+							$('#feedback *')
+								.fadeOut();
+							$('#feedback')
+								.load('/feedback/fout.html')
+								.fadeIn()
+								.focus();
+		        }
+				});
+		    e.preventDefault();
+		    e.unbind();
+			});
+
+
+      $('input:checked').change(function() {
+        if (this.checked)
+          $('#richtlijnen .'+this.name).removeClass('uit').addClass('aan');
+        else
+          $('#richtlijnen .'+this.name).removeClass('aan').addClass('uit');
+      })
+
+    });
+
+  </script>
+	<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='https://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-73007524-1','auto');ga('send','pageview');
+    </script>
+</body>
+</html>

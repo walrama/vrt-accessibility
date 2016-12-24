@@ -16,9 +16,6 @@
 	<fieldset id="opmerkingen">
 		<legend>Optioneel: wat wil je kwijt?</legend>
 		<label>
-			<p class="opmerkingen ja">
-				Wat vind je goed aan deze richtlijn? Denk je dat de richtlijn ook voor anderen duidelijk is?
-			</p>
 			<p class="opmerkingen min-of-meer">
 				Vind je de omschrijving of voorbeelden niet helemaal duidelijk? Wat kan beter?
 			</p>
@@ -33,16 +30,18 @@
 		<label class="block">
 			Ik herken mezelf best in dit profiel:
 			<select name="rol" class="block">
-				<option value="vormgever">Grafisch vormgever</option>
-				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
-				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
-				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
-				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
-				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
-				<option value="ux">Digitaal architect of UX-expert</option>
-				<option value="pm">Project manager of Product owner</option>
-				<option value="baas">(Eind)verantwoordelijke voor een website of app</option>
-				<option value="anderefunctie">Iets helemaal anders</option>
+        <optgroup label="Kies…">
+          <option value="vormgever">Grafisch vormgever</option>
+  				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
+  				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
+  				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
+  				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
+  				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
+  				<option value="ux">Digitaal architect of UX-expert</option>
+  				<option value="pm">Project manager of Product owner</option>
+  				<option value="manager">(Eind)verantwoordelijke voor een website of app</option>
+  				<option value="anderefunctie">Iets helemaal anders</option>
+        </optgroup>
 			</select>
 		</label>
 		<label id="anderefunctie" class="block">

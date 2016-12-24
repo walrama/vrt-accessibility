@@ -1,0 +1,17 @@
+<h1 id="debroncodebevatenkelelementenenattributendieonderdeeluitmakenvandegebruiktehtml-specificatiezoalsaangegeveninhetdoctype">De broncode bevat enkel elementen en attributen die onderdeel uitmaken van de gebruikte HTML-specificatie (zoals aangegeven in het DOCTYPE)</h1>
+
+<p>Als elementen uit bijvoorbeeld de HTML 5-specificatie gebruikt worden (zoals <code>&lt;header&gt;</code>, <code>&lt;article&gt;</code> of <code>&lt;aside&gt;</code>), dan moet het overeenkomstige DOCTYPE gebruikt worden. Meer informatie hierover vind je in het [criterium over geldige DOCTYPE’s].</p>
+
+<p>Pagina’s hoeven <strong>niet noodzakelijk in het geheel</strong> te voldoen aan alle criteria die horen bij het opgegeven DOCTYPE. Het is dus niet verplicht om een <strong>foutloos validatierapport</strong> te kunnen voorleggen voor iedere pagina die door de [Markup Validation Service van het W3C] gehaald wordt.</p>
+
+<p>Voldoen aan de deze voorwaarden is wel verplicht om onvoorspelbare gedragingen in combinatie met schermlezers te voorkomen:</p>
+
+<ul>
+<li>Alle elementen hebben een <strong>start- en eindtag</strong> nodig (tenzij ze <em>self closing</em> zijn).</li>
+<li>Alle elementen zijn genest volgens de nesting rules die het DOCTYPE voorgeschrijft.</li>
+<li>Alle gebruikte <code>id</code>-waarden zijn uniek.</li>
+</ul>
+
+<h2 id="waaromishetbelangrijk">Waarom is het belangrijk?</h2>
+
+<p>Als deze regels niet gerespecteerd worden, kunnen weergevaproblemen zich voordoen – met name in Internet Explorer, wanneer deze browser gebruikt wordt in combinatie met de populaire schermlezer [Jaws for Windows].</p>

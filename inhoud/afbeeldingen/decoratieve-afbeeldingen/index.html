@@ -20,15 +20,33 @@
 		</style>
 	</head>
 	<body class="markdown-body">
-		<h1><a href="/">VRT-kwaliteitsvereisten voor toegankelijke websites, webapplicaties en elektronische nieuwsbrieven</a></h1>
+    <a href="#main">Ga naar inhoud</a>
+    <header id="header">
+      <nav role="navigation" aria-label="site links">
+        <ul>
+          <li><a href="/">Home - Kwaliteitsvereisten voor toegankelijke websites</a></li>
+          <li><a href="#">Over deze kwaliteitsvereisten</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <p>Versie 0.9 -- Laatst aangepast door Roel Van Gils op 12 december 2016.</p>
+    </header>
+    <!-- <form id="search" role="search" action="index.html" method="post">
+      <label>
+        Doorzoek alle richtlijnen
+        <input type="text" name="" value="">
+      </label>
+      <input type="submit" name="" value="Zoek">
+    </form> -->
+    <main role="main" id="main">
 <p class="waar hide">
   Deze richtlijn hoort in <a href="/inhoud">Inhoud</a> › <a href="/inhoud/basisregels">Basisregels</a>
 </p>
-<h2 id="decoratieveafbeeldingenzittenineenstijlblad">Decoratieve afbeeldingen zitten in een stijlblad</h2>
+<h1 id="decoratieveafbeeldingenzittenineenstijlblad">Decoratieve afbeeldingen zitten in een stijlblad</h1>
 
 <p>Decoratieve afbeeldingen stop je in een stijlblad. Ze hoeven niet beschreven te worden. Als ze toch voorkomen in de HTML-broncode, geef je ze een leeg <code>alt</code>-attribuut.</p>
 
-<h3 id="watzijndecoratieveafbeeldingen">Wat zijn decoratieve afbeeldingen?</h3>
+<h2 id="watzijndecoratieveafbeeldingen">Wat zijn decoratieve afbeeldingen?</h2>
 
 <p>Dit zijn enkele voorbeelden van decoratieve afbeeldingen:</p>
 
@@ -39,18 +57,18 @@
 <li>Sneeuwvlokjes, paaseitjes en andere fantasietjes.</li>
 </ul>
 
-<h3 id="stopzeineenstijlblad">Stop ze in een stijlblad</h3>
+<h2 id="stopzeineenstijlblad">Stop ze in een stijlblad</h2>
 
 <p>Je hoeft hiervoor niet speciaals te doen: de CSS-eigenschap <code>background-image</code> gebruiken is voldoende. Iedere schermlezer negeert CSS-achtergrondafbeeldingen, zoals het hoort:</p>
 
 <pre><code>#masthead { background-image: url(bg_blur.jpg) }
 </code></pre>
 
-<h4 id="opgelet:stopgeenbelangrijkeafbeeldingenineenstijlblad">Opgelet: stop geen belangrijke afbeeldingen in een stijlblad</h4>
+<h3 id="opgelet:stopgeenbelangrijkeafbeeldingenineenstijlblad">Opgelet: stop geen belangrijke afbeeldingen in een stijlblad</h3>
 
 <p>Je stopt ook liefst geen belangrijke of <strong>betekenisvolle</strong> afbeeldingen in een stijlblad. Het is immers onmogelijk om een alt-attribuut te koppelen aan een achtergrondafbeelding. Als je dat toch doet, zorg er dan voor dat de boodschap of functie ook duidelijk is als CSS uitstaat.</p>
 
-<h5 id="voorbeeld">Voorbeeld</h5>
+<h4 id="voorbeeld">Voorbeeld</h4>
 
 <pre><code>&lt;style&gt;
   .verplicht {
@@ -70,7 +88,7 @@
 &lt;/label&gt;
 </code></pre>
 
-<h3 id="achtergrondafbeeldingenindehtml-broncode">Achtergrondafbeeldingen in de HTML-broncode</h3>
+<h2 id="achtergrondafbeeldingenindehtml-broncode">Achtergrondafbeeldingen in de HTML-broncode</h2>
 
 <p>Af en toe komen afbeeldingen ook voor in de HTML-broncode van een pagina of nieuwsbrief. In dat geval is het <strong>verplicht</strong> om de afbeelding een <strong>leeg</strong> <code>alt</code>-attribuut te geven. Dat ziet er zo uit:</p>
 
@@ -79,12 +97,13 @@
 
 <p>Als je een CMS gebruikt, moet je mogelijk een vinkje zetten bij &#8216;Decoratief&#8217;.</p>
 
-<h4 id="opgelet:leegisleeg">Opgelet: leeg is leeg</h4>
+<h3 id="opgelet:leegisleeg">Opgelet: leeg is leeg</h3>
 
 <ul>
 <li>Zorg ervoor dat het <code>alt</code>-attribuut nooit ontbreekt; het moet <strong>leeg</strong> (&#8216;null&#8217;) zijn. Als het attribuut zelf ontbreekt (zoals in <code>&lt;img src=&quot;/images/balkje_rood_breed.png&quot; /&gt;</code>), zal een schermlezer immers de bestandsnaam (én vaak zelfs het volledige bestandspad) voorlezen en dat is heel vervelend. Zeker als hetzelfde balkje tien keer voorkomt op dezelfde pagina of in dezelfde nieuwsbrief (&#8216;images/balkje_rood_breed.png&#8217; in bovenstaand voorbeeld).</li>
 <li>Gebruik ook nooit het woordje &#8216;decoratie&#8217;. Er mag zelfs <strong>geen spatie</strong> tussen de aanhalingstekens staan. Enkel zo zal een schermlezer de afbeelding echt negeren, zoals bedoelt.</li>
 </ul>
+  </main>
 	<form id="feedback" data-forge-name="VRT-FEEDBACK">
 	<h3><i class="fa fa-comment-o"></i> Geef feedback op deze richtlijn</h3>
 	<p>Dankzij jouw feedback kunnen we deze richtlijn verbeteren. Ook vragen en suggesties zijn welkom.</p>
@@ -103,9 +122,6 @@
 	<fieldset id="opmerkingen">
 		<legend>Optioneel: wat wil je kwijt?</legend>
 		<label>
-			<p class="opmerkingen ja">
-				Wat vind je goed aan deze richtlijn? Denk je dat de richtlijn ook voor anderen duidelijk is?
-			</p>
 			<p class="opmerkingen min-of-meer">
 				Vind je de omschrijving of voorbeelden niet helemaal duidelijk? Wat kan beter?
 			</p>
@@ -120,16 +136,18 @@
 		<label class="block">
 			Ik herken mezelf best in dit profiel:
 			<select name="rol" class="block">
-				<option value="vormgever">Grafisch vormgever</option>
-				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
-				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
-				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
-				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
-				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
-				<option value="ux">Digitaal architect of UX-expert</option>
-				<option value="pm">Project manager of Product owner</option>
-				<option value="baas">(Eind)verantwoordelijke voor een website of app</option>
-				<option value="anderefunctie">Iets helemaal anders</option>
+        <optgroup label="Kies…">
+          <option value="vormgever">Grafisch vormgever</option>
+  				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
+  				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
+  				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
+  				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
+  				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
+  				<option value="ux">Digitaal architect of UX-expert</option>
+  				<option value="pm">Project manager of Product owner</option>
+  				<option value="manager">(Eind)verantwoordelijke voor een website of app</option>
+  				<option value="anderefunctie">Iets helemaal anders</option>
+        </optgroup>
 			</select>
 		</label>
 		<label id="anderefunctie" class="block">
@@ -181,11 +199,23 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
 	<script src="/js/vendor/jquery.cookie.js"></script>
+  <script src="/js/vendor/match-height.js"></script>
   <script>
 
     $(function() {
 
+      /* Equal heights */
+      $('.categorie .sub-container .sub').matchHeight(
+        {
+          property: 'min-height',
+          target: null,
+          remove: false
+        }
+      );
+
+
 			/* Fix skip links for screenreader users on all browsers */
+
 			$(':header[id]').attr('tabindex','-1');
 			$("a[href^='#']").click(function() {
 				$("#"+$(this).attr("href").slice(1)+"").focus()
@@ -207,17 +237,26 @@
 
 			$('#feedback input[name="duidelijk"]').change(function() {
 				duidelijk = $(this).val();
-				$('p.opmerkingen').hide();
-				$('p.opmerkingen.'+duidelijk).show();
-				$('#feedback #submit').removeAttr('disabled');
-				if (!$('#feedback #opmerkingen').hasClass('open')) {
-					$('#feedback #opmerkingen, #feedback #rol, #feedback #wie').fadeIn();
-					$("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
-					$('#feedback #opmerkingen textarea').focus();
-				}
-				else {
-					$('#feedback #opmerkingen').addClass('open');
-				}
+
+        if (duidelijk == 'ja') {
+          console.log('jajaja');
+          $('fieldset#opmerkingen fieldset#rol fieldset#wie').hide();
+        }
+        else {
+          $('p.opmerkingen').hide();
+  				$('p.opmerkingen.'+duidelijk).show();
+          if (!$('#feedback #opmerkingen').hasClass('open')) {
+  					$('#feedback #opmerkingen').fadeIn();
+  					$('#feedback #opmerkingen textarea').focus();
+  				}
+  				else {
+  					$('#feedback #opmerkingen').addClass('open');
+  				}
+          $("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
+          $('#feedback #rol, #feedback #wie').fadeIn();
+  				$('#feedback #submit').removeAttr('disabled');
+        }
+
 			});
 
 			$('#feedback select[name="rol"]').change(function() {

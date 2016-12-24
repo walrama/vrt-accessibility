@@ -20,33 +20,47 @@
 		</style>
 	</head>
 	<body class="markdown-body">
-		<h1><a href="/">VRT-kwaliteitsvereisten voor toegankelijke websites, webapplicaties en elektronische nieuwsbrieven</a></h1>
+    <a href="#main">Ga naar inhoud</a>
+    <header id="header">
+      <nav role="navigation" aria-label="site links">
+        <ul>
+          <li><a href="/">Home - Kwaliteitsvereisten voor toegankelijke websites</a></li>
+          <li><a href="#">Over deze kwaliteitsvereisten</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <p>Versie 0.9 -- Laatst aangepast door Roel Van Gils op 12 december 2016.</p>
+    </header>
+    <!-- <form id="search" role="search" action="index.html" method="post">
+      <label>
+        Doorzoek alle richtlijnen
+        <input type="text" name="" value="">
+      </label>
+      <input type="submit" name="" value="Zoek">
+    </form> -->
+    <main role="main" id="main">
 <p class="waar hide">
   Deze richtlijn hoort in <a href="/inhoud">Inhoud</a> › <a href="/inhoud/afbeeldingen">Afbeedlingen</a>
 </p>
 <h1 id="afbeeldingenvantekstzijnspaarzaamgebrukt">Afbeeldingen van tekst zijn spaarzaam gebrukt</h1>
 
-<p>Vermijd afbeeldingen van tekst. Geef altijd de voorkeur aan HTML-tekst. Ook voor koppen, slogans, knopopschriften en bijschriften bij foto&#8217;s.</p>
+<p>Vermijd afbeeldingen van tekst. Geef altijd de voorkeur aan (selecteerbare) HTML-tekst. Ook voor koppen, slogans en knopopschriften.</p>
 
-<p><strong>Opgelet</strong>: op deze richtlijn zijn enkele <a href="#toegestaneuitzonderingen">uitzonderingen</a> toegestaan.</p>
+<p><i class="fa fa-exclamation-triangle red" aria-hidden="true"></i> <strong>Opgelet</strong>: op deze richtlijn zijn enkele <a href="#toegestaneuitzonderingen">uitzonderingen</a> toegestaan.</p>
 
 <h2 id="watiseenafbeeldingvantekst">Wat is een afbeelding van tekst?</h2>
 
-<p>Een afbeelding van tekst is meestal gemaakt met een <strong>beeldbewerkingsprogramma</strong> als <a href="http://www.adobe.com/be_nl/products/photoshop.html">Photoshop</a> of <a href="https://www.sketchapp.com">Sketch</a> en heeft een bestandsnaam die eindigt op .png, .svg of .jpg. Ze worden ingevoegd met een <code>&lt;img&gt;</code> tag of met behulp van een techniek waarbij de originele tekst vervangen wordt door een achtergrondafbeelding die gedefinieerd is in een stijlblad. Deze techniek noemt men ook <em>image replacement</em>. Geen van deze technieken is toegestaan.</p>
+<p>Een afbeelding van tekst is meestal gemaakt met een <strong>beeldbewerkingsprogramma</strong> als <a href="http://www.adobe.com/be_nl/products/photoshop.html">Photoshop</a> of <a href="https://www.sketchapp.com">Sketch</a> en heeft een bestandsnaam die eindigt op .png, .svg of .jpg. Ze worden ingevoegd met een <code>&lt;img&gt;</code> tag of met behulp van een techniek waarbij de originele tekst vervangen wordt door een achtergrondafbeelding die gedefinieerd is in een stijlblad. Deze techniek noemt men ook <em>image replacement</em>. Deze techineken worden afgeraden.</p>
 
 <p>Soms zie je het verschil met echte tekst niet zo goed op het scherm. Als je de tekst kan <strong>selecteren</strong> (en kopiëren), ben je zeker dat het om HTML-tekst (&#8216;echte&#8217; tekst) gaat en niet om een <strong>afbeelding</strong> van tekst.</p>
 
 <h3 id="voorbeeld">Voorbeeld</h3>
 
-<p>In onderstaand voorbeeld kan je de tekst in het linkse blok selecteren. De tekst in het rechtse blok kan je niet selecteren omdat het een afbeelding is.</p>
+<p>In onderstaand voorbeeld kan je de tekst in het eerste blok selecteren met je muis. De tekst in het tweede blok kan je niet selecteren omdat het een afbeelding is. Je kan enkel de afbeelding zelf selecteren.</p>
 
-<ul>
-<li><p><span style="display: block; margin: 0; padding: 1em; font-weight: bold; background: DeepPink; color: white;">Dit is HTML-tekst</span></p></li>
-<li><figure>
-<img src="/afbeeldingen/afbeelding-van-tekst.png" alt="Afbeelding van tekst" />
-<figcaption>Afbeelding van tekst</figcaption>
-</figure></li>
-</ul>
+<div style="display: block; margin: 0 0 1em 0; padding: 1em; font-weight: bold; background: DeepPink; color: white; width: 251px">Dit is HTML-tekst</div>
+
+<p><img src="/afbeeldingen/afbeelding-van-tekst.png" alt="Afbeelding van tekst" height="57" /></p>
 
 <h2 id="waaromgebruikjeafbeeldingenvantekstbeterniet">Waarom gebruik je afbeeldingen van tekst beter niet?</h2>
 
@@ -69,7 +83,7 @@
 <li>Wie een website <strong>onderhoudt</strong>, ondervindt dat websites die veel afbeeldingen van tekst bevatten <strong>niet zo handig</strong> zijn om te bewerken of te vertalen. HTML-tekst bewerken is meestal <strong>sneller en gemakkelijker</strong>.</li>
 </ul>
 
-<h2 id="tochcreatiefmettekst">Toch creatief met tekst</h2>
+<h2 id="tochcreatiefmettekst">Toch creatief met tekst?</h2>
 
 <ul>
 <li>Als je <strong>lettertypes</strong> wilt gebruiken die niet voorgeïnstalleerd zijn op computers en smartphones, kan je web fonts gebruiken. Die kan je op je eigen server installeren, maar ook diensten als <a href="https://typekit.com">Adobe Typekit</a> en <a href="https://www.google.com/fonts">Google fonts</a> zijn prima toegankelijk. Technieken die Flash gebruiken (zoals <a href="https://en.wikipedia.org/wiki/Scalable_Inman_Flash_Replacement">sIFR</a>) zijn niet toegankelijk en mag je zeker niet gebruiken.</li>
@@ -79,13 +93,17 @@
 <h2 id="toegestaneuitzonderingen">Toegestane uitzonderingen</h2>
 
 <ul>
-<li><p><strong>Logo&#8217;s en beeldmerken</strong> waarin tekst voorkomt (zoals de naam van een tv-zender) mag je wel gewoon gebruiken. Als er ook een slogan of slagzin bij hoort, maak je daar bij voorkeur wel HTML-tekst van.</p></li>
-<li><p>Complexe <strong>infografieken</strong> met veel tekst en afbeeldingen worden gewoonlijk opgemaakt in een beeldbewerkingsprogramma. Deze afbeeldingen kan je wel gerust zo online plaatsen, maar pas dan wel de <a href="/inhoud/afbeeldingen/diagrammen-infografieken/">richtlijn over het beschrijven van diagrammen en infografieken</a> toe.</p></li>
-<li><p>Soms kan je bijna niet anders dan een afbeelding van tekst gebruiken. In dat geval herhaal je in het <code>alt</code>-attribuut <strong>letterlijk</strong> de afgebeelde tekst of pas je de <a href="/inhoud/afbeeldingen/diagrammen-infografieken/">richtlijn over het beschrijven van diagrammen en infografieken</a> toe. Enkele voorbeelden:</p></li>
-<li><p>Een foto van de set list van een artiest</p></li>
-<li><p>Een stukje uit een ingescand krantenartikel of een handgeschreven manuscript</p></li>
-<li><p>Een verkeersbord</p></li>
+<li><strong>Logo&#8217;s en beeldmerken</strong> waarin tekst voorkomt (zoals de naam van een tv-zender) mag je wel gewoon gebruiken. Als er ook een slogan of slagzin bij hoort, maak je daar bij voorkeur wel HTML-tekst van.</li>
+<li>Complexe <strong>infografieken</strong> met veel tekst en afbeeldingen worden gewoonlijk opgemaakt in een beeldbewerkingsprogramma. Deze afbeeldingen kan je wel gerust zo online plaatsen, maar pas dan wel de <a href="/inhoud/afbeeldingen/diagrammen-infografieken/">richtlijn over het beschrijven van diagrammen en infografieken</a> toe.</li>
+<li>Soms kan je bijna niet anders dan een afbeelding van tekst gebruiken. In dat geval herhaal je in het <code>alt</code>-attribuut <strong>letterlijk</strong> de afgebeelde tekst of pas je de <a href="/inhoud/afbeeldingen/diagrammen-infografieken/">richtlijn over het beschrijven van diagrammen en infografieken</a> toe. Enkele voorbeelden:
+
+<ul>
+<li>Een foto van de set list van een artiest</li>
+<li>Een stukje uit een ingescand krantenartikel of een handgeschreven manuscript</li>
+<li>Een verkeersbord</li>
+</ul></li>
 </ul>
+  </main>
 	<form id="feedback" data-forge-name="VRT-FEEDBACK">
 	<h3><i class="fa fa-comment-o"></i> Geef feedback op deze richtlijn</h3>
 	<p>Dankzij jouw feedback kunnen we deze richtlijn verbeteren. Ook vragen en suggesties zijn welkom.</p>
@@ -104,9 +122,6 @@
 	<fieldset id="opmerkingen">
 		<legend>Optioneel: wat wil je kwijt?</legend>
 		<label>
-			<p class="opmerkingen ja">
-				Wat vind je goed aan deze richtlijn? Denk je dat de richtlijn ook voor anderen duidelijk is?
-			</p>
 			<p class="opmerkingen min-of-meer">
 				Vind je de omschrijving of voorbeelden niet helemaal duidelijk? Wat kan beter?
 			</p>
@@ -121,16 +136,18 @@
 		<label class="block">
 			Ik herken mezelf best in dit profiel:
 			<select name="rol" class="block">
-				<option value="vormgever">Grafisch vormgever</option>
-				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
-				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
-				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
-				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
-				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
-				<option value="ux">Digitaal architect of UX-expert</option>
-				<option value="pm">Project manager of Product owner</option>
-				<option value="baas">(Eind)verantwoordelijke voor een website of app</option>
-				<option value="anderefunctie">Iets helemaal anders</option>
+        <optgroup label="Kies…">
+          <option value="vormgever">Grafisch vormgever</option>
+  				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
+  				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
+  				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
+  				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
+  				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
+  				<option value="ux">Digitaal architect of UX-expert</option>
+  				<option value="pm">Project manager of Product owner</option>
+  				<option value="manager">(Eind)verantwoordelijke voor een website of app</option>
+  				<option value="anderefunctie">Iets helemaal anders</option>
+        </optgroup>
 			</select>
 		</label>
 		<label id="anderefunctie" class="block">
@@ -182,11 +199,23 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
 	<script src="/js/vendor/jquery.cookie.js"></script>
+  <script src="/js/vendor/match-height.js"></script>
   <script>
 
     $(function() {
 
+      /* Equal heights */
+      $('.categorie .sub-container .sub').matchHeight(
+        {
+          property: 'min-height',
+          target: null,
+          remove: false
+        }
+      );
+
+
 			/* Fix skip links for screenreader users on all browsers */
+
 			$(':header[id]').attr('tabindex','-1');
 			$("a[href^='#']").click(function() {
 				$("#"+$(this).attr("href").slice(1)+"").focus()
@@ -208,17 +237,26 @@
 
 			$('#feedback input[name="duidelijk"]').change(function() {
 				duidelijk = $(this).val();
-				$('p.opmerkingen').hide();
-				$('p.opmerkingen.'+duidelijk).show();
-				$('#feedback #submit').removeAttr('disabled');
-				if (!$('#feedback #opmerkingen').hasClass('open')) {
-					$('#feedback #opmerkingen, #feedback #rol, #feedback #wie').fadeIn();
-					$("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
-					$('#feedback #opmerkingen textarea').focus();
-				}
-				else {
-					$('#feedback #opmerkingen').addClass('open');
-				}
+
+        if (duidelijk == 'ja') {
+          console.log('jajaja');
+          $('fieldset#opmerkingen fieldset#rol fieldset#wie').hide();
+        }
+        else {
+          $('p.opmerkingen').hide();
+  				$('p.opmerkingen.'+duidelijk).show();
+          if (!$('#feedback #opmerkingen').hasClass('open')) {
+  					$('#feedback #opmerkingen').fadeIn();
+  					$('#feedback #opmerkingen textarea').focus();
+  				}
+  				else {
+  					$('#feedback #opmerkingen').addClass('open');
+  				}
+          $("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
+          $('#feedback #rol, #feedback #wie').fadeIn();
+  				$('#feedback #submit').removeAttr('disabled');
+        }
+
 			});
 
 			$('#feedback select[name="rol"]').change(function() {

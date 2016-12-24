@@ -1,12 +1,48 @@
 body {
   background: #fff;
-  font-family: "proxima-nova-soft" !important; }
+  font-family: "proxima-nova-soft", sans-serif !important; }
   body a {
     text-decoration: underline !important; }
+
+[href="#main"] {
+  position: absolute;
+  top: -100px;
+  right: 0.5em;
+  color: #fff;
+  font-size: 0.85em; }
+
+i.red {
+  color: red; }
+
+i.green {
+  color: green; }
+
+i.green {
+  color: orange; }
+
+[href="#main"]:focus {
+  top: 0.5em; }
+
+#lpckLagWarningOverlay {
+  display: none; }
 
 @media print {
   h1, .waar, #feedback, #vorige-volgende {
     display: none !important; } }
+form#search input[type=text] {
+  padding: 1em;
+  display: inline-block;
+  width: 80%;
+  border-radius: 4px;
+  background: #eee;
+  margin: 0 10px 0 0; }
+form#search input[type=submit] {
+  display: inline-block;
+  width: 17%;
+  padding: 1em !important;
+  border: 1px solid black;
+  border-radius: 4px; }
+
 ul.horizontaal {
   margin: 0;
   padding: 0;
@@ -112,7 +148,7 @@ li a {
 
 nav#filters {
   display: none;
-  background: gray;
+  background: #eee;
   color: white;
   border: 2px dotted #aaa;
   padding: 1.5em 2em 1.25em 2em;
@@ -127,41 +163,110 @@ nav#filters {
 /*  Richtlijn detail */
 p.waar {
   border: 1px solid #aaa;
-  padding: .5em 1em;
-  background: #eee; }
+  border-left: none;
+  border-right: none;
+  padding: .45em 0;
+  font-size: 80%; }
 
 /*  Verschillende statuusen */
 #richtlijnen ol {
-  counter-reset: item;
-  padding-left: 10px; }
+  counter-reset: item; }
 #richtlijnen li {
   display: block; }
 #richtlijnen li:before {
-  content: counters(item,".") ". ";
-  counter-increment: item; }
-#richtlijnen ol.categorie > li:before, #richtlijnen ol.subcategorie > li:before {
+  content: counters(item,".");
+  counter-increment: item;
+  position: absolute;
+  top: .05em;
+  text-align: left;
+  background: white;
+  padding: 0 .5em;
+  left: 0;
+  font-family: Monaco, monospace;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.2); }
+#richtlijnen ol.lijst > li:before, #richtlijnen ol.subcategorie > li:before {
   content: ""; }
 
-h2:first-of-type + p {
-  border: 1px dashed black !important;
+ol.checklist {
+  margin: 0;
+  padding: 0;
+  text-indent: 0; }
+  ol.checklist h2 {
+    clear: both;
+    text-align: center;
+    display: none;
+    display: block !important;
+    padding: 1em 0 .15em 0;
+    margin: 2em 0 .5em 0;
+    border-radius: 4px; }
+  ol.checklist li.categorie {
+    clear: both;
+    width: 100%; }
+    ol.checklist li.categorie section h2 {
+      text-align: center; }
+
+ol.sub-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  clear: both; }
+  ol.sub-container li.sub {
+    background: #eee;
+    border-radius: 4px;
+    box-shadow: 2px 2px 0 1px rgba(0, 0, 0, 0.2);
+    margin-right: 1.25em;
+    margin-bottom: 1.25em;
+    font-weight: normal;
+    width: 48%;
+    float: left; }
+    ol.sub-container li.sub:nth-child(even) {
+      margin-right: 0; }
+    ol.sub-container li.sub h3 {
+      padding: .5em 1em .5em 1em;
+      text-align: center;
+      font-size: 20px;
+      background: #333;
+      color: white;
+      margin: 0 0 .5em 0;
+      border-top-right-radius: 4px;
+      border-top-left-radius: 4px; }
+    ol.sub-container li.sub ol {
+      margin: 0;
+      padding: 1.5em; }
+      ol.sub-container li.sub ol li {
+        position: relative;
+        padding: 0 0 0 4.5em;
+        margin: 0 0 1em 0;
+        line-height: 1.4em; }
+        ol.sub-container li.sub ol li:hover::before {
+          color: white;
+          background: black !important; }
+        ol.sub-container li.sub ol li a {
+          text-decoration: none !important; }
+          ol.sub-container li.sub ol li a:hover, ol.sub-container li.sub ol li a:focus {
+            text-decoration: underline !important; }
+
+h1 {
+  border-bottom: none !important; }
+
+h1:first-of-type + p {
+  border: 1px solid #aaa !important;
+  border-left: 10px solid #aaa !important;
+  border-radius: 4px;
   background: #eee;
   padding: 1em; }
 
-#richtlijnen li h1, #richtlijnen li h2, #richtlijnen li h3 {
-  display: inline-block !important; }
-
-h1 {
+header h1 {
   display: block;
-  border-bottom: 5px solid black !important; }
-
-#richtlijnen h2 {
-  background: gray;
-  color: white;
-  padding: .25em .75em;
-  margin: 2em 0 0 0; }
+  text-align: center; }
+header p {
+  text-align: center; }
 
 #richtlijnen li.aan {
-  font-weight: bold; }
+  font-weight: normal; }
 #richtlijnen li.uit {
   opacity: 0.5; }
 

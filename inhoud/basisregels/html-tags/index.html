@@ -20,11 +20,29 @@
 		</style>
 	</head>
 	<body class="markdown-body">
-		<h1><a href="/">VRT-kwaliteitsvereisten voor toegankelijke websites, webapplicaties en elektronische nieuwsbrieven</a></h1>
+    <a href="#main">Ga naar inhoud</a>
+    <header id="header">
+      <nav role="navigation" aria-label="site links">
+        <ul>
+          <li><a href="/">Home - Kwaliteitsvereisten voor toegankelijke websites</a></li>
+          <li><a href="#">Over deze kwaliteitsvereisten</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <p>Versie 0.9 -- Laatst aangepast door Roel Van Gils op 12 december 2016.</p>
+    </header>
+    <!-- <form id="search" role="search" action="index.html" method="post">
+      <label>
+        Doorzoek alle richtlijnen
+        <input type="text" name="" value="">
+      </label>
+      <input type="submit" name="" value="Zoek">
+    </form> -->
+    <main role="main" id="main">
 <p class="waar hide">
   Deze richtlijn hoort in <a href="/inhoud">Inhoud</a> › <a href="/inhoud/basisregels">Basisregels</a>
 </p>
-<h2 id="koppenparagrafenopsommingenencitatenzijngemarkeerdmetdedaarvoorbedoeldehtml-tags">Koppen, paragrafen, opsommingen en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags</h2>
+<h1 id="koppenparagrafenopsommingenencitatenzijngemarkeerdmetdedaarvoorbedoeldehtml-tags">Koppen, paragrafen, opsommingen en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags</h1>
 
 <p>Gebruik de juiste <strong>HTML-tags</strong> voor het markeren van de verschillende tekstdelen op een pagina of in een artikel.</p>
 
@@ -37,14 +55,14 @@
 
 <p>Het is een goed idee om ook de <a href="https://www.w3.org/wiki/HTML_structural_elements">andere structuurtags</a> te gebruiken die HTML biedt, maar dat is niet verplicht.</p>
 
-<h3 id="hoedoejedat">Hoe doe je dat?</h3>
+<h2 id="hoedoejedat">Hoe doe je dat?</h2>
 
 <ul>
 <li>Als je een <strong>CMS gebruikt</strong>, hoef je zelf geen HTML te schrijven. Bij een <abbr title="What You See is What You Get" lang="en">WYSIWYG</abbr>-tekstgebied horen meestal <strong>knoppen of keuzelijsten</strong> om koppen en opsommingen in te voegen (net zoals in een tekstverwerker). Zorg er wel voor dat je tussenkoppen niet gewoon vet maakt, maar dat je het juiste <strong>kopniveau</strong> kiest. De stijl van de koppen is meestal door de ontwerper van de website vastgelegd in een stijlblad.</li>
 <li>Als je een <strong>CMS bouwt</strong> of laat bouwen, moet je er ook op letten dat er aan de &#8216;achterkant&#8217; nette HTML-code geproduceerd wordt.</li>
 </ul>
 
-<h3 id="waaromishetbelangrijk">Waarom is het belangrijk?</h3>
+<h2 id="waaromishetbelangrijk">Waarom is het belangrijk?</h2>
 
 <ul>
 <li>Als een pagina netjes gestructureerd is, kan een schermlezer automatisch <strong>inhoudstafels</strong> maken en lijsten met verschillende niveaus <strong>beter doorzoekbaar</strong> maken. Dat bespaart blinde bezoekers erg veel tijd bij het surfen.</li>
@@ -54,9 +72,9 @@
 <li>In oude browsers en op oude GSM-toestellen (de zgn. &#8216;feature phones&#8217;) is zo een <strong>basisopmaak</strong> gegarandeerd.</li>
 </ul>
 
-<h3 id="voorbeeld">Voorbeeld</h3>
+<h2 id="voorbeeld">Voorbeeld</h2>
 
-<h4 id="nietgoed">Niet goed</h4>
+<h3 id="nietgoed">Niet goed</h3>
 
 <pre><code>&lt;div class=&quot;headingBig&quot;&gt;Wie gaat vanavond naar huis met een MIA?&lt;/div&gt;
 &lt;div class=&quot;headingMedium&quot;&gt;Genomineerden in de categorie 'Dance'&lt;/div&gt;
@@ -69,7 +87,7 @@
 • &lt;a href=&quot;…&quot;&gt;Sela Sue&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
 </code></pre>
 
-<h4 id="welgoed">Wel goed</h4>
+<h3 id="welgoed">Wel goed</h3>
 
 <pre><code>&lt;h1&gt;Wie gaat vanavond naar huis met een MIA?&lt;/h1&gt;
 &lt;h2&gt;Genomineerden in de categorie 'Dance'&lt;/h2&gt;
@@ -85,6 +103,7 @@
   &lt;li&gt;&lt;a href=&quot;…&quot;&gt;Sela Sue&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
+  </main>
 	<form id="feedback" data-forge-name="VRT-FEEDBACK">
 	<h3><i class="fa fa-comment-o"></i> Geef feedback op deze richtlijn</h3>
 	<p>Dankzij jouw feedback kunnen we deze richtlijn verbeteren. Ook vragen en suggesties zijn welkom.</p>
@@ -103,9 +122,6 @@
 	<fieldset id="opmerkingen">
 		<legend>Optioneel: wat wil je kwijt?</legend>
 		<label>
-			<p class="opmerkingen ja">
-				Wat vind je goed aan deze richtlijn? Denk je dat de richtlijn ook voor anderen duidelijk is?
-			</p>
 			<p class="opmerkingen min-of-meer">
 				Vind je de omschrijving of voorbeelden niet helemaal duidelijk? Wat kan beter?
 			</p>
@@ -120,16 +136,18 @@
 		<label class="block">
 			Ik herken mezelf best in dit profiel:
 			<select name="rol" class="block">
-				<option value="vormgever">Grafisch vormgever</option>
-				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
-				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
-				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
-				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
-				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
-				<option value="ux">Digitaal architect of UX-expert</option>
-				<option value="pm">Project manager of Product owner</option>
-				<option value="baas">(Eind)verantwoordelijke voor een website of app</option>
-				<option value="anderefunctie">Iets helemaal anders</option>
+        <optgroup label="Kies…">
+          <option value="vormgever">Grafisch vormgever</option>
+  				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
+  				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
+  				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
+  				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
+  				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
+  				<option value="ux">Digitaal architect of UX-expert</option>
+  				<option value="pm">Project manager of Product owner</option>
+  				<option value="manager">(Eind)verantwoordelijke voor een website of app</option>
+  				<option value="anderefunctie">Iets helemaal anders</option>
+        </optgroup>
 			</select>
 		</label>
 		<label id="anderefunctie" class="block">
@@ -181,11 +199,23 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
 	<script src="/js/vendor/jquery.cookie.js"></script>
+  <script src="/js/vendor/match-height.js"></script>
   <script>
 
     $(function() {
 
+      /* Equal heights */
+      $('.categorie .sub-container .sub').matchHeight(
+        {
+          property: 'min-height',
+          target: null,
+          remove: false
+        }
+      );
+
+
 			/* Fix skip links for screenreader users on all browsers */
+
 			$(':header[id]').attr('tabindex','-1');
 			$("a[href^='#']").click(function() {
 				$("#"+$(this).attr("href").slice(1)+"").focus()
@@ -207,17 +237,26 @@
 
 			$('#feedback input[name="duidelijk"]').change(function() {
 				duidelijk = $(this).val();
-				$('p.opmerkingen').hide();
-				$('p.opmerkingen.'+duidelijk).show();
-				$('#feedback #submit').removeAttr('disabled');
-				if (!$('#feedback #opmerkingen').hasClass('open')) {
-					$('#feedback #opmerkingen, #feedback #rol, #feedback #wie').fadeIn();
-					$("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
-					$('#feedback #opmerkingen textarea').focus();
-				}
-				else {
-					$('#feedback #opmerkingen').addClass('open');
-				}
+
+        if (duidelijk == 'ja') {
+          console.log('jajaja');
+          $('fieldset#opmerkingen fieldset#rol fieldset#wie').hide();
+        }
+        else {
+          $('p.opmerkingen').hide();
+  				$('p.opmerkingen.'+duidelijk).show();
+          if (!$('#feedback #opmerkingen').hasClass('open')) {
+  					$('#feedback #opmerkingen').fadeIn();
+  					$('#feedback #opmerkingen textarea').focus();
+  				}
+  				else {
+  					$('#feedback #opmerkingen').addClass('open');
+  				}
+          $("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
+          $('#feedback #rol, #feedback #wie').fadeIn();
+  				$('#feedback #submit').removeAttr('disabled');
+        }
+
 			});
 
 			$('#feedback select[name="rol"]').change(function() {

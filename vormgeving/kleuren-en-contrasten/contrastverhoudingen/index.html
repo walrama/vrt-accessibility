@@ -20,26 +20,44 @@
 		</style>
 	</head>
 	<body class="markdown-body">
-		<h1><a href="/">VRT-kwaliteitsvereisten voor toegankelijke websites, webapplicaties en elektronische nieuwsbrieven</a></h1>
+    <a href="#main">Ga naar inhoud</a>
+    <header id="header">
+      <nav role="navigation" aria-label="site links">
+        <ul>
+          <li><a href="/">Home - Kwaliteitsvereisten voor toegankelijke websites</a></li>
+          <li><a href="#">Over deze kwaliteitsvereisten</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <p>Versie 0.9 -- Laatst aangepast door Roel Van Gils op 12 december 2016.</p>
+    </header>
+    <!-- <form id="search" role="search" action="index.html" method="post">
+      <label>
+        Doorzoek alle richtlijnen
+        <input type="text" name="" value="">
+      </label>
+      <input type="submit" name="" value="Zoek">
+    </form> -->
+    <main role="main" id="main">
 <p class="waar hide">
   Deze richtlijn hoort in <a href="/vormgeving">Vormgeving</a> › <a href="/vormgeving/kleuren en contrasten">Kleuren en contrasten</a>
 </p>
-<h2 id="tekstknoppeneniconencontrasterenvoldoendemetdeachtergrondkleur-ofafbeelding">Tekst, knoppen en iconen contrasteren voldoende met de achtergrondkleur- of afbeelding</h2>
+<h1 id="tekstknoppeneniconencontrasterenvoldoendemetdeachtergrondkleur-ofafbeelding">Tekst, knoppen en iconen contrasteren voldoende met de achtergrondkleur- of afbeelding</h1>
 
 <p>Een <strong>hoog contrast</strong> van tekst ten opzichte van de achtergrond zorgt ervoor dat kleurenblinden en slechtzienden de tekst gemakkelijker kunnen lezen. Veel mensen lezen de tekst op je website ook op een smartphone met een klein (of minder kwalitatief) scherm en/of in slechte lichtomstandigheden.</p>
 
-<h3 id="hoetesten">Hoe testen?</h3>
+<h2 id="hoetesten">Hoe testen?</h2>
 
 <p>Kleurcontrasten kunt u objectief controleren met de gratis <a href="#">Colour Contrast Analyzer</a>. Met de muis duidt u een voor- en een achtergrondkleur op het scherm aan. De contrastratio die u zo verkrijgt, moet <strong>minstens 4,5:1 zijn voor standaardtekst</strong>. Voor grote tekst (18 punten normaal of 14 vet) is een contrastratio van 3:1 al voldoende. Dit criterium is gebaseerd op <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">WCAG 2.0 Succesriterium 1.4.3 (Minimum contrast)</a>.</p>
 
-<h3 id="waaromishetbelangrijk">Waarom is het belangrijk?</h3>
+<h2 id="waaromishetbelangrijk">Waarom is het belangrijk?</h2>
 
 <ul>
 <li>Websites ontwerp je meestal op een <strong>groot en helder</strong> beeldscherm en in optimale <strong>lichtomstandigheden</strong>. Daarop lijkt witte tekst op een gele of lichtgroene achtergrond misschien leesbaar. Op het smartphone-scherm in fel zonlicht merk je echter pas hoe lastig dezelfde tekst te lezen is. Zelfs als je een perfect kleurenzicht hebt, kan een slecht gekozen kleurencombinatie de leesbaarheid dus verminderen.</li>
 <li>Daarnaast doe je het uiterard voor <strong>kleurenblinde bezoekers</strong>.</li>
 </ul>
 
-<h4 id="watiskleurenblindheid">Wat is kleurenblindheid?</h4>
+<h2 id="watiskleurenblindheid">Wat is kleurenblindheid?</h2>
 
 <p>Volledige kleurenblindheid is heel zeldzaam. Daarom spreken we beter over een verstoorde kleurwaarneming. Maar liefst <strong>één op 12 mannen</strong> en <strong>1 op 250 vrouwen</strong> heeft er last van. Bepaalde kleuren zien er voor hen hetzelfde uit en/of ze kunnen schakeringen van dezelfde kleur moeilijk onderscheiden.</p>
 
@@ -58,9 +76,9 @@
 <li>Groen en blauw</li>
 </ul>
 
-<h3 id="aanbevelingen">Aanbevelingen</h3>
+<h2 id="aanbevelingen">Aanbevelingen</h2>
 
-<h4 id="letopmettekstbovenopafbeeldingen">Let op met tekst bovenop afbeeldingen</h4>
+<h3 id="letopmettekstbovenopafbeeldingen">Let op met tekst bovenop afbeeldingen</h3>
 
 <p>De minimum-verhouding van <strong>4,5:1</strong> geldt ook voor tekst op afbeeldingen. Daar is het lastiger om te meten omdat foto&#8217;s veel verschillende kleurschakeringen hebben. Als de foto zich aanpast aan de beeldverhouding van het gebruikte apparaat, kan je bovendien moeilijk voorstellen welk deel van de foto bedekt zal worden.</p>
 
@@ -83,6 +101,7 @@
 <li>Als je de foto zelf niet wil veranderen, kan je de letters een vette rand geven. Een gloed of schaduwrand kan ook. Dat kan allemaal met CSS. Kies hiervoor een kleur die voldoende contrasteert met de achtergrondfoto.</li>
 <li>Gebruik liefst de vette variant ven een lettertype.</li>
 </ul>
+  </main>
 	<form id="feedback" data-forge-name="VRT-FEEDBACK">
 	<h3><i class="fa fa-comment-o"></i> Geef feedback op deze richtlijn</h3>
 	<p>Dankzij jouw feedback kunnen we deze richtlijn verbeteren. Ook vragen en suggesties zijn welkom.</p>
@@ -101,9 +120,6 @@
 	<fieldset id="opmerkingen">
 		<legend>Optioneel: wat wil je kwijt?</legend>
 		<label>
-			<p class="opmerkingen ja">
-				Wat vind je goed aan deze richtlijn? Denk je dat de richtlijn ook voor anderen duidelijk is?
-			</p>
 			<p class="opmerkingen min-of-meer">
 				Vind je de omschrijving of voorbeelden niet helemaal duidelijk? Wat kan beter?
 			</p>
@@ -118,16 +134,18 @@
 		<label class="block">
 			Ik herken mezelf best in dit profiel:
 			<select name="rol" class="block">
-				<option value="vormgever">Grafisch vormgever</option>
-				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
-				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
-				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
-				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
-				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
-				<option value="ux">Digitaal architect of UX-expert</option>
-				<option value="pm">Project manager of Product owner</option>
-				<option value="baas">(Eind)verantwoordelijke voor een website of app</option>
-				<option value="anderefunctie">Iets helemaal anders</option>
+        <optgroup label="Kies…">
+          <option value="vormgever">Grafisch vormgever</option>
+  				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
+  				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
+  				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
+  				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
+  				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
+  				<option value="ux">Digitaal architect of UX-expert</option>
+  				<option value="pm">Project manager of Product owner</option>
+  				<option value="manager">(Eind)verantwoordelijke voor een website of app</option>
+  				<option value="anderefunctie">Iets helemaal anders</option>
+        </optgroup>
 			</select>
 		</label>
 		<label id="anderefunctie" class="block">
@@ -179,11 +197,23 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
 	<script src="/js/vendor/jquery.cookie.js"></script>
+  <script src="/js/vendor/match-height.js"></script>
   <script>
 
     $(function() {
 
+      /* Equal heights */
+      $('.categorie .sub-container .sub').matchHeight(
+        {
+          property: 'min-height',
+          target: null,
+          remove: false
+        }
+      );
+
+
 			/* Fix skip links for screenreader users on all browsers */
+
 			$(':header[id]').attr('tabindex','-1');
 			$("a[href^='#']").click(function() {
 				$("#"+$(this).attr("href").slice(1)+"").focus()
@@ -205,17 +235,26 @@
 
 			$('#feedback input[name="duidelijk"]').change(function() {
 				duidelijk = $(this).val();
-				$('p.opmerkingen').hide();
-				$('p.opmerkingen.'+duidelijk).show();
-				$('#feedback #submit').removeAttr('disabled');
-				if (!$('#feedback #opmerkingen').hasClass('open')) {
-					$('#feedback #opmerkingen, #feedback #rol, #feedback #wie').fadeIn();
-					$("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
-					$('#feedback #opmerkingen textarea').focus();
-				}
-				else {
-					$('#feedback #opmerkingen').addClass('open');
-				}
+
+        if (duidelijk == 'ja') {
+          console.log('jajaja');
+          $('fieldset#opmerkingen fieldset#rol fieldset#wie').hide();
+        }
+        else {
+          $('p.opmerkingen').hide();
+  				$('p.opmerkingen.'+duidelijk).show();
+          if (!$('#feedback #opmerkingen').hasClass('open')) {
+  					$('#feedback #opmerkingen').fadeIn();
+  					$('#feedback #opmerkingen textarea').focus();
+  				}
+  				else {
+  					$('#feedback #opmerkingen').addClass('open');
+  				}
+          $("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
+          $('#feedback #rol, #feedback #wie').fadeIn();
+  				$('#feedback #submit').removeAttr('disabled');
+        }
+
 			});
 
 			$('#feedback select[name="rol"]').change(function() {

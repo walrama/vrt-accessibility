@@ -1,10 +1,10 @@
-<h2 id="tabelhoofdingenenbijschriftenzijngemarkeerdmetdedaarvoorbedoeldehtml-tags">Tabelhoofdingen en bijschriften zijn gemarkeerd met de daarvoor bedoelde HTML-tags</h2>
+<h1 id="tabelhoofdingenenbijschriftenzijngemarkeerdmetdedaarvoorbedoeldehtml-tags">Tabelhoofdingen en bijschriften zijn gemarkeerd met de daarvoor bedoelde HTML-tags</h1>
 
 <p>Markeer cellen die een hoofding bevatten met een <code>&lt;th&gt;</code>-tag en gebruik <code>&lt;td&gt;</code>-tags voor cellen met andere gegevens. De titel of het bijschrift van de tabel markeer je met de <code>&lt;caption&gt;</code>-tag.</p>
 
 <p><strong>Opgelet</strong>: deze richtlijn is enkel bedoeld voor tabellen met <strong>gestructureerde gegevens</strong>. HTML-tabellen mag je niet gebruiken om kolommen, formulieren, volledige webpagina’s of nieuwsbrieven op te maken. Die moet je opmaken met CSS.</p>
 
-<h3 id="hoemarkeerjeeentabelmetdejuistetags">Hoe markeer je een tabel met de juiste tags?</h3>
+<h2 id="hoemarkeerjeeentabelmetdejuistetags">Hoe markeer je een tabel met de juiste tags?</h2>
 
 <ul>
 <li>Als je <strong>HTML met de hand</strong> kan schrijven, kan je deze richtlijn heel gemakkelijk toepassen. Bekijk de <a href="#voorbeelden">voorbeelden verderop</a>.</li>
@@ -12,11 +12,11 @@
 <li>Als je <strong>zelf</strong> een CMS ontwikkelt of laat bouwen, zorg er dan voor dat redacteurs <strong>zonder HTML-kennis</strong> op een <strong>gemakkelijke</strong> manier toegankelijke tabellen kunnen invoegen.</li>
 </ul>
 
-<h3 id="voorbeelden">Voorbeelden</h3>
+<h2 id="voorbeelden">Voorbeelden</h2>
 
 <p>Onderstaand voorbeeld bevat de HTML-code voor een tabel met de FM-frequenties van enkele radiozenders, opgesplitst per provincie. De inhoud is illustratief en niet per se juist of volledig.</p>
 
-<h4 id="goedvoorbeeld">Goed voorbeeld</h4>
+<h3 id="goedvoorbeeld">Goed voorbeeld</h3>
 
 <table>
   <caption>FM-frequenties VRT-radiozenders</caption>
@@ -61,7 +61,7 @@
 &lt;/table&gt;
 </code></pre>
 
-<h4 id="slechtvoorbeeld">Slecht voorbeeld</h4>
+<h3 id="slechtvoorbeeld">Slecht voorbeeld</h3>
 
 <p>FM-frequenties VRT-radiozenders</p>
 
@@ -107,18 +107,16 @@
 &lt;/table&gt;
 </code></pre>
 
-<h3 id="waaromishetbelangrijk">Waarom is het belangrijk?</h3>
-
-<h4 id="voorblindebezoekers">Voor blinde bezoekers</h4>
+<h2 id="noodzakelijkvoorblindebezoekers">Noodzakelijk voor blinde bezoekers</h2>
 
 <p>Als de relatie tussen een tabelhoofding en een datacel <strong>programmatorisch</strong> is vastgelegd, dan kan een schermlezer de inhoud van een tabel veel <strong>begrijpelijker</strong> voorlezen.</p>
 
 <p>Als een bezoeker zich bijvoorbeeld in de cel <code>&lt;td&gt;100.9&lt;/td&gt;</code> bevindt (zie <a href="#goed">voorbeeld hierboven</a>), dan zal een schermlezer er vanzelf bij vertellen in welke provincie en bij welke zender de frequentie hoort. Voor complexe tabellen is dat een onmisbare hulp, zeker als de tabel opgebouwd is uit meerdere <code>&lt;tbody&gt;</code>&#8217;s.</p>
 
-<h5 id="hoeklinkteentabelalsdiewordtvoorgelezen">Hoe klinkt een tabel als die wordt voorgelezen?</h5>
+<h3 id="ookvoorzoekmachines">Ook voor zoekmachines</h3>
+
+<p>Net als de andere verplichtte structuurtags (zie de <a href="/inhoud/basis">basisregels in de categorie Inhoud</a>) helpen <code>&lt;th&gt;</code>&#8217;s en <code>&lt;caption&gt;</code>&#8217;s zoekmachines om de inhoud van je pagina&#8217;s beter te begrijpen en indexeren.</p>
+
+<h2 id="hoeklinkteentabelalsdiewordtvoorgelezen">Hoe klinkt een tabel als die wordt voorgelezen?</h2>
 
 <p>Als je zelf wilt testen hoe het voorlezen van een tabel klinkt, dan kan je dat uitproberen met <a href="http://www.apple.com/benl/voiceover/info/guide/">VoiceOver (staat op elke Mac)</a> of met de gratis schermlezer <a href="http://www.nvaccess.org">NVDA voor Windows</a>.</p>
-
-<h4 id="voorzoekmachines">Voor zoekmachines</h4>
-
-<p>Net als de andere verplichtte structuurtags (zie de <a href="/inhoud/basis">basisregels in de categorie Inhoud</a>) helpen <code>&lt;th&gt;</code>&#8217;s en <code>&lt;caption&gt;</code>&#8217;s zoekmachines om de inhoud van je pagina&#8217;s beter te begrijpen en indexeren. </p>

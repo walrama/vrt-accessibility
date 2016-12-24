@@ -20,27 +20,45 @@
 		</style>
 	</head>
 	<body class="markdown-body">
-		<h1><a href="/">VRT-kwaliteitsvereisten voor toegankelijke websites, webapplicaties en elektronische nieuwsbrieven</a></h1>
+    <a href="#main">Ga naar inhoud</a>
+    <header id="header">
+      <nav role="navigation" aria-label="site links">
+        <ul>
+          <li><a href="/">Home - Kwaliteitsvereisten voor toegankelijke websites</a></li>
+          <li><a href="#">Over deze kwaliteitsvereisten</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <p>Versie 0.9 -- Laatst aangepast door Roel Van Gils op 12 december 2016.</p>
+    </header>
+    <!-- <form id="search" role="search" action="index.html" method="post">
+      <label>
+        Doorzoek alle richtlijnen
+        <input type="text" name="" value="">
+      </label>
+      <input type="submit" name="" value="Zoek">
+    </form> -->
+    <main role="main" id="main">
 <p class="waar hide">
   Deze richtlijn hoort in <a href="/navigatie-en-interactie">Navigatie en interactie</a> › <a href="/navigatie-en-interactie/basisrgels">Basisregels</a>
 </p>
-<h3 id="alseenpagina-onderdeeltijdenshettabbenfocuskrijgt–endusactiveerbaarwordt–isdatduidelijkzicthbaar">Als een pagina-onderdeel tijdens het tabben focus krijgt – en dus activeerbaar wordt – is dat duidelijk zicthbaar</h3>
+<h1 id="alseenpagina-onderdeeltijdenshettabbenfocuskrijgt–endusactiveerbaarwordt–isdatduidelijkzicthbaar">Als een pagina-onderdeel tijdens het tabben focus krijgt – en dus activeerbaar wordt – is dat duidelijk zicthbaar</h1>
 
 <p>Als je navigeert met de tab-toets is het belangrijk om goed te kunnen <strong>zien</strong> waar je je precies bevindt op de pagina. Als je niet kan zien welke link &#8216;focus&#8217; krijgt, weet je ook niet wanneer je op Enter moet drukken om de link te volgen.</p>
 
 <p>Als je een muis gebruikt, kan je gewoon <strong>aanwijzen</strong> waarop je wil klikken en is een visuele markering niet noodzakelijk. In desktop-browsers verandert het muispijltje bovendien in een handje als je over een link beweegt.</p>
 
-<h4 id="nooitverbergen">Nooit verbergen</h4>
+<h2 id="nooitverbergen">Nooit verbergen</h2>
 
 <p>Browsers passen een paar standaard-opmaakregels toe op iedere webpagina. Een van die stijlen is het fijne stippellijntje waarmee elementen &#8216;in focus&#8217; gemarkeerd worden.</p>
 
 <p>Die opmaakregel (<code>outline: none</code>) kan je als webdesigner (te) gemakkelijk overschrijven, maar dat doe je liever niet. In het uitgewerkte voorbeeld verderop laten we zien waarom.</p>
 
-<h4 id="zetlinkslieverextraindeverf">Zet links liever extra in de verf</h4>
+<h2 id="zetlinkslieverextraindeverf">Zet links liever extra in de verf</h2>
 
 <p>Het is niet verplicht, maar het is wel een goede gewoonte om de focus net <strong>extra duidelijk</strong> te maken, bv. met een vette rand of een achtergrondkleurtje. Als je dat doet, let er dan wel op dat de kleuren voldoende contrasteren (zie richtlijn xyz).</p>
 
-<h5 id="voorbeeld:navigatiebalk">Voorbeeld: navigatiebalk</h5>
+<h2 id="interactiefvoorbeeld:navigatiebalk">Interactief voorbeeld: navigatiebalk</h2>
 
 <p>Neem deze eenvoudige navigatiebalk als voorbeeld:</p>
 
@@ -145,7 +163,7 @@
 }
 </code></pre>
 
-<p>Let op: misschien schrijf je deze CSS-regel niet zelf, maar maakt hij deel uit van een stijlblad dat bij een framework hoort. Kijk dat dus zeker na.</p>
+<p><strong>Let op</strong>: misschien schrijf je deze CSS-regel niet zelf, maar maakt hij deel uit van een stijlblad dat bij een framework hoort. Kijk dat dus zeker na.</p>
 
 <p>Probeer maar eens in onderstaande balk te navigeren met de tab-toets. <a href="#stubru-3">Spring meteen naar het eerste item in het derde voorbeeld</a>.</p>
 
@@ -178,7 +196,7 @@
     background: darkOrange;
   }
   #radiozenders-3 ul li a:focus {
-    outline: none; 
+    outline: none;
   }
 </style>
 
@@ -231,6 +249,7 @@
     background: Orange;
   }
 </style>
+  </main>
 	<form id="feedback" data-forge-name="VRT-FEEDBACK">
 	<h3><i class="fa fa-comment-o"></i> Geef feedback op deze richtlijn</h3>
 	<p>Dankzij jouw feedback kunnen we deze richtlijn verbeteren. Ook vragen en suggesties zijn welkom.</p>
@@ -249,9 +268,6 @@
 	<fieldset id="opmerkingen">
 		<legend>Optioneel: wat wil je kwijt?</legend>
 		<label>
-			<p class="opmerkingen ja">
-				Wat vind je goed aan deze richtlijn? Denk je dat de richtlijn ook voor anderen duidelijk is?
-			</p>
 			<p class="opmerkingen min-of-meer">
 				Vind je de omschrijving of voorbeelden niet helemaal duidelijk? Wat kan beter?
 			</p>
@@ -266,16 +282,18 @@
 		<label class="block">
 			Ik herken mezelf best in dit profiel:
 			<select name="rol" class="block">
-				<option value="vormgever">Grafisch vormgever</option>
-				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
-				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
-				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
-				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
-				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
-				<option value="ux">Digitaal architect of UX-expert</option>
-				<option value="pm">Project manager of Product owner</option>
-				<option value="baas">(Eind)verantwoordelijke voor een website of app</option>
-				<option value="anderefunctie">Iets helemaal anders</option>
+        <optgroup label="Kies…">
+          <option value="vormgever">Grafisch vormgever</option>
+  				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
+  				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
+  				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
+  				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
+  				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
+  				<option value="ux">Digitaal architect of UX-expert</option>
+  				<option value="pm">Project manager of Product owner</option>
+  				<option value="manager">(Eind)verantwoordelijke voor een website of app</option>
+  				<option value="anderefunctie">Iets helemaal anders</option>
+        </optgroup>
 			</select>
 		</label>
 		<label id="anderefunctie" class="block">
@@ -327,11 +345,23 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
 	<script src="/js/vendor/jquery.cookie.js"></script>
+  <script src="/js/vendor/match-height.js"></script>
   <script>
 
     $(function() {
 
+      /* Equal heights */
+      $('.categorie .sub-container .sub').matchHeight(
+        {
+          property: 'min-height',
+          target: null,
+          remove: false
+        }
+      );
+
+
 			/* Fix skip links for screenreader users on all browsers */
+
 			$(':header[id]').attr('tabindex','-1');
 			$("a[href^='#']").click(function() {
 				$("#"+$(this).attr("href").slice(1)+"").focus()
@@ -353,17 +383,26 @@
 
 			$('#feedback input[name="duidelijk"]').change(function() {
 				duidelijk = $(this).val();
-				$('p.opmerkingen').hide();
-				$('p.opmerkingen.'+duidelijk).show();
-				$('#feedback #submit').removeAttr('disabled');
-				if (!$('#feedback #opmerkingen').hasClass('open')) {
-					$('#feedback #opmerkingen, #feedback #rol, #feedback #wie').fadeIn();
-					$("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
-					$('#feedback #opmerkingen textarea').focus();
-				}
-				else {
-					$('#feedback #opmerkingen').addClass('open');
-				}
+
+        if (duidelijk == 'ja') {
+          console.log('jajaja');
+          $('fieldset#opmerkingen fieldset#rol fieldset#wie').hide();
+        }
+        else {
+          $('p.opmerkingen').hide();
+  				$('p.opmerkingen.'+duidelijk).show();
+          if (!$('#feedback #opmerkingen').hasClass('open')) {
+  					$('#feedback #opmerkingen').fadeIn();
+  					$('#feedback #opmerkingen textarea').focus();
+  				}
+  				else {
+  					$('#feedback #opmerkingen').addClass('open');
+  				}
+          $("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
+          $('#feedback #rol, #feedback #wie').fadeIn();
+  				$('#feedback #submit').removeAttr('disabled');
+        }
+
 			});
 
 			$('#feedback select[name="rol"]').change(function() {

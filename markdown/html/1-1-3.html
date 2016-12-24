@@ -1,4 +1,4 @@
-<h2 id="dekoppenstructuurisstrikthiërarchisch">De koppenstructuur is strikt hiërarchisch</h2>
+<h1 id="dekoppenstructuurisstrikthiërarchisch">De koppenstructuur is strikt hiërarchisch</h1>
 
 <p>Voor de kop op het hoogste niveau gebruik je het <code>&lt;h1&gt;</code>-element. Voor tussenkoppen gebruik je een <code>&lt;h2&gt;</code> en koppen op een derde of lager niveau markeer met <code>&lt;h3&gt;</code> tot <code>&lt;h6&gt;</code>. Respecteer deze hiërarchie.</p>
 
@@ -9,20 +9,18 @@
 <li>Sla nooit kopniveaus over.</li>
 </ul>
 
-<h3 id="waaromishetbelangrijk">Waarom is het belangrijk?</h3>
+<h2 id="waaromishetbelangrijk">Waarom is het belangrijk?</h2>
 
 <p>Omdat blinde bezoekers geen snelle blik kunnen werpen op een pagina, gebruiken ze koppen en links om <strong>snel en efficiënt</strong> te navigeren. Hun schermlezer maakt eerst een <strong>automatische inhoudstafel</strong> aan voor iedere pagina. Hiervoor baseert het programma zich op het zgn. Document Object Model waartoe ook de koppen behoren. De schermlezer leest die inhoudstafel vervolgens voor en laat de bezoeker <strong>koppensnellen</strong> om snel bij de informatie te komen die hij zoekt.</p>
 
 <p>Er zijn nog meer voordelen. Die staan opgesomd bij het ijkpunt <a href="/inhoud/basisregels/html-tags">Koppen, paragrafen, lijsten en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags</a>.</p>
 
-<h3 id="opmerkingoverhethtml5outline-algoritme">Opmerking over het HTML5 outline-algoritme</h3>
+<h2 id="opmerkingoverhethtml5outline-algoritme">Opmerking over het HTML5 outline-algoritme</h2>
 
-<p><em>Deze opmerking is enkel belangrijk voor front-end-ontwikkelaars.</em></p>
+<p><i class="fa fa-exclamation-triangle green" aria-hidden="true"></i> Deze opmerking is enkel belangrijk voor front-end-ontwikkelaars.</p>
 
-<p>HTML5 heeft een aantal nieuwe elementen geïntroduceerd om pagina&#8217;s op te delen in logische secties: <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;aside&gt;</code> en <code>&lt;article&gt;</code>. Die mag je gerust gebruiken. Echter, volgens de <a href="http://html5doctor.com/outlines/">specificatie</a> kan je een nieuwe &#8216;outline&#8217; of boomstructuur starten binnen de context van zo&#8217;n nieuwe sectie (je start dus steeds opnieuw met een <code>&lt;h1&gt;</code>).</p>
+<p>HTML5 heeft een aantal nieuwe elementen geïntroduceerd om pagina&#8217;s op te delen in logische landmarks, zoals <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;aside&gt;</code>. Die mag je gerust gebruiken. Echter, volgens de <a href="http://html5doctor.com/outlines/">specificatie</a> kan je een nieuwe &#8216;outline&#8217; of boomstructuur starten binnen de context van zo&#8217;n nieuwe sectie (je start dus steeds opnieuw met een <code>&lt;h1&gt;</code>).</p>
 
-<p>Jammer genoeg ondersteunen niet alle schermlezers het HTML5 outline-algoritme even goed. Daarom adviseren we om steeds een <strong>strikt hiërarchische volgorde</strong> aan te houden.</p>
-
-<p>Als je toch het HTML5 outline-algoritme wil toepassen, voeg dan consequent <code>role=&quot;heading&quot;</code> en <code>aria-level=&quot;…&quot;</code> toe aan iedere kop. Zo begrijpen sommige schermlezers het beter.</p>
+<p>Jammer genoeg ondersteunt <strong>geen enkele schermlezers</strong> het HTML5 outline-algoritme even goed. Daarom adviseert de WCAG Working Groep we om steeds de <strong>strikt hiërarchische volgorde</strong> aan te houden.</p>
 
 <p><abbr title="Mozille Developer Network">MDN</abbr> heeft er een verhelderend duidelijk artikel over: <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">Sections and Outlines of an HTML5 Document</a></p>

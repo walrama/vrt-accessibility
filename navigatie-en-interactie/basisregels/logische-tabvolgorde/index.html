@@ -20,25 +20,43 @@
 		</style>
 	</head>
 	<body class="markdown-body">
-		<h1><a href="/">VRT-kwaliteitsvereisten voor toegankelijke websites, webapplicaties en elektronische nieuwsbrieven</a></h1>
+    <a href="#main">Ga naar inhoud</a>
+    <header id="header">
+      <nav role="navigation" aria-label="site links">
+        <ul>
+          <li><a href="/">Home - Kwaliteitsvereisten voor toegankelijke websites</a></li>
+          <li><a href="#">Over deze kwaliteitsvereisten</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <p>Versie 0.9 -- Laatst aangepast door Roel Van Gils op 12 december 2016.</p>
+    </header>
+    <!-- <form id="search" role="search" action="index.html" method="post">
+      <label>
+        Doorzoek alle richtlijnen
+        <input type="text" name="" value="">
+      </label>
+      <input type="submit" name="" value="Zoek">
+    </form> -->
+    <main role="main" id="main">
 <p class="waar hide">
   Deze richtlijn hoort in <a href="/navigatie-en-interactie">Navigatie en interactie</a> › <a href="/navigatie-en-interactie/basisrgels">Basisregels</a>
 </p>
-<h2 id="detab-volgordeislogischenvoorspelbaar">De tab-volgorde is logisch en voorspelbaar</h2>
+<h1 id="detab-volgordeislogischenvoorspelbaar">De tab-volgorde is logisch en voorspelbaar</h1>
 
 <p>Bezoekers die het toetsenbord gebruiken in plaats van de muis, hechten veel belang aan een <strong>logische en voorspelbare</strong> tab-volgorde.</p>
 
-<h3 id="watisdetabvolgorde">Wat is de tabvolgorde?</h3>
+<h2 id="watisdetabvolgorde">Wat is de tabvolgorde?</h2>
 
 <p>De tab-volgorde is de volgorde waarin de elementen op een pagina gefocust worden als je herhaaldelijk op de tab-toets drukt.</p>
 
-<h3 id="waarhetkanmislopen">Waar het kan mislopen</h3>
+<h2 id="waarhetkanmislopen">Waar het kan mislopen</h2>
 
 <p>Meestal hoef je niets speciaals te doen om aan deze richtlijn te voldoen. Toch loop het geregeld mis. Boosdoeners zijn vaak het foutief gebruik van de CSS-eigenschap <code>float</code> en de aanwezigheid van <code>tabindex</code>-attributen op sommige HTML-elementen.</p>
 
-<h4 id="voorbeeld1:foutiefgebruikvandecss-eigenschapfloat">Voorbeeld 1: Foutief gebruik van de CSS-eigenschap &#8216;float&#8217;</h4>
+<h3 id="voorbeeld1:foutiefgebruikvandecss-eigenschapfloat">Voorbeeld 1: Foutief gebruik van de CSS-eigenschap &#8216;float&#8217;</h3>
 
-<h5 id="nietgoed">Niet goed</h5>
+<h4 id="slechtvoorbeeld">Slecht voorbeeld</h4>
 
 <pre><code>&lt;nav&gt;
   &lt;ul&gt;
@@ -55,7 +73,7 @@ nav li {
 }
 </code></pre>
 
-<h5 id="welgoed">Wel goed</h5>
+<h4 id="goedvoorbeeld">Goed voorbeeld</h4>
 
 <pre><code>&lt;nav&gt;
   &lt;ul&gt;
@@ -76,9 +94,10 @@ nav ul li {
 }
 </code></pre>
 
-<h3 id="voorwiebelangrijk">Voor wie belangrijk?</h3>
+<h2 id="voorwieishetbelangrijk">Voor wie is het belangrijk?</h2>
 
 <p>Deze richtlijn is in het bijzonder nuttig voor blinden, omdat ze het scherm niet kunnen zien en dus geen overzicht hebben.</p>
+  </main>
 	<form id="feedback" data-forge-name="VRT-FEEDBACK">
 	<h3><i class="fa fa-comment-o"></i> Geef feedback op deze richtlijn</h3>
 	<p>Dankzij jouw feedback kunnen we deze richtlijn verbeteren. Ook vragen en suggesties zijn welkom.</p>
@@ -97,9 +116,6 @@ nav ul li {
 	<fieldset id="opmerkingen">
 		<legend>Optioneel: wat wil je kwijt?</legend>
 		<label>
-			<p class="opmerkingen ja">
-				Wat vind je goed aan deze richtlijn? Denk je dat de richtlijn ook voor anderen duidelijk is?
-			</p>
 			<p class="opmerkingen min-of-meer">
 				Vind je de omschrijving of voorbeelden niet helemaal duidelijk? Wat kan beter?
 			</p>
@@ -114,16 +130,18 @@ nav ul li {
 		<label class="block">
 			Ik herken mezelf best in dit profiel:
 			<select name="rol" class="block">
-				<option value="vormgever">Grafisch vormgever</option>
-				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
-				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
-				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
-				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
-				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
-				<option value="ux">Digitaal architect of UX-expert</option>
-				<option value="pm">Project manager of Product owner</option>
-				<option value="baas">(Eind)verantwoordelijke voor een website of app</option>
-				<option value="anderefunctie">Iets helemaal anders</option>
+        <optgroup label="Kies…">
+          <option value="vormgever">Grafisch vormgever</option>
+  				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
+  				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
+  				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
+  				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
+  				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
+  				<option value="ux">Digitaal architect of UX-expert</option>
+  				<option value="pm">Project manager of Product owner</option>
+  				<option value="manager">(Eind)verantwoordelijke voor een website of app</option>
+  				<option value="anderefunctie">Iets helemaal anders</option>
+        </optgroup>
 			</select>
 		</label>
 		<label id="anderefunctie" class="block">
@@ -175,11 +193,23 @@ nav ul li {
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
 	<script src="/js/vendor/jquery.cookie.js"></script>
+  <script src="/js/vendor/match-height.js"></script>
   <script>
 
     $(function() {
 
+      /* Equal heights */
+      $('.categorie .sub-container .sub').matchHeight(
+        {
+          property: 'min-height',
+          target: null,
+          remove: false
+        }
+      );
+
+
 			/* Fix skip links for screenreader users on all browsers */
+
 			$(':header[id]').attr('tabindex','-1');
 			$("a[href^='#']").click(function() {
 				$("#"+$(this).attr("href").slice(1)+"").focus()
@@ -201,17 +231,26 @@ nav ul li {
 
 			$('#feedback input[name="duidelijk"]').change(function() {
 				duidelijk = $(this).val();
-				$('p.opmerkingen').hide();
-				$('p.opmerkingen.'+duidelijk).show();
-				$('#feedback #submit').removeAttr('disabled');
-				if (!$('#feedback #opmerkingen').hasClass('open')) {
-					$('#feedback #opmerkingen, #feedback #rol, #feedback #wie').fadeIn();
-					$("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
-					$('#feedback #opmerkingen textarea').focus();
-				}
-				else {
-					$('#feedback #opmerkingen').addClass('open');
-				}
+
+        if (duidelijk == 'ja') {
+          console.log('jajaja');
+          $('fieldset#opmerkingen fieldset#rol fieldset#wie').hide();
+        }
+        else {
+          $('p.opmerkingen').hide();
+  				$('p.opmerkingen.'+duidelijk).show();
+          if (!$('#feedback #opmerkingen').hasClass('open')) {
+  					$('#feedback #opmerkingen').fadeIn();
+  					$('#feedback #opmerkingen textarea').focus();
+  				}
+  				else {
+  					$('#feedback #opmerkingen').addClass('open');
+  				}
+          $("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
+          $('#feedback #rol, #feedback #wie').fadeIn();
+  				$('#feedback #submit').removeAttr('disabled');
+        }
+
 			});
 
 			$('#feedback select[name="rol"]').change(function() {

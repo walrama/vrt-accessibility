@@ -1,32 +1,32 @@
-<h2 id="hetisaltijdduidelijkwaareenlinknaartoegaatooklosvandeomliggendetekst">Het is altijd duidelijk waar een link naartoe gaat, ook los van de omliggende tekst</h2>
+<h1 id="hetisaltijdduidelijkwaareenlinknaartoegaatooklosvandeomliggendetekst">Het is altijd duidelijk waar een link naartoe gaat, ook los van de omliggende tekst</h1>
 
 <p>Als je een link aanbrengt in een zin, kies dan een <strong>betekenisvol woord of fragment</strong>. Beeld je even in dat je de omliggende tekst niet kan lezen. Is het dan nog duidelijk waar je zal belanden als je op de link klikt?</p>
 
-<h3 id="voorbeelden">Voorbeelden</h3>
+<h2 id="voorbeelden">Voorbeelden</h2>
 
-<h4 id="nietgoed">Niet goed</h4>
-
-<ul>
-<li><a href="">Klik hier</a> om tickets voor Monza te winnen</li>
-<li><a href="">Alles wat je moet weten</a> over de presidentsverkiezing</li>
-<li>Herbeluister het <a href="">gesprek</a> met Jef Neve in Touché</li>
-</ul>
-
-<h4 id="welgoed">Wel goed</h4>
+<h3 id="slechtevoorbeelden">Slechte voorbeelden</h3>
 
 <ul>
-<li>Klik hier om <a href="">tickets voor Monza</a> te winnen</li>
-<li>Alles wat je moet weten over de <a href="">presidentsverkiezing in 2016</a></li>
-<li>Herbeluister het <a href="">gesprek Met Jef Neve</a> in Touché</li>
+<li><a href="http://www.example.com/">Klik hier</a> om tickets voor Monza te winnen</li>
+<li><a href="http://www.example.com/">Alles wat je moet weten</a> over de presidentsverkiezing</li>
+<li>Herlees het <a href="http://www.example.com/">gesprek</a> met Jef Neve</li>
 </ul>
 
-<h3 id="blokjesmetleesmeereronder">Blokjes met &#8216;Lees meer&#8217; eronder</h3>
+<h3 id="verbeterdevoorbeelden">Verbeterde voorbeelden</h3>
 
-<p>Op homepages en overzichtspagina&#8217;s vind je vaak blokjes met een link <strong>Lees meer</strong> eronder. Dat is toegestaan, maar zorg er dan wel voor dat de titel van het artikel (met dezelfde bestemming) <strong>ook een link</strong> is. Als het even kan, vermijd het gebruik van nietszeggende links dan helemaal.</p>
+<ul>
+<li><a href="http://www.example.com/">Win tickets voor Monza</a></li>
+<li>Alles wat je moet weten over de <a href="http://www.example.com/">presidentsverkiezing in Amerika</a></li>
+<li>Herlees het <a href="http://www.example.com/">gesprek Met Jef Neve</a></li>
+</ul>
 
-<h3 id="afbeeldingenalslinkgebruiken">Afbeeldingen als link gebruiken</h3>
+<h2 id="blokjesmetleesmeereronder">Blokjes met &#8216;Lees meer&#8217; eronder</h2>
 
-<p>Als je een <strong>afbeelding als link</strong> gebruikt, dan krijgt de <strong>alt-tekst</strong> de rol van de linktekst. Geef de afbeelding daarom een alt-tekst die het <strong>doel van de link</strong> duidelijk maakt. Als het logo van je website bijvoorbeeld naar de homepage linkt, is &#8216;Home&#8217; een duidelijke alt-tekst:</p>
+<p>Op homepages en overzichtspagina&#8217;s zie je vaak blokjes met een <strong>Lees meer</strong>-link eronder. Dat is toegestaan, maar zorg er dan wel voor dat de titel van het artikel (met dezelfde bestemming) <strong>ook een link</strong> is.</p>
+
+<h2 id="afbeeldingenalslinkgebruiken">Afbeeldingen als link gebruiken</h2>
+
+<p>Als je een <strong>afbeelding als link</strong> gebruikt, dan krijgt de <strong>alt-tekst</strong> de rol van de linktekst. Geef de afbeelding daarom een alt-tekst die het <strong>doel van de link</strong> duidelijk omschrijft. Als het logo van je website bijvoorbeeld naar de homepage linkt, is &#8216;Home&#8217; een duidelijke alt-tekst:</p>
 
 <pre><code>&lt;a href=&quot;/&quot;&gt;
   &lt;img src=&quot;/images/logo_stubru.png&quot; alt=&quot;Home&quot;&gt;
@@ -35,32 +35,34 @@
 
 <p>Dit geldt trouwens ook voor <strong>client side image maps</strong>: elk <code>&lt;area&gt;</code>-element heeft een alt-tekst nodig die het doel van de link beschrijft.</p>
 
-<h3 id="stukjesvanlinksverbergen">Stukjes van links verbergen</h3>
+<h2 id="stukjesvanlinksverbergen">Stukjes van links verbergen</h2>
 
 <p>Met CSS is het mogelijk om stukjes tekst te <strong>verbergen</strong>. Afhankelijk van hoe deze techniek toegepast is, worden deze stukjes tekst toch voorgelezen door schermlezers. Zo kan je <strong>extra informatie</strong> toevoegen aan links om iets te verduidelijken voor blinde bezoekers.</p>
 
-<h4 id="voorbeeld:">Voorbeeld:</h4>
+<h3 id="voorbeeld:">Voorbeeld:</h3>
 
-<h5 id="html">HTML</h5>
+<h4 id="html">HTML</h4>
 
 <pre><code>&lt;a href=&quot;…&quot;&gt;
   Weersvoorspelling morgen &lt;span class=&quot;hide&quot;&gt;(verschijnt als een kaart)&lt;/span&gt;
 &lt;/a&gt;
 </code></pre>
 
-<h5 id="css">CSS</h5>
+<h4 id="css">CSS</h4>
 
 <p>Als je een HTML-element &#8216;off screen&#8217; positioneert, wordt het wel nog voorgelezen door een schermlezer. Dat kan zo:</p>
 
 <pre><code>.hide {
-  position: absolute; 
+  position: absolute;
   left: -10000px;
 }
 </code></pre>
 
 <p>In dit <a href="http://www.anysurfer.be/nl/in-de-praktijk/websites/verborgen-tekst">artikel over verborgen tekst</a> wordt deze techniek in detail toegelicht.</p>
 
-<h3 id="tooltips">Tooltips</h3>
+<p><i class="fa fa-exclamation-triangle red" aria-hidden="true"></i> <strong>Let op</strong>: tekst die je verbergt met de CSS-eigenschap <code>display: none</code> of <code>visibiity: hidden</code> wordt <strong>voor iedereen</strong> onzichtbaar gemaakt, dus ook voor gebruikers van schermlezers.</p>
+
+<h2 id="tooltips">Tooltips</h2>
 
 <p>In HTML kan je <strong>tooltips</strong> toevoegen aan hyperlinks met behulp van het <code>title</code>-attribuut. In de meeste browsers verschijnt er een (geel) tekstbalkje als je met je muis over een link met een tooltip beweegt.</p>
 
@@ -75,12 +77,12 @@
 <li>Kijk de website regelmatig na op <strong>dode links</strong>. Ze komen vaker voor dan je zou denken. Gebruik hiervoor bijvoorbeeld de <a href="http://validator.w3.org/checklink">gratis Link Checker van het W3C</a>.</li>
 </ul>
 
-<h2 id="voorwieishetnuttig">Voor wie is het nuttig?</h2>
+<h2 id="waaromishetbelangrijk">Waarom is het belangrijk?</h2>
 
 <h3 id="noodzakelijkvoorblindebezoekers">Noodzakelijk voor blinde bezoekers</h3>
 
 <p>Het is nooit leuk als je niet weet waar je terecht zal komen als je op een link klikt. Soms kan je uit de context wel afleiden waar je zal belanden, maar voor blinde bezoekers is dat anders. Om sneller en efficiënter te navigeren, springen zij gewoonlijk <strong>van link naar link</strong> of ze laten een <strong>lijstje</strong> voorlezen met alle links die de schermlezer op een pagina vindt. &#8216;Lees meer&#8217; en &#8216;Klik hier&#8217; klinken dan wel erg weinigzeggend.</p>
 
-<h3 id="zoekmachineoptimalisatie">Zoekmachineoptimalisatie</h3>
+<h3 id="beterscoreninzoekmachines">Beter scoren in zoekmachines</h3>
 
 <p>Google en andere zoekmachines geven een hogere waardering aan websites met veel goede interne en externe links. Zoekmachines beoordelen niet enkel de kwaliteit van de website waar je naar verwijst, maar ze hebben ook aandacht voor de linktekst zelf. Websites met <strong>informatieve en unieke linkteksten</strong> scoren daarom vaak beter.</p>

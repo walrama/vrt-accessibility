@@ -1,0 +1,413 @@
+<!doctype html>
+<html class="markup-body">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+		<title></title>
+		<link rel="stylesheet" href="/github-markdown.css">
+		<link rel="stylesheet" href="/css/vrt-toegankelijkheid.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<script src="https://use.typekit.net/tvi1crm.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+		<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+		</style>
+	</head>
+	<body class="markdown-body">
+    <a href="#main">Ga naar inhoud</a>
+    <header id="header">
+      <nav role="navigation" aria-label="site links">
+        <ul>
+          <li><a href="/">Home - Kwaliteitsvereisten voor toegankelijke websites</a></li>
+          <li><a href="#">Over deze kwaliteitsvereisten</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <p>Versie 0.9 -- Laatst aangepast door Roel Van Gils op 12 december 2016.</p>
+    </header>
+    <!-- <form id="search" role="search" action="index.html" method="post">
+      <label>
+        Doorzoek alle richtlijnen
+        <input type="text" name="" value="">
+      </label>
+      <input type="submit" name="" value="Zoek">
+    </form> -->
+    <main role="main" id="main">
+<p class="waar hide">
+  todo
+</p>
+<h1 id="labelshebbeneenìd-attribuutdatovereenstemtmethetfor-attribuutvanhetbijbehorendeformulierveld">Labels hebben een <code>ìd</code>-attribuut dat overeenstemt met het <code>for</code>-attribuut van het bijbehorende formulierveld</h1>
+
+<p>Labels en invoervelden moeten <strong>programmatorisch</strong> met elkaar verbonden zijn. Deze regel geldt voor [alle formulierelementen die HTML voorziet], behalve voor verzendknoppen (voor verzendknoppen is de [regel over links en knoppen] van toepassing).</p>
+
+<p>Als je een ‘form builder’ gebruikt (zoals [Typeform] of [Google Forms]), hoef je hiervoor meestal niets extra’s te doen. Als je zelf HTML schrijft (of een front-end framework) gebruikt, moet je zorgvuldig te werk gaan.</p>
+
+<p>Als een veld verplicht ingevuld moet worden, vemeld dat dan als ondedeel van het label.</p>
+
+<h2 id="standaardmethode">Standaardmethode</h2>
+
+<ul>
+<li>Geef ieder formulierveld een <code>id</code>-attribuut met een <strong>unieke waarde</strong>.</li>
+<li>Plaats een <code>&lt;label&gt;</code>- en een <code>&lt;/label&gt;</code>-tag rondom de instructietekst.</li>
+<li>Herhaal de waarde van het <code>id</code>-attribuut in het <code>for</code>-attribuut van het <code>&lt;label&gt;</code>-element.</li>
+</ul>
+
+<h3 id="goedvoorbeeld">Goed voorbeeld</h3>
+
+<p>&#8216;&#8217; &lt;label for=&quot;naam”&gt;Voornaam</label>
+&#8216;&#8217; <input type="text" id=“voornaam" name="voornaam" />
+&#8216;&#8217;
+&#8216;&#8217; &lt;label for=&quot;naam”&gt;Achternaam</label>
+&#8216;&#8217; <input type="text" id=“achternaam” name="achternaam" />
+&#8216;&#8217;
+&#8216;&#8217; <label for="vertrek">Vertrekhalte</label>
+&#8216;&#8217; &lt;select name=&quot;vertrekhalte” id=“vertrekhalte”&gt;
+&#8216;&#8217; <option value=“leuven”>Leuven</option>
+&#8216;&#8217; <option value=“gent”>Gent</option>
+&#8216;&#8217; <option value=“brussel”>Brussel</option>
+&#8216;&#8217; </select>
+&#8216;&#8217;
+&#8216;&#8217; <input type="checkbox" name=“hulpnodig” id=“hulpnodig”>
+&#8216;&#8217; <label for="hulpnodig">Ik heb hulp nodig bij het opstappen</label>
+&#8216;&#8217;
+&#8216;&#8217; <label for=“opmerkingen”>Opmerkingen (optioneel)</label>
+&#8216;&#8217; <textarea id="opmerkingen" name="opmerkingen" rows="5" cols="50"></textarea>
+&#8216;&#8217;
+&#8216;&#8217; &lt;input type=“submit” value=“Verstuur aanvraag” /&gt;</p>
+
+<h2 id="eenvoudigemethode">Eenvoudige methode</h2>
+
+<p>Als het label net <strong>boven</strong> of (naast het veld) staat, is het vaak handiger om de zogeheten <em>shorthand-notatie</em> te gebruiken. Die is <strong>even toegankelijk</strong>, maar ziet er een stuk compacter uit. Omdat het niet nodig is om overeenstemmende <code>for</code>- en <code>id</code>-attributen toe te voegen, is de kans op het maken van fouten bovendien kleiner.</p>
+
+<p>Je moet er wel op letten dat je binnen de <code>&lt;label&gt;</code>- en <code>&lt;/label&gt;</code>-tag slechts één formulierelement plaatst.</p>
+
+<h3 id="goedvoorbeeldshorthand-notatie">Goed voorbeeld (shorthand-notatie)</h3>
+
+<p>&#8216;&#8217; <label>
+&#8216;&#8217; Schrijf me in op de nieuwsbrief
+&#8216;&#8217; <input type=“radio” name=“nieuwsbrief” value=“ja” />
+&#8216;&#8217; </label></p>
+
+<h2 id="voorwieishetnodig">Voor wie is het nodig?</h2>
+
+<h3 id="voorgebruikersvanschermlezers">Voor gebruikers van schermlezers</h3>
+
+<p>Als je het scherm niet kan zien, is het <strong>essentieel</strong> om te kunnen <strong>horen</strong> waar een formulierveld voor staat.</p>
+
+<p>~~ Een schermleesprogramma als VoiceOver of Jaws interpreteert de achterliggende HTML-code en kan dus niet zomaar ‘zien’ of een label bij een veld hoort of niet. Enkel als labels <strong>juist gekoppeld</strong> zijn (door een van de hierboven methodes te gebruiken, worden ze opgepikt en voorgelezen. Dat gebeurt bijvoorbeeld wanneer de cursor in een veld terechtkomt of wanneer een gebruiker een lijst opvraagt met beschikbare formuliervelden.</p>
+
+<h3 id="voorallemuisgebruikersenbezoekersmetbeperktemotorischevaardigheden">Voor alle muisgebruikers en bezoekers met beperkte motorische vaardigheden</h3>
+
+<p>Als labels juist gebruikt zijn, kan je met een muisklik (of een vingertik) op het label de tekstcursor in het bijbehorende veld plaatsen. Op dezelfde manier kan je ook gemakkelijk keuzerondjes en aankruisvakjes activeren. Dat werkt een stuk handiger omdat deze formulierelementen op zich een heel klein klik- of aanraakgebied hebben.</p>
+
+<p>Probeer het hieronder zelf.</p>
+
+<h4 id="voorbeeldnietgoed">Voorbeeld (niet goed)</h4>
+
+<p>Als je op de labels klikt met je muis, gebeurt er niks:</p>
+
+<p>~~ <fieldset>
+~~ <legend>Kies gerecht</legend>
+~~ <ul>
+~~ <li><input type="radio" name="gerecht" value="1"> Stoverij met frieten</li>
+~~ <li><input type="radio" name="gerecht" value="2"> Mosselen met frieten</li>
+~~ <li><input type="radio" name="gerecht" value="3"> Gentse waterzooi</li>
+~~ </ul>
+~~ </fieldset></p>
+
+<h5 id="bijbehorendecode">Bijbehorende code</h5>
+
+<p>&#8216;&#8217; <fieldset>
+&#8216;&#8217; <legend>Kies gerecht</legend>
+&#8216;&#8217; <ul>
+&#8216;&#8217; <li><input type="radio" name="gerecht" value="1"> Stoverij met frieten</li>
+&#8216;&#8217; <li><input type="radio" name="gerecht" value="2"> Mosselen met frieten</li>
+&#8216;&#8217; <li><input type="radio" name="gerecht" value="3"> Gentse waterzooi</li>
+&#8216;&#8217; </ul>
+&#8216;&#8217; </fieldset></p>
+
+<h4 id="voorbeeldwelgoed">Voorbeeld (wel goed)</h4>
+
+<p>In onderstaand voorbeeld zijn wel labels gebruikt. Als je op de labels klikt (of tikt met je vinger), wordt het bijbehorende keuzerondje actief gemaakt.</p>
+
+<p>~~ <fieldset>
+~~ <legend>Kies gerecht</legend>
+~~ <ul>
+~~ <li>
+~~ <label>
+~~ <input type="radio" name="gerecht" value="1">
+~~ Stoverij met frieten
+~~ </label>
+~~ </li>
+~~ <li>
+~~ <label>
+~~ <input type="radio" name="gerecht" value="2">
+~~ Mosselen met frieten
+~~ </label>
+~~ </li>
+~~ <li>
+~~ <label>
+~~ <input type="radio" name="gerecht" value="3">
+~~ Gentse waterzooi
+~~ </label>
+~~ </li>
+~~ </ul>
+~~ </fieldset></p>
+
+<h5 id="bijbehorendecode">Bijbehorende code</h5>
+
+<p>&#8216;&#8217; <fieldset>
+&#8216;&#8217; <legend>Kies gerecht</legend>
+&#8216;&#8217; <ul>
+&#8216;&#8217; <li>
+&#8216;&#8217; <label>
+&#8216;&#8217; <input type="radio" name="gerecht" value="1">
+&#8216;&#8217; Stoverij met frieten
+&#8216;&#8217; </label>
+&#8216;&#8217; </li>
+&#8216;&#8217; <li>
+&#8216;&#8217; <label>
+&#8216;&#8217; <input type="radio" name="gerecht" value="2">
+&#8216;&#8217; Mosselen met frieten
+&#8216;&#8217; </label>
+&#8216;&#8217; </li>
+&#8216;&#8217; <li>
+&#8216;&#8217; <label>
+&#8216;&#8217; <input type="radio" name="gerecht" value="3">
+&#8216;&#8217; Gentse waterzooi
+&#8216;&#8217; </label>
+&#8216;&#8217; </li>
+&#8216;&#8217; </ul>
+&#8216;&#8217; </fieldset></p>
+  </main>
+	<form id="feedback" data-forge-name="VRT-FEEDBACK">
+	<h3><i class="fa fa-comment-o"></i> Geef feedback op deze richtlijn</h3>
+	<p>Dankzij jouw feedback kunnen we deze richtlijn verbeteren. Ook vragen en suggesties zijn welkom.</p>
+	<fieldset id="duidelijk">
+		<legend>Vond je deze richtlijn duidelijk en volledig?</legend>
+		<label class="inline">
+			<input type="radio" name="duidelijk" value="ja" /> Ja
+		</label>
+		<label class="inline">
+			<input type="radio" name="duidelijk" value="min-of-meer" /> Min of meer
+		</label>
+		<label class="inline">
+			<input type="radio" name="duidelijk" value="nee" /> Nee
+		</label>
+	</fieldset>
+	<fieldset id="opmerkingen">
+		<legend>Optioneel: wat wil je kwijt?</legend>
+		<label>
+			<p class="opmerkingen min-of-meer">
+				Vind je de omschrijving of voorbeelden niet helemaal duidelijk? Wat kan beter?
+			</p>
+			<p class="opmerkingen nee">
+				Heb je een fout geveonden, ontbreekt er iets of ben je het oneens met de inhoud? Wat kan beter?
+			</p>
+			<textarea name="opmerkingen" style="width: 100%" rows="10"></textarea>
+		</label>
+	</fieldset>
+	<fieldset id="rol">
+		<legend>Welke omschrijving past best bij je?</legend>
+		<label class="block">
+			Ik herken mezelf best in dit profiel:
+			<select name="rol" class="block">
+        <optgroup label="Kies…">
+          <option value="vormgever">Grafisch vormgever</option>
+  				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
+  				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
+  				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
+  				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
+  				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
+  				<option value="ux">Digitaal architect of UX-expert</option>
+  				<option value="pm">Project manager of Product owner</option>
+  				<option value="manager">(Eind)verantwoordelijke voor een website of app</option>
+  				<option value="anderefunctie">Iets helemaal anders</option>
+        </optgroup>
+			</select>
+		</label>
+		<label id="anderefunctie" class="block">
+			<span class="block small">Omschrijf je functie of waarom je te maken krijgt met deze richtlijnen.</span>
+			<input type="text" name="anderefunctie" style="width: 100%" class="block" />
+		</label>
+	</fieldset>
+	<fieldset id="wie">
+		<legend>Optioneel: jouw gegevens</legend>
+		<p>
+			Misschien hebben we bijkomende vragen. Als je je naam en e-mailadres invult, kunnen we contact met je opnemen.
+		</p>
+		<label class="block">
+			<span class="block small">Volledige naam</span>
+			<input type="text" name="naam" style="width: 100%" class="block" />
+		</label>
+		<label class="block">
+			<span class="block small">E-mailadres</span>
+			<input type="text" data-forge-name="email" style="width: 100%" class="block" />
+		</label>
+	</fieldset>
+	<label style="display: none"">
+		Als je dit veld ziet, laat het dan gewoon leeg. Het staat er enkel om spam te voorkomen.
+		<input type="text" name="_gotcha" disabled="disabled" />
+	</label>
+	<input type="hidden" name="_next" value="/feedback/bedankt.html" />
+	<input type="hidden" name="_subject" value="Feedback op VRT-Toegankelijkheidsrichtlijnen" />
+	<!-- <input type="hidden" name="_cc" value="marc.walraven@vrt.be" /> -->
+	<input type="submit" id="submit" value="Verstuur feedback" />
+</form>
+
+<nav id="vorige-volgende">
+	<ul class="clearfix">
+		<li class="vorige">
+			<a href="#">
+				<span><i class="fa fa-arrow-circle-left"></i> Vorige richtlijn</span>
+				<span>(Koppen, paragrafen, lijsten en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags)</span>
+			</a>
+		</li>
+		<li class="volgende">
+			<a href="#">
+				<span>Volgende richtlijn <i class="fa fa-arrow-circle-right"></i></span>
+				<span>(De koppenstructuur is strikt hiërarchisch)</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+	<script src="/js/vendor/jquery.cookie.js"></script>
+  <script src="/js/vendor/match-height.js"></script>
+  <script>
+
+    $(function() {
+
+      /* Equal heights */
+      $('.categorie .sub-container .sub').matchHeight(
+        {
+          property: 'min-height',
+          target: null,
+          remove: false
+        }
+      );
+
+
+			/* Fix skip links for screenreader users on all browsers */
+
+			$(':header[id]').attr('tabindex','-1');
+			$("a[href^='#']").click(function() {
+				$("#"+$(this).attr("href").slice(1)+"").focus()
+			});
+
+			var rol = $.cookie('rol');
+			var anderefunctie = $.cookie('anderefunctie');
+			var naam = $.cookie('naam');
+			var email = $.cookie('email');
+
+			$('#feedback select[name="rol"]').val(rol);
+			$('#feedback input[name="anderefunctie"]').val(anderefunctie);
+			$('#feedback input[name="naam"]').val(naam);
+			$('#feedback input[name="email"]').val(email);
+
+			$('#feedback #opmerkingen, #feedback #rol, #feedback #wie, p.opmerkingen').hide();
+			if (rol != 'anderefunctie') $('#feedback #anderefunctie').hide();
+			$('#feedback #submit').attr('disabled','disabled');
+
+			$('#feedback input[name="duidelijk"]').change(function() {
+				duidelijk = $(this).val();
+
+        if (duidelijk == 'ja') {
+          console.log('jajaja');
+          $('fieldset#opmerkingen fieldset#rol fieldset#wie').hide();
+        }
+        else {
+          $('p.opmerkingen').hide();
+  				$('p.opmerkingen.'+duidelijk).show();
+          if (!$('#feedback #opmerkingen').hasClass('open')) {
+  					$('#feedback #opmerkingen').fadeIn();
+  					$('#feedback #opmerkingen textarea').focus();
+  				}
+  				else {
+  					$('#feedback #opmerkingen').addClass('open');
+  				}
+          $("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
+          $('#feedback #rol, #feedback #wie').fadeIn();
+  				$('#feedback #submit').removeAttr('disabled');
+        }
+
+			});
+
+			$('#feedback select[name="rol"]').change(function() {
+				if ($(this).val() == 'anderefunctie') {
+					$('#anderefunctie').show().focus();
+				}
+				else {
+					$('#anderefunctie').hide();
+				}
+			});
+
+			$("#feedback").submit(function(e) {
+				$.ajax({
+				    url: "https://getforge.com/api/form-data",
+						data:  $(this).serializeArray(),
+				    method: "POST",
+				    dataType: "json",
+						beforeSend: function() {
+							$.cookie('rol', $('#feedback select[name="rol"]').val(), { expires: 7, path: '/' });
+							$.cookie('anderefunctie', $('#feedback input[name="anderefunctie"]').val(), { expires: 7, path: '/' });
+							$.cookie('naam', $('#feedback input[name="naam"]').val(), { expires: 7, path: '/' });
+							$.cookie('email', $('#feedback input[name="email"]').val(), { expires: 7, path: '/' });
+							$('#feedback #submit')
+								.attr('disabled','disabled')
+								.attr('value','Bezig met verzenden...');
+		        },
+						success: function(data, textStatus, jqXHR) {
+							$('#feedback #submit')
+								.attr('value','Verzonden');
+							$('#feedback *')
+								.fadeOut();
+							$('#feedback')
+								.load('/feedback/bedankt.html')
+								.fadeIn()
+								.focus();
+		        },
+						error: function(data, textStatus, jqXHR) {
+							$('#feedback #submit')
+								.attr('value','Er is iets misgelopen');
+							$('#feedback *')
+								.fadeOut();
+							$('#feedback')
+								.load('/feedback/fout.html')
+								.fadeIn()
+								.focus();
+		        }
+				});
+		    e.preventDefault();
+		    e.unbind();
+			});
+
+
+      $('input:checked').change(function() {
+        if (this.checked)
+          $('#richtlijnen .'+this.name).removeClass('uit').addClass('aan');
+        else
+          $('#richtlijnen .'+this.name).removeClass('aan').addClass('uit');
+      })
+
+    });
+
+  </script>
+	<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='https://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-73007524-1','auto');ga('send','pageview');
+    </script>
+</body>
+</html>

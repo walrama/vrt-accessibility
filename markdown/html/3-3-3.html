@@ -1,0 +1,57 @@
+<h1 id="elkformulierheefteenzichtbareverzendknopenopdieknopisderichtlijnoverlinksenknoppentoegepast">Elk formulier heeft een zichtbare verzendknop en op die knop is de richtlijn over links en knoppen toegepast</h1>
+
+<p>De verzendknop moet een [helder opschrift] bevatten en zowel met de muis als het toetsenbord te activeren zijn. De HTML voor een verzendknop onder een inschrijfformulier ziet er meestal zo uit:</p>
+
+<p><code>&lt;input type=&quot;submit&quot; value=&quot;Schrijf in&quot;&gt;</code></p>
+
+<p>Je kunt ook het net zo toegankelijke <code>&lt;button&gt;</code>-element gebruiken:</p>
+
+<p><code>&lt;button type=&quot;submit&quot;&gt;Schrijf in&lt;/button&gt;</code></p>
+
+<p>Ook de (verouderde) techniek waarbij een afbeelding als verzendknop gebruikt wordt, is toegestaan. Vergeet in dat geval niet om een duidelijk <code>alt</code>-attribuut toe te voegen:</p>
+
+<p><code>&lt;input type=&quot;image&quot; src=&quot;submitButton.png&quot; alt=&quot;Schrijf in&quot; /&gt;</code></p>
+
+<h2 id="watalsmijnknopeenanderhtml-elementiszoalseenimgofeenspan">Wat als mijn knop een ander HTML-element is, zoals een <code>&lt;img&gt;</code> of een <code>&lt;span&gt;</code>?</h2>
+
+<p>Als je om een of andere reden geen <code>&lt;input&gt;</code>- of <code>&lt;button&gt;</code>-element kan gebruiken, is er extra werk nodig om de knop toegankelijk te maken.</p>
+
+<h3 id="goedvoorbeeld">Goed voorbeeld</h3>
+
+<p><code>&lt;span class=&quot;myCustomButton&quot; onClick=&quot;myCustomHandler()&quot; role=“button” tabindex=“0“&gt;Schrijf in&lt;/span&gt;</code></p>
+
+<h3 id="ditmoetjesowiesodoenomeenknoptemakenvanjespan-element">Dit moet je sowieso doen om een knop te maken van je <code>&lt;span&gt;</code>-element</h3>
+
+<ul>
+<li>Aan je stylesheet moet je een selector toevoegen (<code>. myCustomButton {}</code> in dit geval) om <code>&lt;span class=&quot;myCustomButton”&gt;</code> er als een knop te laten uitzien. Je kan zelfs het opschrift <em>Schrijf in</em> verbergen en vervangen door een afbeelding, maar gebruik in dat geval zeker een [techniek om de tekst enkel voor schermlezers te verbergen].</li>
+<li>Ook zal je een <em>event listener</em> (of een <code>onClick</code>-attribuut) moeten toevoegen opdat er ook echt iets gebeurt wanneer een gebruiker op jouw knop klikt. De JavaScript-code die daarvoor zorgt, schrijf je zelf of wordt voorzien door het framework dat je gebruikt.</li>
+</ul>
+
+<h3 id="zomaakjedeknopookvoorblindenentoetsenbordgebruikerstoegankelijk">Zo maak je de knop ook voor blinden en toetsenbordgebruikers toegankelijk</h3>
+
+<ul>
+<li>Het is <strong>noodzakelijk</strong> om het attribuut <code>tabindex=&quot;0&quot;</code> toe te voegen omdat dat ervoor zorgt dat het <code>&lt;span&gt;</code>-element <strong>bereikbaar</strong> is met de <key>Tab</key>-toets en dus <em>keyboard focus</em> kan krijgen. Door het attribuut <code>tabindex=&quot;0&quot;</code> te gebruiken, blijkt de tab-volgorde onaangetast.</li>
+<li>Het <code>role</code>-attribuut (<code>role=“button”</code>) is ook noodzakelijk. Hierdoor weet een schermlezer dat hij <code>&lt;span class=&quot;myCustomButton&quot;&gt;</code> als een knop moet <strong>aankondigen</strong>. Een blinde gebruiker zal voor bovenstaand voorbeeld <em>Knop: Schrijf in</em> te horen krijgen als hij eop focust. Zonder die informatie weet je gebruiker niet dat het om een knop gaat die hij kan activeren (hij ziet de knop immers niet).</li>
+</ul>
+
+<p>Doordat de knop nu bereikbaar is én correct aangekondigd wordt, kan een blinde gebruiker de knop nu activeren met de Enter-toets. Tenminste, als een <code>onClick</code>-event aan de knop gekoppeld is. <code>onClick</code> is immers, in tegenstelling tot bijvoorbeeld <code>onMouseDown</code> en <code>onMouseOver</code>, een <strong>apparaatonnafhankelijke event handler</strong> die probleemloos geactiveerd kan worden met een muisklik, de <key>Enter</key>-toets of met een tikje op een aanraakscherm.</p>
+
+<h3 id="conclusie">Conclusie</h3>
+
+<p>Je ziet dat het <strong>veel lastiger</strong> is om toegankelijke knoppen te maken met HTML-elementen die hier niet op voorzien zijn. Dat komt doordat browsers en screenreaders uit zichzelf al weten hoe ze <em>native</em> knoppen moeten aankondigen en hoe gebruikers ermee kunnen interacteren.</p>
+
+<p>Overweeg daarom om – waar mogelijk – een <code>&lt;input type=&quot;submit&quot;&gt;</code> of <code>&lt;button type=&quot;submit&quot;&gt;</code> te gebruiken voor verzendknoppen. Een <code>&lt;button&gt;</code>-element kan je in moderne browsers bovendien net zo gemakkelijk vormgeven met CSS als pakweg een <code>&lt;span&gt;</code>-element.</p>
+
+<h2 id="toegestaneuitzonderingvoorformulierenmetéénveld">Toegestane uitzondering voor formulieren met één veld</h2>
+
+<p>Als een formulier slechts één veld heeft, is het <strong>niet verplicht</strong> om de verzendknop zichtbaar te maken. Dat komt het vaakst voor bij zoekvelden. Voor je gebruikers – ook voor blinde bezoekers – is het <strong>voldoende duidelijk</strong> dat ze de zoekopdracht kunnen starten met de <key>Enter</key>-toets.</p>
+
+<h3 id="voorbeeld">Voorbeeld</h3>
+
+<p>&#8216;&#8217; <form action=“/zoekresultaten”>
+&#8216;&#8217; <label>
+&#8216;&#8217; Zoek: &lt;input type=“search” placeholder=“Voorbeeld: terzake” /&gt;
+&#8216;&#8217; </label>
+&#8216;&#8217; </form></p>
+
+<p>Merk ten slotte nog op dat het een goed idee is om de verzendknop op smartphones en tablets <strong>altijd zichtbaar</strong> te maken. Dat verhoogt het gebruiksgemak aanzienlijk.</p>

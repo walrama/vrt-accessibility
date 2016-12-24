@@ -1,0 +1,354 @@
+<!doctype html>
+<html class="markup-body">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+		<title></title>
+		<link rel="stylesheet" href="/github-markdown.css">
+		<link rel="stylesheet" href="/css/vrt-toegankelijkheid.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<script src="https://use.typekit.net/tvi1crm.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+		<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+		</style>
+	</head>
+	<body class="markdown-body">
+    <a href="#main">Ga naar inhoud</a>
+    <header id="header">
+      <nav role="navigation" aria-label="site links">
+        <ul>
+          <li><a href="/">Home - Kwaliteitsvereisten voor toegankelijke websites</a></li>
+          <li><a href="#">Over deze kwaliteitsvereisten</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <p>Versie 0.9 -- Laatst aangepast door Roel Van Gils op 12 december 2016.</p>
+    </header>
+    <!-- <form id="search" role="search" action="index.html" method="post">
+      <label>
+        Doorzoek alle richtlijnen
+        <input type="text" name="" value="">
+      </label>
+      <input type="submit" name="" value="Zoek">
+    </form> -->
+    <main role="main" id="main">
+<p class="waar hide">
+  todo
+</p>
+<h1 id="dabouwstenenvaniederepaginazijngemarkeerdmeteenarialandmark.gebruikariarolesspaarzaam.">Da bouwstenen van iedere pagina zijn gemarkeerd met een ARIA Landmark. Gebruik ARIA Roles spaarzaam.</h1>
+
+<p>Gebruik <strong>ARIA Landmarks</strong> banner, complementary, contentinfo, main, navigation, search en application voor de overeenkomstige onderdelen op iedere pagina. Gebruik de <strong>ARIA Roles</strong> enkel voor webapplicaties en wanneer native HTML-elementen niet gebruikt kunnen worden.</p>
+
+<h2 id="watisaria">Wat is ARIA?</h2>
+
+<p>ARIA is de afkorting van <code>Accessible Rich Internet Applications</code> en is een officiële W3C-specificatie. ARIA definiëert een reeks attributen die de <strong>semantiek</strong> van webpagina’s en de <strong>betekenis van interface-onderdelen</strong> kunnen verduidelijken:</p>
+
+<ul>
+<li>Gebruik <strong>Landmarks</strong> om belangrijke gebieden op een pagina te identificeren.</li>
+<li>Gebruik <strong>Roles</strong> om interfaces van webapplicatis toegankelijk te maken.</li>
+</ul>
+
+<p>ARIA-attributen hebben geen invloed op de pagina-layout en het browsergedrag. ARIA-attributen voegen wel informatie aan de <code>accessibility tree</code> die browsers automatisch samenstellen voor schermelezers.</p>
+
+<h2 id="landmarkszijnverplicht">Landmarks zijn verplicht</h2>
+
+<p>Wanneer een van deze onderdelen aanwezig is op een pagina, gebruik dan het overeenkomstige landmark-attribuut.</p>
+
+<blockquote>
+<p><strong>Opgelet</strong>: Gebruik ieder element slechts één keer per pagina. Volgens de specificatie mag je ze wel meermaals gebruiken, maar dat zorgt in de praktijk gewoonlijk voor verwarring.</p>
+</blockquote>
+
+<h3 id="banner">Banner</h3>
+
+<p>Gebruik voor site-specifieke gegevens die op alle pagina’s voorkomen: het logo, de naam van de website en eventueel een slagzin.</p>
+
+<h3 id="complementary">Complementary</h3>
+
+<p>Een blok met inhoud die aanvullend gebruikt wordt voor de inhoud van de pagina, maar ook op zichzelf kan bestaan. Voorbeeld: links naar gerelateerde artikels.</p>
+
+<h3 id="contentinfo">Contentinfo</h3>
+
+<p>Deze rol gebruik je typisch voor de footer van een pagina en komt, net als de banner, maar één keer voor. Traditioneel bevat dit blok copyright-informatie, een privacy-statement en eventueel contactgegevens of een link naar een toegankelijkheidsverklaring.</p>
+
+<h3 id="main">Main</h3>
+
+<p>De eigenlijke inhoud van de pagina. In de praktijk is dat alles wat zich tussen Banner en Contentinfo bevindt.</p>
+
+<h3 id="navigation">Navigation</h3>
+
+<p>Een verzameling links om doorheen de website te nagieren. Gewoonlijk is dat de primaire navigatiebalk. Gebruik navigation liefst maar één keer. Gebruik het niet voor het kruimelspoor of voor andere links binnen de pagina.</p>
+
+<h3 id="search">Search</h3>
+
+<p>Als de website een zoekveld heeft, gebruik je deze rol. Gebruik hem maar één keer.</p>
+
+<h2 id="roleszijnmeestalnietnodig">Roles zijn meestal niet nodig</h2>
+
+<p>Er zijn een stuk of 70 verschillende waarden voor eht <code>role</code>-attribuut. Ze moeten met veel zorg gebruikt worden.</p>
+
+<p>Het toevoegen van de verkeerde ARIA-roles kan een pagina helemaal ontoegankelijk maken. Een role creëert een bepaalde verwachting bij de hulpmiddelengebruiker. Als u aan een element bijvoorbeeld een <code>role=&quot;checkbox&quot;</code> geeft, zal de gebruiker proberen die te activeren met de spatiebalk. Als dat gedrag niet toegevoegd is met JavaScript, is dat problematisch.</p>
+
+<h3 id="watkanjezoaldoenmetaria-roles">Wat kan je zoal doen met ARIA-roles?</h3>
+
+<ul>
+<li><strong>Widgets</strong> toegankelijk maken waarvoor in HTML geen element bestaat, zoals een tabpaneel.</li>
+<li>En <strong>status</strong> aangeven die visueel duidelijk is maar niet voor screenreadergebruikers. Bijvoorbeeld is een submenu in- of uitgeklapt?</li>
+<li>Een screenreader laten <strong>melden</strong> dat er informatie is <strong>bijgekomen</strong> of <strong>gewijzigd</strong> op een webpagina.</li>
+<li>Onderdelen van een webpagina of webtoepassing <strong>duidelijker benoemen</strong> voor gebruikers die het scherm niet zien.</li>
+<li><strong>Verborgen informatie</strong> toeveogen die enkel nuttig is voor gebruikers van schermelezers en – omgekeerd – informatie verbergen die zichtbaar is op het scherm, maar in de weg staat voor gebruikers van schermelezers.</li>
+</ul>
+
+<h3 id="driegoudenregelsvoorhetgebruikvanariaroles">Drie gouden regels voor het gebruik van ARIA Roles</h3>
+
+<ol>
+<li>Als een <strong>native HTML-element</strong> bestaat voor de functionaliteit die je wil toevoegen, geef daar dan steeds de voorkeur aan (knoppen, checkboxes, dropdowns etc.). Deze elementen hoef je niet bijkomend te verrijken met ARIA Roles.</li>
+<li>Verander <strong>nooit de betekenis of semantiek</strong> van native HTML-elementen door ARIA Roles toe te voegen, tenzij dat de toegankelijkheid aantoonbaar verbetert. Voeg ARIA-roles enkel toe aan generieke HTML-elementen zoals <code>&lt;div&gt;</code>’s en <code>&lt;span&gt;</code>’s.</li>
+<li>Alle met ARIA Roles verrijke interface-onderdelen moeten volledig bruikbaar gemaakt wroden met het <strong>toetsenbord</strong>.</li>
+</ol>
+
+<h3 id="gebruikariarolesalleenwanneerhetnodigis">Gebruik ARIA Roles alleen wanneer het nodig is</h3>
+
+<p>Bij gebruik van standaard HTML-elementen voorzien browsers standaardgedrag en geven alle informatie ook door aan screenreaders en de andere hulpmiddelen die mensen met een handicap gebruiken. Bijvoorbeeld voor een select-element voorziet de browser automatisch dat je ernaar toe kunt tabben, dat je met de pijltoetsen een keuze kunt maken en dat je door de eerste letter in te typen meteen naar de optie gaat die met die letter begint. Ook gebruikers (her)kennen dit en kunnen het zonder uitleg gebruiken. Een screenreader zal het conssistent als keuzelijst aankondigen enz.</p>
+
+<p>Als er een HTML-element bestaat voor de functie die u nodig heeft, gebruik dat dan. U maakt het zichzelf bijvoorbeeld veel gemakkelijker door knoppen altijd met button te maken. Als u div onclick gebruikt dan is dat element aanklikbaar met de muis, maar het gedraagt zich voor de rest niet als een knop. Het standaardgedrag dat browsers aan een knop geven, moet u nu zelf voorzien.</p>
+
+<h2 id="meerlezen">Meer lezen</h2>
+
+<ul>
+<li>[Using WAI-ARIA in HTML]</li>
+<li>[What is WAI-ARIA, what does it do for me, and what not? (Marco&#8217;s Accessibility Blog)]</li>
+<li>[The Accessibility Tree: A Training Guide for Advanced Web Development]</li>
+</ul>
+  </main>
+	<form id="feedback" data-forge-name="VRT-FEEDBACK">
+	<h3><i class="fa fa-comment-o"></i> Geef feedback op deze richtlijn</h3>
+	<p>Dankzij jouw feedback kunnen we deze richtlijn verbeteren. Ook vragen en suggesties zijn welkom.</p>
+	<fieldset id="duidelijk">
+		<legend>Vond je deze richtlijn duidelijk en volledig?</legend>
+		<label class="inline">
+			<input type="radio" name="duidelijk" value="ja" /> Ja
+		</label>
+		<label class="inline">
+			<input type="radio" name="duidelijk" value="min-of-meer" /> Min of meer
+		</label>
+		<label class="inline">
+			<input type="radio" name="duidelijk" value="nee" /> Nee
+		</label>
+	</fieldset>
+	<fieldset id="opmerkingen">
+		<legend>Optioneel: wat wil je kwijt?</legend>
+		<label>
+			<p class="opmerkingen min-of-meer">
+				Vind je de omschrijving of voorbeelden niet helemaal duidelijk? Wat kan beter?
+			</p>
+			<p class="opmerkingen nee">
+				Heb je een fout geveonden, ontbreekt er iets of ben je het oneens met de inhoud? Wat kan beter?
+			</p>
+			<textarea name="opmerkingen" style="width: 100%" rows="10"></textarea>
+		</label>
+	</fieldset>
+	<fieldset id="rol">
+		<legend>Welke omschrijving past best bij je?</legend>
+		<label class="block">
+			Ik herken mezelf best in dit profiel:
+			<select name="rol" class="block">
+        <optgroup label="Kies…">
+          <option value="vormgever">Grafisch vormgever</option>
+  				<option value="redacteur">Online-redacteur zonder HTML-kennis</option>
+  				<option value="redacteur-html">Online-redacteur met basiskennis HTML</option>
+  				<option value="webdesigner">Webdesigner met basiskennis JavaScript</option>
+  				<option value="frontend">Front-end-webontwikkelaar met uitgebreide JavaScript-kennis</option>
+  				<option value="backend">Back-end-webontwikkelaar of CMS-expert</option>
+  				<option value="ux">Digitaal architect of UX-expert</option>
+  				<option value="pm">Project manager of Product owner</option>
+  				<option value="manager">(Eind)verantwoordelijke voor een website of app</option>
+  				<option value="anderefunctie">Iets helemaal anders</option>
+        </optgroup>
+			</select>
+		</label>
+		<label id="anderefunctie" class="block">
+			<span class="block small">Omschrijf je functie of waarom je te maken krijgt met deze richtlijnen.</span>
+			<input type="text" name="anderefunctie" style="width: 100%" class="block" />
+		</label>
+	</fieldset>
+	<fieldset id="wie">
+		<legend>Optioneel: jouw gegevens</legend>
+		<p>
+			Misschien hebben we bijkomende vragen. Als je je naam en e-mailadres invult, kunnen we contact met je opnemen.
+		</p>
+		<label class="block">
+			<span class="block small">Volledige naam</span>
+			<input type="text" name="naam" style="width: 100%" class="block" />
+		</label>
+		<label class="block">
+			<span class="block small">E-mailadres</span>
+			<input type="text" data-forge-name="email" style="width: 100%" class="block" />
+		</label>
+	</fieldset>
+	<label style="display: none"">
+		Als je dit veld ziet, laat het dan gewoon leeg. Het staat er enkel om spam te voorkomen.
+		<input type="text" name="_gotcha" disabled="disabled" />
+	</label>
+	<input type="hidden" name="_next" value="/feedback/bedankt.html" />
+	<input type="hidden" name="_subject" value="Feedback op VRT-Toegankelijkheidsrichtlijnen" />
+	<!-- <input type="hidden" name="_cc" value="marc.walraven@vrt.be" /> -->
+	<input type="submit" id="submit" value="Verstuur feedback" />
+</form>
+
+<nav id="vorige-volgende">
+	<ul class="clearfix">
+		<li class="vorige">
+			<a href="#">
+				<span><i class="fa fa-arrow-circle-left"></i> Vorige richtlijn</span>
+				<span>(Koppen, paragrafen, lijsten en citaten zijn gemarkeerd met de daarvoor bedoelde HTML-tags)</span>
+			</a>
+		</li>
+		<li class="volgende">
+			<a href="#">
+				<span>Volgende richtlijn <i class="fa fa-arrow-circle-right"></i></span>
+				<span>(De koppenstructuur is strikt hiërarchisch)</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+	<script src="/js/vendor/jquery.cookie.js"></script>
+  <script src="/js/vendor/match-height.js"></script>
+  <script>
+
+    $(function() {
+
+      /* Equal heights */
+      $('.categorie .sub-container .sub').matchHeight(
+        {
+          property: 'min-height',
+          target: null,
+          remove: false
+        }
+      );
+
+
+			/* Fix skip links for screenreader users on all browsers */
+
+			$(':header[id]').attr('tabindex','-1');
+			$("a[href^='#']").click(function() {
+				$("#"+$(this).attr("href").slice(1)+"").focus()
+			});
+
+			var rol = $.cookie('rol');
+			var anderefunctie = $.cookie('anderefunctie');
+			var naam = $.cookie('naam');
+			var email = $.cookie('email');
+
+			$('#feedback select[name="rol"]').val(rol);
+			$('#feedback input[name="anderefunctie"]').val(anderefunctie);
+			$('#feedback input[name="naam"]').val(naam);
+			$('#feedback input[name="email"]').val(email);
+
+			$('#feedback #opmerkingen, #feedback #rol, #feedback #wie, p.opmerkingen').hide();
+			if (rol != 'anderefunctie') $('#feedback #anderefunctie').hide();
+			$('#feedback #submit').attr('disabled','disabled');
+
+			$('#feedback input[name="duidelijk"]').change(function() {
+				duidelijk = $(this).val();
+
+        if (duidelijk == 'ja') {
+          console.log('jajaja');
+          $('fieldset#opmerkingen fieldset#rol fieldset#wie').hide();
+        }
+        else {
+          $('p.opmerkingen').hide();
+  				$('p.opmerkingen.'+duidelijk).show();
+          if (!$('#feedback #opmerkingen').hasClass('open')) {
+  					$('#feedback #opmerkingen').fadeIn();
+  					$('#feedback #opmerkingen textarea').focus();
+  				}
+  				else {
+  					$('#feedback #opmerkingen').addClass('open');
+  				}
+          $("html, body").animate({ scrollTop: $(document).height()-$(window).height() });
+          $('#feedback #rol, #feedback #wie').fadeIn();
+  				$('#feedback #submit').removeAttr('disabled');
+        }
+
+			});
+
+			$('#feedback select[name="rol"]').change(function() {
+				if ($(this).val() == 'anderefunctie') {
+					$('#anderefunctie').show().focus();
+				}
+				else {
+					$('#anderefunctie').hide();
+				}
+			});
+
+			$("#feedback").submit(function(e) {
+				$.ajax({
+				    url: "https://getforge.com/api/form-data",
+						data:  $(this).serializeArray(),
+				    method: "POST",
+				    dataType: "json",
+						beforeSend: function() {
+							$.cookie('rol', $('#feedback select[name="rol"]').val(), { expires: 7, path: '/' });
+							$.cookie('anderefunctie', $('#feedback input[name="anderefunctie"]').val(), { expires: 7, path: '/' });
+							$.cookie('naam', $('#feedback input[name="naam"]').val(), { expires: 7, path: '/' });
+							$.cookie('email', $('#feedback input[name="email"]').val(), { expires: 7, path: '/' });
+							$('#feedback #submit')
+								.attr('disabled','disabled')
+								.attr('value','Bezig met verzenden...');
+		        },
+						success: function(data, textStatus, jqXHR) {
+							$('#feedback #submit')
+								.attr('value','Verzonden');
+							$('#feedback *')
+								.fadeOut();
+							$('#feedback')
+								.load('/feedback/bedankt.html')
+								.fadeIn()
+								.focus();
+		        },
+						error: function(data, textStatus, jqXHR) {
+							$('#feedback #submit')
+								.attr('value','Er is iets misgelopen');
+							$('#feedback *')
+								.fadeOut();
+							$('#feedback')
+								.load('/feedback/fout.html')
+								.fadeIn()
+								.focus();
+		        }
+				});
+		    e.preventDefault();
+		    e.unbind();
+			});
+
+
+      $('input:checked').change(function() {
+        if (this.checked)
+          $('#richtlijnen .'+this.name).removeClass('uit').addClass('aan');
+        else
+          $('#richtlijnen .'+this.name).removeClass('aan').addClass('uit');
+      })
+
+    });
+
+  </script>
+	<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='https://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-73007524-1','auto');ga('send','pageview');
+    </script>
+</body>
+</html>
